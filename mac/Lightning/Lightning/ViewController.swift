@@ -28,7 +28,8 @@ class ViewController: NSViewController {
     @IBAction func switchButtonPressed(_ sender: Any) {
         DispatchQueue.global(qos: .utility).async {
             while (self.switchButton.selectedSegment == 1) {
-                // Avoids memory leaks
+                
+                // Avoid memory leaks
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
                     self.controller.captureScreen()
@@ -37,7 +38,6 @@ class ViewController: NSViewController {
                         self.resultLabel.stringValue = "\(1.0 / (endTime - startTime))"
                     }
                 }
-                
             }
         }
         self.resultLabel.stringValue = "-"
