@@ -48,7 +48,7 @@ class ViewController: NSViewController {
     
     @IBAction func powerButtonPressed(_ sender: Any) {
         self.disableControls()
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             while (self.powerButton.selectedSegment == 1) {
                 // Avoid memory leaks
                 autoreleasepool() {
