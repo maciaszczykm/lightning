@@ -4,25 +4,20 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "5A811E91F5DFF59170683E14D2C5755F19DE18CB" : 9223372036854775807,
+    "EA2589678FDB86E557A664B2CE9B9202D494DB85" : 9223372036854775807,
     "5FF47C36BC9DB0F0AA0EEB83E4AC415727398BF7" : 9223372036854775807,
-    "2A6E0E431E033610DAE2C1E7C7C49C1940B29B10" : 9223372036854775807
+    "5A811E91F5DFF59170683E14D2C5755F19DE18CB" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2EB9B03F-7E7B-455C-B9BC-847651574A06",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "5A811E91F5DFF59170683E14D2C5755F19DE18CB" : "lightning\/mac\/Lightning\/Frameworks\/ORSSerialPort\/",
+    "EA2589678FDB86E557A664B2CE9B9202D494DB85" : "lightning\/",
     "5FF47C36BC9DB0F0AA0EEB83E4AC415727398BF7" : "legacy\/",
-    "2A6E0E431E033610DAE2C1E7C7C49C1940B29B10" : "lightning\/"
+    "5A811E91F5DFF59170683E14D2C5755F19DE18CB" : "lightning\/mac\/Lightning\/Frameworks\/ORSSerialPort\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "mac",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "mac\/mac.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maciaszczykm\/lightning.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A6E0E431E033610DAE2C1E7C7C49C1940B29B10"
-    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/armadsen\/ORSSerialPort.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
@@ -32,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maciaszczykm\/lightning.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5FF47C36BC9DB0F0AA0EEB83E4AC415727398BF7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maciaszczykm\/lightning.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EA2589678FDB86E557A664B2CE9B9202D494DB85"
     }
   ]
 }

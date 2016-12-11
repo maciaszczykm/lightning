@@ -56,7 +56,7 @@ void setup()
       lastByteTime = t;
     } else {
       // Turn off lights, when no data recieved for more than minute
-      if((t - lastByteTime) > 60000) {
+      if((t - lastByteTime) > 5000) {
         for(c=0; c<32767; c++) {
           for(SPDR=0; !(SPSR & _BV(SPIF)); );
         }
