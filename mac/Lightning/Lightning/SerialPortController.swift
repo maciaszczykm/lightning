@@ -11,18 +11,19 @@ import ORSSerial
 
 class SerialPortController {
     
+    let pathPrefix : String = "/dev/cu."
     var serialPort : ORSSerialPort
     var magicWord : Data
     
     init(path: String, baudRate: NSNumber) {
-        self.serialPort = ORSSerialPort(path: path)!
+        self.serialPort = ORSSerialPort(path: self.pathPrefix + path)!
         self.serialPort.baudRate = baudRate
         self.serialPort.open()
         self.magicWord = Data()
     }
     
     init(path: String, baudRate: NSNumber, magicWord: Data) {
-        self.serialPort = ORSSerialPort(path: path)!
+        self.serialPort = ORSSerialPort(path: self.pathPrefix + path)!
         self.serialPort.baudRate = baudRate
         self.serialPort.open()
         self.magicWord = magicWord
@@ -40,6 +41,14 @@ class SerialPortController {
     
     deinit {
         self.serialPort.close()
+    }
+    
+    static func getAvailablePorts() -> [String] {
+        var availablePorts = [String]()
+        for availablePort in ORSSerialPortManager.shared().availablePorts {
+            availablePorts.append(availablePort.name)
+        }
+        return availablePorts
     }
     
 }

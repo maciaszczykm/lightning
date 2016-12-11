@@ -18,7 +18,7 @@ class LightController {
     let context : CIContext
     let filter : CIFilter
     
-    init() {
+    init(serialPort: String) {
         self.screen = Screen(displayId: CGMainDisplayID())
         self.lights = LightStrand(screen: screen)
         
@@ -27,7 +27,7 @@ class LightController {
         magicWord.append(UInt8(lights.lights.count - 1))
         magicWord.append(magicWord[magicWord.count - 1] ^ 0x13)
         
-        self.serialPortController = SerialPortController(path: "/dev/cu.usbmodem1411", baudRate: 115200, magicWord: Data(magicWord))
+        self.serialPortController = SerialPortController(path: serialPort, baudRate: 115200, magicWord: Data(magicWord))
         self.context = CIContext()
         self.filter = CIFilter(name: "CIAreaAverage")!
     }
@@ -53,5 +53,5 @@ class LightController {
         context.render(image, toBitmap: &pixel, rowBytes: 4, bounds: image.extent , format: kCIFormatRGBA8, colorSpace: CGColorSpaceCreateDeviceRGB())
         return pixel
     }
-    
+
 }

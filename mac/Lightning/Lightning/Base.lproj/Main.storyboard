@@ -664,7 +664,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Lightning" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -683,7 +683,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Lightning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="367" height="86"/>
+                        <rect key="frame" x="0.0" y="0.0" width="367" height="111"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VCz-qW-2Ox">
@@ -696,9 +696,18 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gP6-R1-GYC">
-                                <rect key="frame" x="75" y="49" width="274" height="17"/>
+                                <rect key="frame" x="93" y="49" width="256" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-" id="mEg-xI-8pP">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPV-DX-Fl7">
+                                <rect key="frame" x="18" y="74" width="71" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Serial port:" id="6fG-E1-sVU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -715,19 +724,32 @@
                                     </segments>
                                 </segmentedCell>
                                 <connections>
-                                    <action selector="switchButtonPressed:" target="XfG-lQ-9wD" id="WNY-Mp-mnP"/>
+                                    <action selector="powerButtonPressed:" target="XfG-lQ-9wD" id="MUe-l1-16k"/>
                                 </connections>
                             </segmentedControl>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcm-jO-B0l">
+                                <rect key="frame" x="93" y="69" width="257" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="NgK-xu-F4b">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="dHQ-ac-KmC"/>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="portSwtichPressed:" target="XfG-lQ-9wD" id="vQa-fE-wWD"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="resultLabel" destination="gP6-R1-GYC" id="sgG-0W-5HS"/>
-                        <outlet property="switchButton" destination="m1x-55-egV" id="Q2Y-No-4Zh"/>
+                        <outlet property="fpsLabel" destination="gP6-R1-GYC" id="cOS-jn-GeK"/>
+                        <outlet property="portSwitch" destination="mcm-jO-B0l" id="zME-ef-rSr"/>
+                        <outlet property="powerButton" destination="m1x-55-egV" id="Ovv-Lm-j6W"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.5" y="563"/>
+            <point key="canvasLocation" x="18.5" y="575.5"/>
         </scene>
     </scenes>
 </document>

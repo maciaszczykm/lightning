@@ -11,12 +11,16 @@ import ORSSerial
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var resultLabel: NSTextField!
-    @IBOutlet weak var switchButton: NSSegmentedControl!
-    let controller = LightController()
+    @IBOutlet weak var fpsLabel: NSTextField!
+    @IBOutlet weak var powerButton: NSSegmentedControl!
+    @IBOutlet weak var serialPortList: NSComboBox!
+    @IBOutlet weak var portSwitch: NSPopUpButton!
+    
+    var controller : LightController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initPortSwitch()
     }
     
     override var representedObject: Any? {
@@ -25,22 +29,50 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func switchButtonPressed(_ sender: Any) {
-        DispatchQueue.global(qos: .utility).async {
-            while (self.switchButton.selectedSegment == 1) {
-                
+    private func initPortSwitch() {
+        self.portSwitch.addItems(withTitles: SerialPortController.getAvailablePorts())
+        if (portSwitch.numberOfItems > 0) {
+            print("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
+            self.portSwitch.selectItem(at: 0)
+            self.controller = LightController(serialPort: self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem))
+        } else {
+            print("Disabling power button, because there are not any serial ports available")
+            self.powerButton.isEnabled = false
+        }
+    }
+    
+    @IBAction func portSwtichPressed(_ sender: Any) {
+        print("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
+        self.controller = LightController(serialPort: self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem))
+    }
+    
+    @IBAction func powerButtonPressed(_ sender: Any) {
+        self.disableControls()
+        DispatchQueue.global(qos: .background).async {
+            while (self.powerButton.selectedSegment == 1) {
                 // Avoid memory leaks
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    self.controller.captureScreen()
+                    self.controller?.captureScreen()
                     let endTime = CFAbsoluteTimeGetCurrent()
-                    DispatchQueue.main.async {
-                        self.resultLabel.stringValue = "\(1.0 / (endTime - startTime))"
+                    DispatchQueue.main.sync {
+                        self.fpsLabel.stringValue = "\(1.0 / (endTime - startTime))"
                     }
                 }
             }
+            DispatchQueue.main.sync {
+                self.enableControls()
+                self.fpsLabel.stringValue = "-"
+            }
         }
-        self.resultLabel.stringValue = "-"
+    }
+    
+    private func disableControls() {
+        self.portSwitch.isEnabled = false
+    }
+    
+    private func enableControls() {
+        self.portSwitch.isEnabled = true
     }
     
 }
