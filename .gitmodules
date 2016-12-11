@@ -1,0 +1,3 @@
+[submodule "mac/Lightning/Frameworks/ORSSerialPort"]
+	path = mac/Lightning/Frameworks/ORSSerialPort
+	url = https://github.com/armadsen/ORSSerialPort.git
