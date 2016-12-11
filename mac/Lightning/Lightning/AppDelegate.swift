@@ -11,12 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Placeholder for application initialization
-    }
-    
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Placeholder for application teardown
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
     }
     
 }
