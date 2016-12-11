@@ -17,7 +17,25 @@
 		46399EAD1DFC4CD000078CE6 /* SerialPortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAC1DFC4CD000078CE6 /* SerialPortController.swift */; };
 		46399EB01DFC4DD200078CE6 /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAF1DFC4DD200078CE6 /* LightController.swift */; };
 		46399EB21DFC4E2700078CE6 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EB11DFC4E2700078CE6 /* Screen.swift */; };
+		463E373A1DFD8C0D005EA90A /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E37371DFD8BF1005EA90A /* ORSSerial.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		463E37361DFD8BF1005EA90A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		463E37381DFD8BF1005EA90A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		46399E901DFC454600078CE6 /* Lightning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lightning.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +50,7 @@
 		46399EAC1DFC4CD000078CE6 /* SerialPortController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPortController.swift; sourceTree = "<group>"; };
 		46399EAF1DFC4DD200078CE6 /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
 		46399EB11DFC4E2700078CE6 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463E373A1DFD8C0D005EA90A /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				46399E921DFC454600078CE6 /* Lightning */,
-				46399E911DFC454600078CE6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,13 +78,15 @@
 				46399E901DFC454600078CE6 /* Lightning.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		46399E921DFC454600078CE6 /* Lightning */ = {
 			isa = PBXGroup;
 			children = (
+				463E373B1DFD8C5D005EA90A /* Frameworks */,
+				46399E911DFC454600078CE6 /* Products */,
 				46399EAE1DFC4CDE00078CE6 /* Application */,
-				46399EA61DFC48C800078CE6 /* Model */,
 			);
 			path = Lightning;
 			sourceTree = "<group>";
@@ -84,15 +105,33 @@
 		46399EAE1DFC4CDE00078CE6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
-				46399E951DFC454600078CE6 /* ViewController.swift */,
 				46399E931DFC454600078CE6 /* AppDelegate.swift */,
+				46399E951DFC454600078CE6 /* ViewController.swift */,
+				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
 				46399EAC1DFC4CD000078CE6 /* SerialPortController.swift */,
 				46399E991DFC454600078CE6 /* Main.storyboard */,
-				46399E971DFC454600078CE6 /* Assets.xcassets */,
 				46399E9C1DFC454600078CE6 /* Info.plist */,
+				46399E971DFC454600078CE6 /* Assets.xcassets */,
+				46399EA61DFC48C800078CE6 /* Model */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		463E37321DFD8BF1005EA90A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				463E37371DFD8BF1005EA90A /* ORSSerial.framework */,
+				463E37391DFD8BF1005EA90A /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		463E373B1DFD8C5D005EA90A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,12 +182,35 @@
 			mainGroup = 46399E871DFC454600078CE6;
 			productRefGroup = 46399E911DFC454600078CE6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 463E37321DFD8BF1005EA90A /* Products */;
+					ProjectRef = 463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				46399E8F1DFC454600078CE6 /* Lightning */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		463E37371DFD8BF1005EA90A /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 463E37361DFD8BF1005EA90A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		463E37391DFD8BF1005EA90A /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = 463E37381DFD8BF1005EA90A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		46399E8E1DFC454600078CE6 /* Resources */ = {
