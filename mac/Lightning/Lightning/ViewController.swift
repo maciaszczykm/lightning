@@ -15,12 +15,43 @@ class ViewController: NSViewController {
     @IBOutlet weak var powerButton: NSSegmentedControl!
     @IBOutlet weak var serialPortList: NSComboBox!
     @IBOutlet weak var portSwitch: NSPopUpButton!
+    @IBOutlet weak var displaySwitch: NSPopUpButton!
     
     var controller : LightController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initPortSwitch()
+        
+        // Init port switch
+        var initialPort = ""
+        self.portSwitch.addItems(withTitles: SerialPortController.getAvailablePorts())
+        if (portSwitch.numberOfItems > 0) {
+            print("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
+            self.portSwitch.selectItem(at: 0)
+            initialPort = self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem)
+        } else {
+            print("Disabling power button, because there are not any serial ports available")
+            self.powerButton.isEnabled = false
+        }
+        
+        // Init display switch
+        var initialDisplay : String
+        self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
+        if (displaySwitch.numberOfItems > 0) {
+            print("Setting " + self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem) + " display")
+            self.displaySwitch.selectItem(at: 0)
+            initialDisplay = self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem)
+            if (initialDisplay.contains(" (main display)")) {
+                // TODO
+            }
+        } else {
+            print("Disabling power button, because there are not any displays available")
+            self.powerButton.isEnabled = false
+        }
+        
+        // Initialize class members
+        // TODO
+        self.controller = LightController(serialPort: initialPort)
     }
     
     override var representedObject: Any? {
@@ -29,21 +60,13 @@ class ViewController: NSViewController {
         }
     }
     
-    private func initPortSwitch() {
-        self.portSwitch.addItems(withTitles: SerialPortController.getAvailablePorts())
-        if (portSwitch.numberOfItems > 0) {
-            print("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
-            self.portSwitch.selectItem(at: 0)
-            self.controller = LightController(serialPort: self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem))
-        } else {
-            print("Disabling power button, because there are not any serial ports available")
-            self.powerButton.isEnabled = false
-        }
-    }
-    
     @IBAction func portSwtichPressed(_ sender: Any) {
         print("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
         self.controller = LightController(serialPort: self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem))
+    }
+    
+    @IBAction func displaySwitchPressed(_ sender: Any) {
+        // TODO
     }
     
     @IBAction func powerButtonPressed(_ sender: Any) {
@@ -56,23 +79,26 @@ class ViewController: NSViewController {
                     self.controller?.captureScreen()
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
-                        self.fpsLabel.stringValue = "\(1.0 / (endTime - startTime))"
+                        let fps = Double(round(10 / (endTime - startTime))/10)
+                        self.fpsLabel.stringValue = "\(fps) frames per second"
                     }
                 }
             }
             DispatchQueue.main.sync {
                 self.enableControls()
-                self.fpsLabel.stringValue = "-"
+                self.fpsLabel.stringValue = "0 frames per second"
             }
         }
     }
     
     private func disableControls() {
         self.portSwitch.isEnabled = false
+        self.displaySwitch.isEnabled = false
     }
     
     private func enableControls() {
         self.portSwitch.isEnabled = true
+        self.displaySwitch.isEnabled = true
     }
     
 }
