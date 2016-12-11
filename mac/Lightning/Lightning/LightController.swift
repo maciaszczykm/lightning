@@ -17,27 +17,24 @@ class LightController {
     let screen : Screen
     let context : CIContext
     let filter : CIFilter
-    let magicWord : Data
     
     init() {
-        // Generate magic word
-        var magicWord: [UInt8] = Array("Ada".utf8)
-        magicWord.append(0)
-        magicWord.append(25 - 1)
-        magicWord.append(magicWord[3] ^ magicWord[4] ^ 0x55)
-        
-        // Initialize all class members
-        self.magicWord = Data(magicWord)
-        self.serialPortController = SerialPortController(path: "/dev/cu.usbmodem1411", baudRate: 115200)
         self.screen = Screen(displayId: CGMainDisplayID())
         self.lights = LightStrand(screen: screen)
+        
+        // Generate magic word (11 bytes-long)
+        var magicWord: [UInt8] = Array("Lightning".utf8)
+        magicWord.append(UInt8(lights.lights.count - 1))
+        magicWord.append(magicWord[magicWord.count - 1] ^ 0x13)
+        
+        self.serialPortController = SerialPortController(path: "/dev/cu.usbmodem1411", baudRate: 115200, magicWord: Data(magicWord))
         self.context = CIContext()
         self.filter = CIFilter(name: "CIAreaAverage")!
     }
     
     func captureScreen() {
         let image = CGDisplayCreateImage(screen.id)
-        var data = Data(magicWord)
+        var data = Data()
         for light in lights.lights {
             let crop = image?.cropping(to: light.area)
             let inputImage = CIImage(cgImage:crop!)
