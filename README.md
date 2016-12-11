@@ -1,2 +1,2 @@
-# lightning
+# Lightning
 Ambilight-like lighting system
