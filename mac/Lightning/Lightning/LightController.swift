@@ -35,7 +35,7 @@ class LightController {
         self.lights = LightStrand(screen: screen)
     }
     
-    func captureScreen() {
+    func captureScreen(brightness: UInt8) {
         let image = CGDisplayCreateImage(screen.id)
         var data = Data()
         for light in lights.lights {
@@ -44,9 +44,9 @@ class LightController {
             filter.setValue(inputImage, forKey: kCIInputImageKey)
             filter.setValue(CIVector(cgRect: inputImage.extent), forKey: kCIInputExtentKey)
             light.color = extractColor(image: (filter.outputImage)!)
-            data.append(light.color.red / 2)
-            data.append(light.color.green / 2)
-            data.append(light.color.blue / 2)
+            data.append(light.color.red / brightness)
+            data.append(light.color.green / brightness)
+            data.append(light.color.blue / brightness)
         }
         self.serialPortController.send(data: data)
     }

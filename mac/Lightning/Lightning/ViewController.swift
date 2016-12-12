@@ -16,13 +16,14 @@ class ViewController: NSViewController {
     @IBOutlet weak var serialPortList: NSComboBox!
     @IBOutlet weak var portSwitch: NSPopUpButton!
     @IBOutlet weak var displaySwitch: NSPopUpButton!
+    @IBOutlet weak var brightnessSlider: NSSlider!
     
     var controller : LightController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Init port switch
+        // Initialize port switch
         var initialPort = ""
         self.portSwitch.addItems(withTitles: SerialPortController.getAvailablePorts())
         if (portSwitch.numberOfItems > 0) {
@@ -34,7 +35,7 @@ class ViewController: NSViewController {
             self.powerButton.isEnabled = false
         }
         
-        // Init display switch
+        // Initialize display switch
         var initialDisplay = ""
         self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
         if (displaySwitch.numberOfItems > 0) {
@@ -81,7 +82,7 @@ class ViewController: NSViewController {
                 // Avoid memory leaks
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    self.controller?.captureScreen()
+                    self.controller?.captureScreen(brightness: UInt8(Int(self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue)))
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)

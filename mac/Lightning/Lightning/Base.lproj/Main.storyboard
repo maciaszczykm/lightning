@@ -758,7 +758,7 @@
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="At1-Id-iY5">
                                 <rect key="frame" x="103" y="67" width="246" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Yv7-r0-s84"/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="10" doubleValue="10" tickMarkPosition="above" sliderType="linear" id="Yv7-r0-s84"/>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gP6-R1-GYC">
                                 <rect key="frame" x="18" y="20" width="256" height="17"/>
@@ -772,6 +772,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="brightnessSlider" destination="At1-Id-iY5" id="dlb-9Y-MeK"/>
                         <outlet property="displaySwitch" destination="H3n-PZ-2ar" id="jf0-uy-ZmA"/>
                         <outlet property="fpsLabel" destination="gP6-R1-GYC" id="cOS-jn-GeK"/>
                         <outlet property="portSwitch" destination="mcm-jO-B0l" id="zME-ef-rSr"/>
