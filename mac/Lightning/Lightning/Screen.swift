@@ -12,7 +12,7 @@ class Screen {
     
     let id : UInt32
     let resolution : CGSize
-    static let mainDisplayString = " (main display)"
+    static let mainDisplayString = " (main)"
     
     init(displayId: UInt32) {
         self.id = displayId
