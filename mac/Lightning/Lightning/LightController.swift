@@ -12,24 +12,27 @@ import OpenGL
 
 class LightController {
     
-    let serialPortController : SerialPortController
-    let lights : LightStrand
-    let screen : Screen
+    var serialPortController : SerialPortController
+    var lights : LightStrand
+    var screen : Screen
     let context : CIContext
     let filter : CIFilter
     
-    init(serialPort: String) {
-        self.screen = Screen(displayId: CGMainDisplayID())
+    init(serialPort: String, display: UInt32) {
+        self.screen = Screen(displayId: display)
         self.lights = LightStrand(screen: screen)
-        
-        // Generate magic word (11 bytes-long)
-        var magicWord: [UInt8] = Array("Lightning".utf8)
-        magicWord.append(UInt8(lights.lights.count - 1))
-        magicWord.append(magicWord[magicWord.count - 1] ^ 0x13)
-        
-        self.serialPortController = SerialPortController(path: serialPort, baudRate: 115200, magicWord: Data(magicWord))
         self.context = CIContext()
         self.filter = CIFilter(name: "CIAreaAverage")!
+        self.serialPortController = SerialPortController(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
+    }
+    
+    func setPort(serialPort: String) {
+        self.serialPortController = SerialPortController(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
+    }
+    
+    func setScreen(displayId: UInt32) {
+        self.screen = Screen(displayId: displayId)
+        self.lights = LightStrand(screen: screen)
     }
     
     func captureScreen() {
@@ -52,6 +55,13 @@ class LightController {
         var pixel = Color(red: 0, green: 0, blue: 0)
         context.render(image, toBitmap: &pixel, rowBytes: 4, bounds: image.extent , format: kCIFormatRGBA8, colorSpace: CGColorSpaceCreateDeviceRGB())
         return pixel
+    }
+    
+    static func getMagicWord() -> Data {
+        var magicWord: [UInt8] = Array("Lightning".utf8)
+        magicWord.append(25 - 1)
+        magicWord.append(magicWord[magicWord.count - 1] ^ 0x13)
+        return Data(magicWord)
     }
 
 }

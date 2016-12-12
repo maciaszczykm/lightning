@@ -12,6 +12,7 @@ class Screen {
     
     let id : UInt32
     let resolution : CGSize
+    static let mainDisplayString = " (main display)"
     
     init(displayId: UInt32) {
         self.id = displayId
@@ -27,7 +28,7 @@ class Screen {
         for display in Array(availableDisplays[0..<Int(realCount)]) {
             var stringValue = String(display)
             if (CGDisplayIsMain(display) == 1) {
-                stringValue += " (main display)"
+                stringValue += mainDisplayString
             }
             displays.append(stringValue)
         }

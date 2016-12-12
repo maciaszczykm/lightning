@@ -35,14 +35,14 @@ class ViewController: NSViewController {
         }
         
         // Init display switch
-        var initialDisplay : String
+        var initialDisplay = ""
         self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
         if (displaySwitch.numberOfItems > 0) {
             print("Setting " + self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem) + " display")
             self.displaySwitch.selectItem(at: 0)
             initialDisplay = self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem)
-            if (initialDisplay.contains(" (main display)")) {
-                // TODO
+            if (initialDisplay.hasSuffix(Screen.mainDisplayString)) {
+                initialDisplay = initialDisplay.components(separatedBy: " ").first!
             }
         } else {
             print("Disabling power button, because there are not any displays available")
@@ -50,8 +50,7 @@ class ViewController: NSViewController {
         }
         
         // Initialize class members
-        // TODO
-        self.controller = LightController(serialPort: initialPort)
+        self.controller = LightController(serialPort: initialPort, display: UInt32(initialDisplay)!)
     }
     
     override var representedObject: Any? {
@@ -61,12 +60,18 @@ class ViewController: NSViewController {
     }
     
     @IBAction func portSwtichPressed(_ sender: Any) {
-        print("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
-        self.controller = LightController(serialPort: self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem))
+        let chosenPort = self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem)
+        print("Setting \(chosenPort) serial port")
+        controller?.setPort(serialPort: chosenPort)
     }
     
     @IBAction func displaySwitchPressed(_ sender: Any) {
-        // TODO
+        var chosenDisplay = self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem)
+        print("Setting \(chosenDisplay) display")
+        if (chosenDisplay.hasSuffix(Screen.mainDisplayString)) {
+            chosenDisplay = chosenDisplay.components(separatedBy: " ").first!
+        }
+        controller?.setScreen(displayId: UInt32(chosenDisplay)!)
     }
     
     @IBAction func powerButtonPressed(_ sender: Any) {
