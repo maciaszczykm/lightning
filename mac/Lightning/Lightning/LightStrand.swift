@@ -12,8 +12,8 @@ class LightStrand {
     
     var lights = [Light]()
     
-    // Assumes usage of 25 lights in a chain (6 on the sides, 11 on the top and 2 in top corners)
     init(screen: Screen) {
+        NSLog("Initializing light strand assuming 25 ligts in it [6 ob both sides, 11 on top and 2 in corners]")
         let resolution = screen.resolution
         let singleArea = CGSize(width: resolution.width / 13, height: resolution.height / 7)
         

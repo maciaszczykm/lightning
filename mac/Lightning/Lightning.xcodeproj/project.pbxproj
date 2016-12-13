@@ -14,7 +14,7 @@
 		46399EA51DFC483C00078CE6 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EA41DFC483C00078CE6 /* Light.swift */; };
 		46399EA81DFC48EF00078CE6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EA71DFC48EF00078CE6 /* Color.swift */; };
 		46399EAA1DFC49D800078CE6 /* LightStrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EA91DFC49D800078CE6 /* LightStrand.swift */; };
-		46399EAD1DFC4CD000078CE6 /* SerialPortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAC1DFC4CD000078CE6 /* SerialPortController.swift */; };
+		46399EAD1DFC4CD000078CE6 /* SerialPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAC1DFC4CD000078CE6 /* SerialPort.swift */; };
 		46399EB01DFC4DD200078CE6 /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAF1DFC4DD200078CE6 /* LightController.swift */; };
 		46399EB21DFC4E2700078CE6 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EB11DFC4E2700078CE6 /* Screen.swift */; };
 		463E373A1DFD8C0D005EA90A /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E37371DFD8BF1005EA90A /* ORSSerial.framework */; };
@@ -47,7 +47,7 @@
 		46399EA41DFC483C00078CE6 /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		46399EA71DFC48EF00078CE6 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		46399EA91DFC49D800078CE6 /* LightStrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightStrand.swift; sourceTree = "<group>"; };
-		46399EAC1DFC4CD000078CE6 /* SerialPortController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPortController.swift; sourceTree = "<group>"; };
+		46399EAC1DFC4CD000078CE6 /* SerialPort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPort.swift; sourceTree = "<group>"; };
 		46399EAF1DFC4DD200078CE6 /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
 		46399EB11DFC4E2700078CE6 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -94,6 +94,7 @@
 		46399EA61DFC48C800078CE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
 				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
 				46399EA41DFC483C00078CE6 /* Light.swift */,
 				46399EA71DFC48EF00078CE6 /* Color.swift */,
@@ -108,7 +109,6 @@
 				46399E931DFC454600078CE6 /* AppDelegate.swift */,
 				46399E951DFC454600078CE6 /* ViewController.swift */,
 				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
-				46399EAC1DFC4CD000078CE6 /* SerialPortController.swift */,
 				46399E991DFC454600078CE6 /* Main.storyboard */,
 				46399E9C1DFC454600078CE6 /* Info.plist */,
 				46399E971DFC454600078CE6 /* Assets.xcassets */,
@@ -229,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46399EAD1DFC4CD000078CE6 /* SerialPortController.swift in Sources */,
+				46399EAD1DFC4CD000078CE6 /* SerialPort.swift in Sources */,
 				46399EA51DFC483C00078CE6 /* Light.swift in Sources */,
 				46399EAA1DFC49D800078CE6 /* LightStrand.swift in Sources */,
 				46399EB01DFC4DD200078CE6 /* LightController.swift in Sources */,

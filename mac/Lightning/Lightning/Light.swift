@@ -10,7 +10,7 @@ import Foundation
 
 class Light {
     
-    var area: CGRect
+    let area: CGRect
     var color: Color = Color(red: 0, green: 0, blue: 0)
     
     init(area: CGRect) {

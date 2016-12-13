@@ -12,7 +12,7 @@ import OpenGL
 
 class LightController {
     
-    var serialPortController : SerialPortController
+    var serialPortController : SerialPort
     var lights : LightStrand
     var screen : Screen
     let context : CIContext
@@ -23,14 +23,16 @@ class LightController {
         self.lights = LightStrand(screen: screen)
         self.context = CIContext()
         self.filter = CIFilter(name: "CIAreaAverage")!
-        self.serialPortController = SerialPortController(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
+        self.serialPortController = SerialPort(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
     }
     
     func setPort(serialPort: String) {
-        self.serialPortController = SerialPortController(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
+        NSLog("Setting \(serialPort) serial port")
+        self.serialPortController = SerialPort(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
     }
     
     func setScreen(displayId: UInt32) {
+        NSLog("Setting \(displayId) display")
         self.screen = Screen(displayId: displayId)
         self.lights = LightStrand(screen: screen)
     }

@@ -1,5 +1,5 @@
 //
-//  SerialPortController.swift
+//  SerialPort.swift
 //  Lightning
 //
 //  Created by Marcin Maciaszczyk on 10.12.2016.
@@ -9,10 +9,10 @@
 import Foundation
 import ORSSerial
 
-class SerialPortController {
+class SerialPort {
     
-    var serialPort : ORSSerialPort
-    var magicWord : Data
+    let serialPort : ORSSerialPort
+    let magicWord : Data
     
     init(path: String, baudRate: NSNumber) {
         self.serialPort = ORSSerialPort(path: path)!
@@ -43,11 +43,13 @@ class SerialPortController {
     }
     
     static func getAvailablePorts() -> [String] {
-        var availablePorts = [String]()
-        for availablePort in ORSSerialPortManager.shared().availablePorts {
-            availablePorts.append("/dev/cu." + availablePort.name)
+        NSLog("Getting list of available ports")
+        var ports = [String]()
+        for port in ORSSerialPortManager.shared().availablePorts {
+            ports.append("/dev/cu." + port.name)
         }
-        return availablePorts
+        NSLog("Available ports: \(ports)")
+        return ports
     }
     
 }

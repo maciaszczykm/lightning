@@ -683,11 +683,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Lightning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="367" height="170"/>
+                        <rect key="frame" x="0.0" y="0.0" width="367" height="179"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPV-DX-Fl7">
-                                <rect key="frame" x="18" y="100" width="71" height="17"/>
+                                <rect key="frame" x="18" y="109" width="71" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Serial port:" id="6fG-E1-sVU">
                                     <font key="font" metaFont="system"/>
@@ -696,7 +696,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3v-X7-swk">
-                                <rect key="frame" x="18" y="69" width="73" height="17"/>
+                                <rect key="frame" x="18" y="78" width="73" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Brightness:" id="73q-lJ-5Zs">
                                     <font key="font" metaFont="system"/>
@@ -704,22 +704,8 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1x-55-egV">
-                                <rect key="frame" x="278" y="15" width="71" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Bev-eB-OHl">
-                                    <font key="font" metaFont="system"/>
-                                    <segments>
-                                        <segment label="Off" width="32" selected="YES"/>
-                                        <segment label="On" width="32" tag="1"/>
-                                    </segments>
-                                </segmentedCell>
-                                <connections>
-                                    <action selector="powerButtonPressed:" target="XfG-lQ-9wD" id="MUe-l1-16k"/>
-                                </connections>
-                            </segmentedControl>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcm-jO-B0l">
-                                <rect key="frame" x="103" y="95" width="247" height="26"/>
+                                <rect key="frame" x="103" y="104" width="247" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="NgK-xu-F4b">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -731,7 +717,7 @@
                                 </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGD-6L-IMF">
-                                <rect key="frame" x="18" y="131" width="52" height="17"/>
+                                <rect key="frame" x="18" y="140" width="52" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Display:" id="xyD-Rr-Md8">
                                     <font key="font" metaFont="system"/>
@@ -740,7 +726,7 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3n-PZ-2ar">
-                                <rect key="frame" x="103" y="126" width="247" height="26"/>
+                                <rect key="frame" x="103" y="135" width="247" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="zKi-lI-2Vq">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -751,12 +737,8 @@
                                     <action selector="displaySwitchPressed:" target="XfG-lQ-9wD" id="rod-NX-kMd"/>
                                 </connections>
                             </popUpButton>
-                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="DX2-bi-dN3">
-                                <rect key="frame" x="0.0" y="44" width="367" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </box>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="At1-Id-iY5">
-                                <rect key="frame" x="103" y="67" width="246" height="19"/>
+                                <rect key="frame" x="103" y="76" width="246" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="10" doubleValue="10" tickMarkPosition="above" sliderType="linear" id="Yv7-r0-s84"/>
                             </slider>
@@ -769,6 +751,24 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Jgp-Uv-520">
+                                <rect key="frame" x="0.0" y="52" width="367" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1x-55-egV">
+                                <rect key="frame" x="278" y="14" width="71" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Bev-eB-OHl">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="Off" width="32" selected="YES"/>
+                                        <segment label="On" width="32" tag="1"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="powerButtonPressed:" target="XfG-lQ-9wD" id="MUe-l1-16k"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                     </view>
                     <connections>
@@ -781,7 +781,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.5" y="605"/>
+            <point key="canvasLocation" x="18.5" y="609.5"/>
         </scene>
     </scenes>
 </document>

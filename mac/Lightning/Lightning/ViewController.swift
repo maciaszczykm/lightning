@@ -25,13 +25,13 @@ class ViewController: NSViewController {
         
         // Initialize port switch
         var initialPort = ""
-        self.portSwitch.addItems(withTitles: SerialPortController.getAvailablePorts())
+        self.portSwitch.addItems(withTitles: SerialPort.getAvailablePorts())
         if (portSwitch.numberOfItems > 0) {
-            print("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
+            NSLog("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
             self.portSwitch.selectItem(at: 0)
             initialPort = self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem)
         } else {
-            print("Disabling power button, because there are not any serial ports available")
+            NSLog("Disabling power button, because there are not any serial ports available")
             self.powerButton.isEnabled = false
         }
         
@@ -39,14 +39,14 @@ class ViewController: NSViewController {
         var initialDisplay = ""
         self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
         if (displaySwitch.numberOfItems > 0) {
-            print("Setting " + self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem) + " display")
+            NSLog("Setting " + self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem) + " display")
             self.displaySwitch.selectItem(at: 0)
             initialDisplay = self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem)
             if (initialDisplay.hasSuffix(Screen.mainDisplayString)) {
                 initialDisplay = initialDisplay.components(separatedBy: " ").first!
             }
         } else {
-            print("Disabling power button, because there are not any displays available")
+            NSLog("Disabling power button, because there are not any displays available")
             self.powerButton.isEnabled = false
         }
         
@@ -62,13 +62,11 @@ class ViewController: NSViewController {
     
     @IBAction func portSwtichPressed(_ sender: Any) {
         let chosenPort = self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem)
-        print("Setting \(chosenPort) serial port")
         controller?.setPort(serialPort: chosenPort)
     }
     
     @IBAction func displaySwitchPressed(_ sender: Any) {
         var chosenDisplay = self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem)
-        print("Setting \(chosenDisplay) display")
         if (chosenDisplay.hasSuffix(Screen.mainDisplayString)) {
             chosenDisplay = chosenDisplay.components(separatedBy: " ").first!
         }
