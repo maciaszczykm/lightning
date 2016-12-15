@@ -17,6 +17,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var portSwitch: NSPopUpButton!
     @IBOutlet weak var displaySwitch: NSPopUpButton!
     @IBOutlet weak var brightnessSlider: NSSlider!
+    @IBOutlet weak var smothnessSlider: NSSlider!
     
     var controller : LightController? = nil
     
@@ -73,6 +74,14 @@ class ViewController: NSViewController {
         controller?.setScreen(displayId: UInt32(chosenDisplay)!)
     }
     
+    @IBAction func brightnessSliderMoved(_ sender: Any) {
+        NSLog("Setting \(self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue) brightness")
+    }
+    
+    @IBAction func smothnessSliderMoved(_ sender: Any) {
+        NSLog("Setting \((self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100) smothness")
+    }
+    
     @IBAction func powerButtonPressed(_ sender: Any) {
         self.disableControls()
         DispatchQueue.global(qos: .userInteractive).async {
@@ -80,7 +89,7 @@ class ViewController: NSViewController {
                 // Avoid memory leaks
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    self.controller?.captureScreen(brightness: UInt8(Int(self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue)))
+                    self.controller?.captureScreen(brightness: self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue, smothness: (self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100)
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)

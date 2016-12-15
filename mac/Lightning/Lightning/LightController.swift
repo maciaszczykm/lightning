@@ -8,7 +8,6 @@
 
 import Foundation
 import Cocoa
-import OpenGL
 
 class LightController {
     
@@ -37,7 +36,7 @@ class LightController {
         self.lights = LightStrand(screen: screen)
     }
     
-    func captureScreen(brightness: UInt8) {
+    func captureScreen(brightness: Double, smothness: Double) {
         let image = CGDisplayCreateImage(screen.id)
         var data = Data()
         for light in lights.lights {
@@ -45,18 +44,12 @@ class LightController {
             let inputImage = CIImage(cgImage:crop!)
             filter.setValue(inputImage, forKey: kCIInputImageKey)
             filter.setValue(CIVector(cgRect: inputImage.extent), forKey: kCIInputExtentKey)
-            light.color = extractColor(image: (filter.outputImage)!)
-            data.append(light.color.red / brightness)
-            data.append(light.color.green / brightness)
-            data.append(light.color.blue / brightness)
+            light.color.update(context: context, image: filter.outputImage!, brightness: brightness, smothness: smothness)
+            data.append(light.color.red)
+            data.append(light.color.green)
+            data.append(light.color.blue)
         }
         self.serialPortController.send(data: data)
-    }
-    
-    func extractColor(image: CIImage) -> Color {
-        var pixel = Color(red: 0, green: 0, blue: 0)
-        context.render(image, toBitmap: &pixel, rowBytes: 4, bounds: image.extent , format: kCIFormatRGBA8, colorSpace: CGColorSpaceCreateDeviceRGB())
-        return pixel
     }
     
     static func getMagicWord() -> Data {
