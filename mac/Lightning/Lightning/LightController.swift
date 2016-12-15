@@ -11,7 +11,7 @@ import Cocoa
 
 class LightController {
     
-    var serialPortController : SerialPort
+    var serialPort : SerialPort
     var lights : LightStrand
     var screen : Screen
     let context : CIContext
@@ -22,12 +22,12 @@ class LightController {
         self.lights = LightStrand(screen: screen)
         self.context = CIContext()
         self.filter = CIFilter(name: "CIAreaAverage")!
-        self.serialPortController = SerialPort(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
+        self.serialPort = SerialPort(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
     }
     
     func setPort(serialPort: String) {
         NSLog("Setting \(serialPort) serial port")
-        self.serialPortController = SerialPort(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
+        self.serialPort = SerialPort(path: serialPort, baudRate: 115200, magicWord: LightController.getMagicWord())
     }
     
     func setScreen(displayId: UInt32) {
@@ -49,7 +49,7 @@ class LightController {
             data.append(light.color.green)
             data.append(light.color.blue)
         }
-        self.serialPortController.send(data: data)
+        self.serialPort.send(data: data)
     }
     
     static func getMagicWord() -> Data {

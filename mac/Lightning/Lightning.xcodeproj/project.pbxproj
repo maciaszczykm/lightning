@@ -94,11 +94,11 @@
 		46399EA61DFC48C800078CE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
-				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
-				46399EA41DFC483C00078CE6 /* Light.swift */,
 				46399EA71DFC48EF00078CE6 /* Color.swift */,
+				46399EA41DFC483C00078CE6 /* Light.swift */,
+				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
 				46399EB11DFC4E2700078CE6 /* Screen.swift */,
+				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -106,13 +106,9 @@
 		46399EAE1DFC4CDE00078CE6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				46399E931DFC454600078CE6 /* AppDelegate.swift */,
-				46399E951DFC454600078CE6 /* ViewController.swift */,
-				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
-				46399E991DFC454600078CE6 /* Main.storyboard */,
-				46399E9C1DFC454600078CE6 /* Info.plist */,
-				46399E971DFC454600078CE6 /* Assets.xcassets */,
+				46BD27351E032DAC00392738 /* Controller */,
 				46399EA61DFC48C800078CE6 /* Model */,
+				46BD27381E032DC400392738 /* View */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -132,6 +128,26 @@
 				463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46BD27351E032DAC00392738 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		46BD27381E032DC400392738 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46399E971DFC454600078CE6 /* Assets.xcassets */,
+				46399E931DFC454600078CE6 /* AppDelegate.swift */,
+				46399E9C1DFC454600078CE6 /* Info.plist */,
+				46399E991DFC454600078CE6 /* Main.storyboard */,
+				46399E951DFC454600078CE6 /* ViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
