@@ -664,12 +664,14 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Lightning" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Lightning" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="500" height="320"/>
+                        <rect key="contentRect" x="573" y="322" width="500" height="320"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="500" height="320"/>
+                        <value key="maxSize" type="size" width="500" height="320"/>
+                        <contentBorderThickness minY="32"/>
                     </window>
                     <connections>
                         <segue destination="RrO-sX-t2G" kind="relationship" relationship="window.shadowedContentViewController" id="jp6-fF-K2Y"/>
@@ -682,12 +684,13 @@
         <!--Tab View Controller-->
         <scene sceneID="VhG-LA-Vaz">
             <objects>
-                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="2" id="RrO-sX-t2G" sceneMemberID="viewController">
+                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="2" tabStyle="bottom" id="RrO-sX-t2G" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Screen capturing" id="73T-a4-sWk"/>
                         <tabViewItem label="Backlighting" id="9vi-Y6-VTZ"/>
                         <tabViewItem label="Settings" identifier="" id="f50-z2-aaL"/>
                     </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="yax-2X-BVF">
                         <rect key="frame" x="0.0" y="133" width="450" height="306"/>
                         <autoresizingMask key="autoresizingMask"/>
