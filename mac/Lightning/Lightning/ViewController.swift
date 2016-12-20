@@ -13,66 +13,8 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var fpsLabel: NSTextField!
     @IBOutlet weak var powerButton: NSSegmentedControl!
-    @IBOutlet weak var serialPortList: NSComboBox!
-    @IBOutlet weak var portSwitch: NSPopUpButton!
-    @IBOutlet weak var displaySwitch: NSPopUpButton!
     @IBOutlet weak var brightnessSlider: NSSlider!
     @IBOutlet weak var smothnessSlider: NSSlider!
-    
-    var controller : LightController? = nil
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Initialize port switch
-        var initialPort = ""
-        self.portSwitch.addItems(withTitles: SerialPort.getAvailablePorts())
-        if (portSwitch.numberOfItems > 0) {
-            NSLog("Setting " + self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem) + " serial port")
-            self.portSwitch.selectItem(at: 0)
-            initialPort = self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem)
-        } else {
-            NSLog("Disabling power button, because there are not any serial ports available")
-            self.powerButton.isEnabled = false
-        }
-        
-        // Initialize display switch
-        var initialDisplay = ""
-        self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
-        if (displaySwitch.numberOfItems > 0) {
-            NSLog("Setting " + self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem) + " display")
-            self.displaySwitch.selectItem(at: 0)
-            initialDisplay = self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem)
-            if (initialDisplay.hasSuffix(Screen.mainDisplayString)) {
-                initialDisplay = initialDisplay.components(separatedBy: " ").first!
-            }
-        } else {
-            NSLog("Disabling power button, because there are not any displays available")
-            self.powerButton.isEnabled = false
-        }
-        
-        // Initialize class members
-        self.controller = LightController(serialPort: initialPort, display: UInt32(initialDisplay)!)
-    }
-    
-    override var representedObject: Any? {
-        didSet {
-            // Placeholder for view initialization
-        }
-    }
-    
-    @IBAction func portSwtichPressed(_ sender: Any) {
-        let chosenPort = self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem)
-        controller?.setPort(serialPort: chosenPort)
-    }
-    
-    @IBAction func displaySwitchPressed(_ sender: Any) {
-        var chosenDisplay = self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem)
-        if (chosenDisplay.hasSuffix(Screen.mainDisplayString)) {
-            chosenDisplay = chosenDisplay.components(separatedBy: " ").first!
-        }
-        controller?.setScreen(displayId: UInt32(chosenDisplay)!)
-    }
     
     @IBAction func brightnessSliderMoved(_ sender: Any) {
         NSLog("Setting \(self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue) brightness")
@@ -83,13 +25,15 @@ class ViewController: NSViewController {
     }
     
     @IBAction func powerButtonPressed(_ sender: Any) {
-        self.disableControls()
+        //self.disableControls()
+        let controller = LightController(serialPort: AppConfig.sharedInstance.port, display: AppConfig.sharedInstance.display)
+        
         DispatchQueue.global(qos: .userInteractive).async {
             while (self.powerButton.selectedSegment == 1) {
-                // Avoid memory leaks
+                // Avoid memory leaks.
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    self.controller?.captureScreen(brightness: self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue, smothness: (self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100)
+                    controller.captureScreen(brightness: self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue, smothness: (self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100)
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)
@@ -98,20 +42,9 @@ class ViewController: NSViewController {
                 }
             }
             DispatchQueue.main.sync {
-                self.enableControls()
+                //self.enableControls()
                 self.fpsLabel.stringValue = "0 frames per second"
             }
         }
     }
-    
-    private func disableControls() {
-        self.portSwitch.isEnabled = false
-        self.displaySwitch.isEnabled = false
-    }
-    
-    private func enableControls() {
-        self.portSwitch.isEnabled = true
-        self.displaySwitch.isEnabled = true
-    }
-    
 }

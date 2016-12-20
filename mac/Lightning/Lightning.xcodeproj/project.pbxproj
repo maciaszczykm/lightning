@@ -18,6 +18,8 @@
 		46399EB01DFC4DD200078CE6 /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAF1DFC4DD200078CE6 /* LightController.swift */; };
 		46399EB21DFC4E2700078CE6 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EB11DFC4E2700078CE6 /* Screen.swift */; };
 		463E373A1DFD8C0D005EA90A /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E37371DFD8BF1005EA90A /* ORSSerial.framework */; };
+		46ABE9D61E09DE59005BF613 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D51E09DE59005BF613 /* SettingsView.swift */; };
+		46ABE9D81E09E0D5005BF613 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D71E09E0D5005BF613 /* AppConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		46399EAF1DFC4DD200078CE6 /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
 		46399EB11DFC4E2700078CE6 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		46ABE9D51E09DE59005BF613 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		46ABE9D71E09E0D5005BF613 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,24 +95,20 @@
 			path = Lightning;
 			sourceTree = "<group>";
 		};
-		46399EA61DFC48C800078CE6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				46399EA71DFC48EF00078CE6 /* Color.swift */,
-				46399EA41DFC483C00078CE6 /* Light.swift */,
-				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
-				46399EB11DFC4E2700078CE6 /* Screen.swift */,
-				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		46399EAE1DFC4CDE00078CE6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				46BD27351E032DAC00392738 /* Controller */,
-				46399EA61DFC48C800078CE6 /* Model */,
-				46BD27381E032DC400392738 /* View */,
+				46399E9C1DFC454600078CE6 /* Info.plist */,
+				46399E991DFC454600078CE6 /* Main.storyboard */,
+				46399E971DFC454600078CE6 /* Assets.xcassets */,
+				46ABE9D71E09E0D5005BF613 /* AppConfig.swift */,
+				46399E931DFC454600078CE6 /* AppDelegate.swift */,
+				46399EA71DFC48EF00078CE6 /* Color.swift */,
+				46399EA41DFC483C00078CE6 /* Light.swift */,
+				46399EB11DFC4E2700078CE6 /* Screen.swift */,
+				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
+				46ABE9D51E09DE59005BF613 /* SettingsView.swift */,
+				46BD27351E032DAC00392738 /* Old */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -130,24 +130,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		46BD27351E032DAC00392738 /* Controller */ = {
+		46BD27351E032DAC00392738 /* Old */ = {
 			isa = PBXGroup;
 			children = (
 				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		46BD27381E032DC400392738 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				46399E971DFC454600078CE6 /* Assets.xcassets */,
-				46399E931DFC454600078CE6 /* AppDelegate.swift */,
-				46399E9C1DFC454600078CE6 /* Info.plist */,
-				46399E991DFC454600078CE6 /* Main.storyboard */,
+				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
 				46399E951DFC454600078CE6 /* ViewController.swift */,
 			);
-			name = View;
+			name = Old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +173,7 @@
 					46399E8F1DFC454600078CE6 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = S776A92NS2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -246,8 +237,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46399EAD1DFC4CD000078CE6 /* SerialPort.swift in Sources */,
+				46ABE9D81E09E0D5005BF613 /* AppConfig.swift in Sources */,
 				46399EA51DFC483C00078CE6 /* Light.swift in Sources */,
 				46399EAA1DFC49D800078CE6 /* LightStrand.swift in Sources */,
+				46ABE9D61E09DE59005BF613 /* SettingsView.swift in Sources */,
 				46399EB01DFC4DD200078CE6 /* LightController.swift in Sources */,
 				46399EA81DFC48EF00078CE6 /* Color.swift in Sources */,
 				46399E961DFC454600078CE6 /* ViewController.swift in Sources */,
@@ -366,12 +359,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S776A92NS2;
 				INFOPLIST_FILE = Lightning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = maciaszczykm.Lightning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -380,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S776A92NS2;
 				INFOPLIST_FILE = Lightning/Info.plist;

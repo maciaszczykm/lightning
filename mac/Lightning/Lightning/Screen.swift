@@ -10,24 +10,25 @@ import Foundation
 
 class Screen {
     
-    let id : UInt32
-    let resolution : CGSize
+    let id: UInt32
+    let resolution: CGSize
+    
     static let mainDisplayString = " (main)"
     
-    init(displayId: UInt32) {
-        NSLog("Initializing \(displayId) display")
-        self.id = displayId
-        self.resolution = Screen.getDisplayResolution(displayId: displayId)
+    init(id: UInt32) {
+        NSLog("Initializing \(id) display")
+        self.id = id
+        self.resolution = Screen.getDisplayResolution(id: id)
     }
     
     static func getAvailableDisplays() -> [String] {
         NSLog("Getting list of available displays")
         let maxCount: UInt32 = 16
         var realCount: UInt32 = 0
-        var availableDisplays = [CGDirectDisplayID](repeating: 0, count: Int(maxCount))
-        CGGetOnlineDisplayList(maxCount, &availableDisplays, &realCount)
+        var displaysArray = [CGDirectDisplayID](repeating: 0, count: Int(maxCount))
+        CGGetOnlineDisplayList(maxCount, &displaysArray, &realCount)
         var displays = [String]()
-        for display in Array(availableDisplays[0..<Int(realCount)]) {
+        for display in Array(displaysArray[0..<Int(realCount)]) {
             var stringValue = String(display)
             if (CGDisplayIsMain(display) == 1) {
                 stringValue += mainDisplayString
@@ -38,11 +39,11 @@ class Screen {
         return displays
     }
     
-    static func getDisplayResolution(displayId: CGDirectDisplayID) -> CGSize {
-        NSLog("Getting resolution of \(displayId) display")
-        let displayedImage = CGDisplayCreateImage(displayId)
+    static func getDisplayResolution(id: CGDirectDisplayID) -> CGSize {
+        NSLog("Getting resolution of \(id) display")
+        let displayedImage = CGDisplayCreateImage(id)
         let displaySize = CGSize(width: (displayedImage?.width)!, height: (displayedImage?.height)!)
-        NSLog("Resolution of \(displayId) display: \(displaySize.width)x\(displaySize.height)")
+        NSLog("Resolution of \(id) display: \(displaySize.width)x\(displaySize.height)")
         return displaySize
     }
     

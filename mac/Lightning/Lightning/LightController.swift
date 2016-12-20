@@ -11,14 +11,14 @@ import Cocoa
 
 class LightController {
     
-    var serialPort : SerialPort
-    var lights : LightStrand
-    var screen : Screen
-    let context : CIContext
-    let filter : CIFilter
+    var serialPort: SerialPort
+    var lights: LightStrand
+    var screen: Screen
+    let context: CIContext
+    let filter: CIFilter
     
     init(serialPort: String, display: UInt32) {
-        self.screen = Screen(displayId: display)
+        self.screen = Screen(id: display)
         self.lights = LightStrand(screen: screen)
         self.context = CIContext()
         self.filter = CIFilter(name: "CIAreaAverage")!
@@ -32,7 +32,7 @@ class LightController {
     
     func setScreen(displayId: UInt32) {
         NSLog("Setting \(displayId) display")
-        self.screen = Screen(displayId: displayId)
+        self.screen = Screen(id: displayId)
         self.lights = LightStrand(screen: screen)
     }
     

@@ -11,8 +11,8 @@ import ORSSerial
 
 class SerialPort {
     
-    let serialPort : ORSSerialPort
-    let magicWord : Data
+    let serialPort: ORSSerialPort
+    let magicWord: Data
     
     init(path: String, baudRate: NSNumber) {
         self.serialPort = ORSSerialPort(path: path)!
