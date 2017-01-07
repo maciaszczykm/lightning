@@ -25,9 +25,8 @@ class CaptureView: NSViewController {
     }
     
     @IBAction func powerButtonPressed(_ sender: Any) {
-        let capturer = ScreenCapturer()
-        
         DispatchQueue.global(qos: .userInteractive).async {
+            let capturer = ScreenCapturer()
             while (self.powerButton.selectedSegment == 1) {
                 // Avoids memory leaks.
                 autoreleasepool() {

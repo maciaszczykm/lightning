@@ -873,10 +873,10 @@
             </objects>
             <point key="canvasLocation" x="803" y="1290"/>
         </scene>
-        <!--View Controller-->
+        <!--Backlight View-->
         <scene sceneID="MvN-a5-5uZ">
             <objects>
-                <viewController id="nrx-lf-XuC" sceneMemberID="viewController">
+                <viewController id="nrx-lf-XuC" customClass="BacklightView" customModule="Lightning" sceneMemberID="viewController">
                     <view key="view" id="Fqq-gW-7Az">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="271"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -950,7 +950,7 @@
                                     </segments>
                                 </segmentedCell>
                                 <connections>
-                                    <action selector="powerButtonPressed:" target="XfG-lQ-9wD" id="mKc-VR-QgZ"/>
+                                    <action selector="powerButtonPressed:" target="nrx-lf-XuC" id="TsH-OH-K4P"/>
                                 </connections>
                             </segmentedControl>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbA-dd-Ebo">
@@ -966,7 +966,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="5" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="3ix-ht-ohr"/>
                                 <connections>
-                                    <action selector="smothnessSliderMoved:" target="XfG-lQ-9wD" id="rvo-lG-PLt"/>
+                                    <action selector="speedSliderMoved:" target="nrx-lf-XuC" id="CAy-9i-990"/>
                                 </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uK3-aH-gyY">
@@ -1000,6 +1000,16 @@
                             </colorWell>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="animiationSwitch" destination="tS7-6a-WZB" id="VX1-C5-wIq"/>
+                        <outlet property="firstColorPicker" destination="Ek7-k1-4ON" id="q0L-qs-JUH"/>
+                        <outlet property="fourthColorPicker" destination="kgL-13-GQQ" id="bkr-Qf-nHx"/>
+                        <outlet property="fpsLabel" destination="RpK-3h-U5s" id="2M6-0v-Oik"/>
+                        <outlet property="powerButton" destination="pWT-vd-LEn" id="bwa-DH-FdK"/>
+                        <outlet property="secondColorPicker" destination="rOq-dN-eqs" id="Z5z-KE-RaQ"/>
+                        <outlet property="speedSlider" destination="DUt-kv-tPi" id="abN-op-ZbC"/>
+                        <outlet property="thirdColorPicker" destination="chE-9m-QaC" id="SIr-1p-Ovb"/>
+                    </connections>
                 </viewController>
                 <customObject id="zei-7t-6xx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

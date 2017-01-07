@@ -21,6 +21,7 @@
 		46ABE9D61E09DE59005BF613 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D51E09DE59005BF613 /* SettingsView.swift */; };
 		46ABE9D81E09E0D5005BF613 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D71E09E0D5005BF613 /* AppConfig.swift */; };
 		46FD2A5D1E212F8B0026190D /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD2A5C1E212F8B0026190D /* LightController.swift */; };
+		46FD2A5F1E214EBD0026190D /* BacklightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD2A5E1E214EBD0026190D /* BacklightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		46ABE9D51E09DE59005BF613 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		46ABE9D71E09E0D5005BF613 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		46FD2A5C1E212F8B0026190D /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
+		46FD2A5E1E214EBD0026190D /* BacklightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BacklightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				46399E971DFC454600078CE6 /* Assets.xcassets */,
 				46ABE9D71E09E0D5005BF613 /* AppConfig.swift */,
 				46399E931DFC454600078CE6 /* AppDelegate.swift */,
+				46FD2A5E1E214EBD0026190D /* BacklightView.swift */,
 				46399E951DFC454600078CE6 /* CaptureView.swift */,
 				46399EA71DFC48EF00078CE6 /* Color.swift */,
 				46399EA41DFC483C00078CE6 /* Light.swift */,
@@ -233,6 +236,7 @@
 			files = (
 				46399EAD1DFC4CD000078CE6 /* SerialPort.swift in Sources */,
 				46ABE9D81E09E0D5005BF613 /* AppConfig.swift in Sources */,
+				46FD2A5F1E214EBD0026190D /* BacklightView.swift in Sources */,
 				46399EA51DFC483C00078CE6 /* Light.swift in Sources */,
 				46399EAA1DFC49D800078CE6 /* LightStrand.swift in Sources */,
 				46ABE9D61E09DE59005BF613 /* SettingsView.swift in Sources */,
