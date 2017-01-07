@@ -105,6 +105,7 @@
 				46399E931DFC454600078CE6 /* AppDelegate.swift */,
 				46399EA71DFC48EF00078CE6 /* Color.swift */,
 				46399EA41DFC483C00078CE6 /* Light.swift */,
+				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
 				46399EB11DFC4E2700078CE6 /* Screen.swift */,
 				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
 				46ABE9D51E09DE59005BF613 /* SettingsView.swift */,
@@ -134,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
-				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
 				46399E951DFC454600078CE6 /* ViewController.swift */,
 			);
 			name = Old;
