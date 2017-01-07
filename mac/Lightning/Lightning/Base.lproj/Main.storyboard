@@ -1005,10 +1005,10 @@
             </objects>
             <point key="canvasLocation" x="266" y="1289.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Capture View-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Lightning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="CaptureView" customModule="Lightning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="271"/>
                         <autoresizingMask key="autoresizingMask"/>

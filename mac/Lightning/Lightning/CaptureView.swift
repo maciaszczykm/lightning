@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CaptureView.swift
 //  Lightning
 //
 //  Created by Marcin Maciaszczyk on 10.12.2016.
@@ -9,7 +9,7 @@
 import Cocoa
 import ORSSerial
 
-class ViewController: NSViewController {
+class CaptureView: NSViewController {
     
     @IBOutlet weak var fpsLabel: NSTextField!
     @IBOutlet weak var powerButton: NSSegmentedControl!

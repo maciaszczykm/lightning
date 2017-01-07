@@ -10,6 +10,7 @@ import Foundation
 import Cocoa
 
 class LightController {
+    
     var serialPort: SerialPort
     var lights: LightStrand
     var screen: Screen

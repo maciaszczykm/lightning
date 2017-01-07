@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46399E941DFC454600078CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399E931DFC454600078CE6 /* AppDelegate.swift */; };
-		46399E961DFC454600078CE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399E951DFC454600078CE6 /* ViewController.swift */; };
+		46399E961DFC454600078CE6 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399E951DFC454600078CE6 /* CaptureView.swift */; };
 		46399E981DFC454600078CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46399E971DFC454600078CE6 /* Assets.xcassets */; };
 		46399E9B1DFC454600078CE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46399E991DFC454600078CE6 /* Main.storyboard */; };
 		46399EA51DFC483C00078CE6 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EA41DFC483C00078CE6 /* Light.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		46399E901DFC454600078CE6 /* Lightning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lightning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46399E931DFC454600078CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46399E951DFC454600078CE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46399E951DFC454600078CE6 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		46399E971DFC454600078CE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46399E9A1DFC454600078CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46399E9C1DFC454600078CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +105,7 @@
 				46399E971DFC454600078CE6 /* Assets.xcassets */,
 				46ABE9D71E09E0D5005BF613 /* AppConfig.swift */,
 				46399E931DFC454600078CE6 /* AppDelegate.swift */,
+				46399E951DFC454600078CE6 /* CaptureView.swift */,
 				46399EA71DFC48EF00078CE6 /* Color.swift */,
 				46399EA41DFC483C00078CE6 /* Light.swift */,
 				46FD2A5C1E212F8B0026190D /* LightController.swift */,
@@ -113,7 +114,6 @@
 				46399EAF1DFC4DD200078CE6 /* ScreenCapturer.swift */,
 				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
 				46ABE9D51E09DE59005BF613 /* SettingsView.swift */,
-				46BD27351E032DAC00392738 /* Old */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -133,14 +133,6 @@
 				463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		46BD27351E032DAC00392738 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				46399E951DFC454600078CE6 /* ViewController.swift */,
-			);
-			name = Old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +239,7 @@
 				46399EB01DFC4DD200078CE6 /* ScreenCapturer.swift in Sources */,
 				46FD2A5D1E212F8B0026190D /* LightController.swift in Sources */,
 				46399EA81DFC48EF00078CE6 /* Color.swift in Sources */,
-				46399E961DFC454600078CE6 /* ViewController.swift in Sources */,
+				46399E961DFC454600078CE6 /* CaptureView.swift in Sources */,
 				46399E941DFC454600078CE6 /* AppDelegate.swift in Sources */,
 				46399EB21DFC4E2700078CE6 /* Screen.swift in Sources */,
 			);

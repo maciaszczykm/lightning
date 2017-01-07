@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class ScreenCapturer : LightController {
+class ScreenCapturer: LightController {
     
     func capture(brightness: Double, smothness: Double) {
         let image = CGDisplayCreateImage(screen.id)
