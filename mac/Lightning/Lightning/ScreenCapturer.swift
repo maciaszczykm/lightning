@@ -26,5 +26,5 @@ class ScreenCapturer: LightController {
         }
         self.serialPort.send(data: data)
     }
-
+    
 }

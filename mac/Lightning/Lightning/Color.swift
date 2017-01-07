@@ -16,7 +16,7 @@ struct Color {
     var green: UInt8 = 0
     var blue: UInt8 = 0
     var alpha: UInt8 = 0
-
+    
     // Updates color with first pixel's value from specified image.
     // Brightness makes color darker (flipped logic).
     // Smothness makes color transitions longer (flipped logic).
@@ -31,5 +31,5 @@ struct Color {
         self.green = UInt8(((priorGreen * (1 - smothness)) + (Double(self.green) * smothness)) / brightness)
         self.blue = UInt8(((priorBlue * (1 - smothness)) + (Double(self.blue) * smothness)) / brightness)
     }
-
+    
 }

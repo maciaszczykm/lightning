@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 class SettingsView: NSViewController {
-
+    
     @IBOutlet weak var displaySwitch: NSPopUpButton!
     @IBOutlet weak var portSwitch: NSPopUpButton!
     @IBOutlet weak var topLightsField: NSTextField!
