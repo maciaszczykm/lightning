@@ -42,9 +42,10 @@ class SettingsView: NSViewController {
         }
         
         // Initialize lights fields.
-        self.leftLightsField.stringValue = "7"
-        self.rightLightsField.stringValue = "7"
-        self.topLightsField.stringValue = "11"
+        self.topLightsField.stringValue = "\(AppConfig.sharedInstance.topLightsCount)"
+        self.leftLightsField.stringValue = "\(AppConfig.sharedInstance.sideLightsCount)"
+        self.rightLightsField.stringValue = "\(AppConfig.sharedInstance.sideLightsCount)"
+        self.rightLightsField.isEnabled = false
         self.updateLightsLabel()
         
     }
@@ -69,6 +70,17 @@ class SettingsView: NSViewController {
     
     @IBAction func portSwitched(_ sender: Any) {
         AppConfig.sharedInstance.setPort(self.portSwitch.itemTitle(at: self.portSwitch.indexOfSelectedItem))
+    }
+    
+    @IBAction func topLightsFieldChanged(_ sender: Any) {
+        AppConfig.sharedInstance.setTopLightsCount(self.topLightsField.stringValue)
+        self.updateLightsLabel()
+    }
+    
+    @IBAction func leftLightsFieldChanged(_ sender: Any) {
+        self.rightLightsField.stringValue = self.leftLightsField.stringValue
+        AppConfig.sharedInstance.setSideLightsCount(self.leftLightsField.stringValue)
+        self.updateLightsLabel()
     }
     
 }

@@ -14,6 +14,7 @@ class AppConfig {
     var port: String
     var display: UInt32
     var isSetupValid: Bool
+    var topLightsCount, sideLightsCount: Int
     
     static let sharedInstance = AppConfig()
     
@@ -21,6 +22,8 @@ class AppConfig {
         self.port = ""
         self.display = 0
         self.isSetupValid = true
+        self.topLightsCount = 11
+        self.sideLightsCount = 7
     }
     
     func setPort(_ port: String) {
@@ -35,6 +38,16 @@ class AppConfig {
         } else {
             self.display = UInt32(display)!
         }
+    }
+    
+    func setTopLightsCount(_ count: String) {
+        NSLog("Setting \(count) lights on top")
+        self.topLightsCount = Int(count)!
+    }
+    
+    func setSideLightsCount(_ count: String) {
+        NSLog("Setting \(count) lights on both sides")
+        self.sideLightsCount = Int(count)!
     }
     
 }

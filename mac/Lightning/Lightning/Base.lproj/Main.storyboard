@@ -745,6 +745,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="topLightsFieldChanged:" target="cSG-hM-S8J" id="5sy-jd-7On"/>
+                                </connections>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvw-YH-bdQ">
                                 <rect key="frame" x="84" y="225" width="354" height="26"/>
@@ -784,6 +787,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="leftLightsFieldChanged:" target="cSG-hM-S8J" id="5On-9g-wkQ"/>
+                                </connections>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="x2S-ow-dRN">
                                 <rect key="frame" x="109" y="19" width="304" height="5"/>
