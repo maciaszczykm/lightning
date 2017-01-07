@@ -12,29 +12,24 @@ import ORSSerial
 class SerialPort {
     
     let serialPort: ORSSerialPort
-    let magicWord: Data
+    let useMagicWord: Bool
     
-    init(path: String, baudRate: NSNumber) {
+    private static let magicWord = SerialPort.getMagicWord()
+    
+    init(path: String, baudRate: NSNumber, useMagicWord: Bool) {
         self.serialPort = ORSSerialPort(path: path)!
         self.serialPort.baudRate = baudRate
         self.serialPort.open()
-        self.magicWord = Data()
-    }
-    
-    init(path: String, baudRate: NSNumber, magicWord: Data) {
-        self.serialPort = ORSSerialPort(path: path)!
-        self.serialPort.baudRate = baudRate
-        self.serialPort.open()
-        self.magicWord = magicWord
+        self.useMagicWord = useMagicWord
     }
     
     func send(data: Data) {
-        if (self.magicWord.isEmpty) {
-            self.serialPort.send(data)
-        } else {
-            var mutatedData = Data(magicWord)
+        if (self.useMagicWord) {
+            var mutatedData = Data(SerialPort.magicWord)
             mutatedData.append(data)
             self.serialPort.send(mutatedData)
+        } else {
+            self.serialPort.send(data)
         }
     }
     
@@ -52,4 +47,13 @@ class SerialPort {
         return ports
     }
     
+    static func getMagicWord() -> Data {
+        var magicWord: [UInt8] = Array("Lightning".utf8)
+        magicWord.append(25 - 1)
+        magicWord.append(magicWord[magicWord.count - 1] ^ 0x13)
+        return Data(magicWord)
+    }
+    
 }
+
+

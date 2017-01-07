@@ -15,11 +15,12 @@
 		46399EA81DFC48EF00078CE6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EA71DFC48EF00078CE6 /* Color.swift */; };
 		46399EAA1DFC49D800078CE6 /* LightStrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EA91DFC49D800078CE6 /* LightStrand.swift */; };
 		46399EAD1DFC4CD000078CE6 /* SerialPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAC1DFC4CD000078CE6 /* SerialPort.swift */; };
-		46399EB01DFC4DD200078CE6 /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAF1DFC4DD200078CE6 /* LightController.swift */; };
+		46399EB01DFC4DD200078CE6 /* ScreenCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAF1DFC4DD200078CE6 /* ScreenCapturer.swift */; };
 		46399EB21DFC4E2700078CE6 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EB11DFC4E2700078CE6 /* Screen.swift */; };
 		463E373A1DFD8C0D005EA90A /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E37371DFD8BF1005EA90A /* ORSSerial.framework */; };
 		46ABE9D61E09DE59005BF613 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D51E09DE59005BF613 /* SettingsView.swift */; };
 		46ABE9D81E09E0D5005BF613 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D71E09E0D5005BF613 /* AppConfig.swift */; };
+		46FD2A5D1E212F8B0026190D /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD2A5C1E212F8B0026190D /* LightController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +51,12 @@
 		46399EA71DFC48EF00078CE6 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		46399EA91DFC49D800078CE6 /* LightStrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightStrand.swift; sourceTree = "<group>"; };
 		46399EAC1DFC4CD000078CE6 /* SerialPort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPort.swift; sourceTree = "<group>"; };
-		46399EAF1DFC4DD200078CE6 /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
+		46399EAF1DFC4DD200078CE6 /* ScreenCapturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCapturer.swift; sourceTree = "<group>"; };
 		46399EB11DFC4E2700078CE6 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		46ABE9D51E09DE59005BF613 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		46ABE9D71E09E0D5005BF613 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		46FD2A5C1E212F8B0026190D /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,10 @@
 				46399E931DFC454600078CE6 /* AppDelegate.swift */,
 				46399EA71DFC48EF00078CE6 /* Color.swift */,
 				46399EA41DFC483C00078CE6 /* Light.swift */,
+				46FD2A5C1E212F8B0026190D /* LightController.swift */,
 				46399EA91DFC49D800078CE6 /* LightStrand.swift */,
 				46399EB11DFC4E2700078CE6 /* Screen.swift */,
+				46399EAF1DFC4DD200078CE6 /* ScreenCapturer.swift */,
 				46399EAC1DFC4CD000078CE6 /* SerialPort.swift */,
 				46ABE9D51E09DE59005BF613 /* SettingsView.swift */,
 				46BD27351E032DAC00392738 /* Old */,
@@ -134,7 +138,6 @@
 		46BD27351E032DAC00392738 /* Old */ = {
 			isa = PBXGroup;
 			children = (
-				46399EAF1DFC4DD200078CE6 /* LightController.swift */,
 				46399E951DFC454600078CE6 /* ViewController.swift */,
 			);
 			name = Old;
@@ -241,7 +244,8 @@
 				46399EA51DFC483C00078CE6 /* Light.swift in Sources */,
 				46399EAA1DFC49D800078CE6 /* LightStrand.swift in Sources */,
 				46ABE9D61E09DE59005BF613 /* SettingsView.swift in Sources */,
-				46399EB01DFC4DD200078CE6 /* LightController.swift in Sources */,
+				46399EB01DFC4DD200078CE6 /* ScreenCapturer.swift in Sources */,
+				46FD2A5D1E212F8B0026190D /* LightController.swift in Sources */,
 				46399EA81DFC48EF00078CE6 /* Color.swift in Sources */,
 				46399E961DFC454600078CE6 /* ViewController.swift in Sources */,
 				46399E941DFC454600078CE6 /* AppDelegate.swift in Sources */,

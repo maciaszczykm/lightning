@@ -25,15 +25,14 @@ class ViewController: NSViewController {
     }
     
     @IBAction func powerButtonPressed(_ sender: Any) {
-        //self.disableControls()
-        let controller = LightController(serialPort: AppConfig.sharedInstance.port, display: AppConfig.sharedInstance.display)
+        let capturer = ScreenCapturer()
         
         DispatchQueue.global(qos: .userInteractive).async {
             while (self.powerButton.selectedSegment == 1) {
-                // Avoid memory leaks.
+                // Avoids memory leaks.
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    controller.captureScreen(brightness: self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue, smothness: (self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100)
+                    capturer.capture(brightness: self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue, smothness: (self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100)
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)
@@ -42,7 +41,6 @@ class ViewController: NSViewController {
                 }
             }
             DispatchQueue.main.sync {
-                //self.enableControls()
                 self.fpsLabel.stringValue = "0 frames per second"
             }
         }
