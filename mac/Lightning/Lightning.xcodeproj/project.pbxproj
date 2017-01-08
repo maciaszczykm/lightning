@@ -73,11 +73,11 @@
 		468A70141E22517000FE1A50 /* Snake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 		468A70161E225A9E00FE1A50 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		468A70181E2269F800FE1A50 /* Disco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disco.swift; sourceTree = "<group>"; };
-		468A701E1E22862C00FE1A50 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = /Users/maciaszczykm/Workspace/lightning/mac/Lightning/build/Debug/Tests.xctest; sourceTree = "<absolute>"; };
 		468A70221E22862D00FE1A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		468A702A1E22880F00FE1A50 /* LightStrandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightStrandTests.swift; sourceTree = "<group>"; };
 		468A702C1E228B9000FE1A50 /* ScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
 		468A702E1E228E1500FE1A50 /* ColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
+		468B0C4D1E22AA1800FFC884 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = /Users/maciaszczykm/Workspace/lightning/mac/Lightning/build/Debug/Tests.xctest; sourceTree = "<absolute>"; };
 		46ABE9D51E09DE59005BF613 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		46ABE9D71E09E0D5005BF613 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		46FD2A5C1E212F8B0026190D /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 			);
 			name = Tests;
 			productName = LightningTests;
-			productReference = 468A701E1E22862C00FE1A50 /* Tests.xctest */;
+			productReference = 468B0C4D1E22AA1800FFC884 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -557,6 +557,7 @@
 				468A70271E22862D00FE1A50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
