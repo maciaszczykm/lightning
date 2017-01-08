@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4605A9F41E22BDF50065B497 /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 463E37371DFD8BF1005EA90A /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		46399E941DFC454600078CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399E931DFC454600078CE6 /* AppDelegate.swift */; };
 		46399E961DFC454600078CE6 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399E951DFC454600078CE6 /* CaptureView.swift */; };
 		46399E981DFC454600078CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46399E971DFC454600078CE6 /* Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		46399EAD1DFC4CD000078CE6 /* SerialPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAC1DFC4CD000078CE6 /* SerialPort.swift */; };
 		46399EB01DFC4DD200078CE6 /* ScreenCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EAF1DFC4DD200078CE6 /* ScreenCapturer.swift */; };
 		46399EB21DFC4E2700078CE6 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399EB11DFC4E2700078CE6 /* Screen.swift */; };
-		463E373A1DFD8C0D005EA90A /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E37371DFD8BF1005EA90A /* ORSSerial.framework */; };
 		468A70131E22514200FE1A50 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A70121E22514200FE1A50 /* Animation.swift */; };
 		468A70151E22517000FE1A50 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A70141E22517000FE1A50 /* Snake.swift */; };
 		468A70171E225A9E00FE1A50 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A70161E225A9E00FE1A50 /* Animations.swift */; };
@@ -32,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4605A9F51E22BDF50065B497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCA89111A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
 		463E37361DFD8BF1005EA90A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */;
@@ -54,6 +61,20 @@
 			remoteInfo = Lightning;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4605A9F71E22BDF50065B497 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4605A9F41E22BDF50065B497 /* ORSSerial.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4605A9EF1E22B8D20065B497 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = /Users/maciaszczykm/Workspace/lightning/mac/Lightning/build/Debug/Tests.xctest; sourceTree = "<absolute>"; };
@@ -89,7 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463E373A1DFD8C0D005EA90A /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,10 +223,12 @@
 				46399E8C1DFC454600078CE6 /* Sources */,
 				46399E8D1DFC454600078CE6 /* Frameworks */,
 				46399E8E1DFC454600078CE6 /* Resources */,
+				4605A9F71E22BDF50065B497 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4605A9F61E22BDF50065B497 /* PBXTargetDependency */,
 			);
 			name = Lightning;
 			productName = Lightning;
@@ -354,6 +376,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4605A9F61E22BDF50065B497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ORSSerial;
+			targetProxy = 4605A9F51E22BDF50065B497 /* PBXContainerItemProxy */;
+		};
 		468A70241E22862D00FE1A50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 46399E8F1DFC454600078CE6 /* Lightning */;
