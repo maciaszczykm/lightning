@@ -24,7 +24,7 @@ class BacklightView: NSViewController {
         
         // Initialize animiation switch.
         self.animiationSwitch.addItems(withTitles: Animations.getAnimationNames())
-        if (self.animiationSwitch.numberOfItems < 1) {
+        if self.animiationSwitch.numberOfItems < 1 {
             self.powerButton.isEnabled = false
         }
     }
@@ -38,7 +38,7 @@ class BacklightView: NSViewController {
         DispatchQueue.global(qos: .userInteractive).async {
             let animation = Animations.animations[self.animiationSwitch.itemTitle(at: self.animiationSwitch.indexOfSelectedItem)]!
             animation.setup(colors: self.getSelectedColors())
-            while (self.powerButton.selectedSegment == 1) {
+            while self.powerButton.selectedSegment == 1 {
                 // Avoids memory leaks.
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()

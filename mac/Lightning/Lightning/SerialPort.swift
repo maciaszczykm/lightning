@@ -34,7 +34,7 @@ class SerialPort {
     }
     
     func send(data: Data) {
-        if (self.useMagicWord) {
+        if self.useMagicWord {
             var mutatedData = Data(SerialPort.magicWord)
             mutatedData.append(data)
             self.serialPort.send(mutatedData)

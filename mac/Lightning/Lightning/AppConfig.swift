@@ -33,7 +33,7 @@ class AppConfig {
     
     func setDisplay(_ display: String) {
         NSLog("Setting \(display) display")
-        if (display.hasSuffix(Screen.mainDisplayString)) {
+        if display.hasSuffix(Screen.mainDisplayString) {
             self.display = UInt32(display.components(separatedBy: " ").first!)!
         } else {
             self.display = UInt32(display)!

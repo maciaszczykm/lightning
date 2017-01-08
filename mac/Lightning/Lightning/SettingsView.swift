@@ -24,7 +24,7 @@ class SettingsView: NSViewController {
         
         // Initialize port switch.
         self.portSwitch.addItems(withTitles: SerialPort.getAvailablePorts())
-        if (self.portSwitch.numberOfItems > 0) {
+        if self.portSwitch.numberOfItems > 0 {
             AppConfig.sharedInstance.setPort(self.portSwitch.itemTitle(at: 0))
         } else {
             AppConfig.sharedInstance.isSetupValid = false
@@ -33,7 +33,7 @@ class SettingsView: NSViewController {
         
         // Initialize display switch.
         self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
-        if (self.displaySwitch.numberOfItems > 0) {
+        if self.displaySwitch.numberOfItems > 0 {
             AppConfig.sharedInstance.setDisplay(self.displaySwitch.itemTitle(at: 0))
             self.updateResolutionLabel()
         } else {

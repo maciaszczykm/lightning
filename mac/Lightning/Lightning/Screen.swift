@@ -30,7 +30,7 @@ class Screen {
         var displays = [String]()
         for display in Array(displaysArray[0..<Int(realCount)]) {
             var stringValue = String(display)
-            if (CGDisplayIsMain(display) == 1) {
+            if CGDisplayIsMain(display) == 1 {
                 stringValue += mainDisplayString
             }
             displays.append(stringValue)
