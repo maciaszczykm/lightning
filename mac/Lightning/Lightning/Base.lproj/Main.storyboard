@@ -893,16 +893,10 @@
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-6a-WZB">
                                 <rect key="frame" x="100" y="227" width="338" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="6gl-wA-wyd" id="UdH-AO-1Nu">
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="UdH-AO-1Nu">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="olb-7D-qtj">
-                                        <items>
-                                            <menuItem title="Item 1" state="on" id="6gl-wA-wyd"/>
-                                            <menuItem title="Item 2" id="Idm-s8-B5w"/>
-                                            <menuItem title="Item 3" id="wtq-Ec-ZlM"/>
-                                        </items>
-                                    </menu>
+                                    <menu key="menu" id="olb-7D-qtj"/>
                                 </popUpButtonCell>
                             </popUpButton>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKU-Rw-vZ8">
@@ -964,7 +958,7 @@
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUt-kv-tPi">
                                 <rect key="frame" x="100" y="201" width="337" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" state="on" alignment="left" minValue="5" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="3ix-ht-ohr"/>
+                                <sliderCell key="cell" alignment="left" minValue="10000" maxValue="850000" doubleValue="700000" tickMarkPosition="above" sliderType="linear" id="3ix-ht-ohr"/>
                                 <connections>
                                     <action selector="speedSliderMoved:" target="nrx-lf-XuC" id="CAy-9i-990"/>
                                 </connections>

@@ -31,7 +31,7 @@ class CaptureView: NSViewController {
                 // Avoids memory leaks.
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    capturer.capture(brightness: self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue, smothness: (self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100)
+                    capturer.run(brightness: self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue, smothness: (self.smothnessSlider.maxValue - self.smothnessSlider.doubleValue + self.smothnessSlider.minValue) / 100)
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)

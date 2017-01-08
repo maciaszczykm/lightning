@@ -11,7 +11,7 @@ import Cocoa
 
 class ScreenCapturer: LightController {
     
-    func capture(brightness: Double, smothness: Double) {
+    func run(brightness: Double, smothness: Double) {
         let image = CGDisplayCreateImage(screen.id)
         var data = Data()
         for light in lights.lights {
