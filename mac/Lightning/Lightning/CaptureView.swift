@@ -11,10 +11,33 @@ import ORSSerial
 
 class CaptureView: NSViewController {
     
-    @IBOutlet weak var fpsLabel: NSTextField!
-    @IBOutlet weak var powerButton: NSSegmentedControl!
+    @IBOutlet weak var displaySwitch: NSPopUpButton!
     @IBOutlet weak var brightnessSlider: NSSlider!
     @IBOutlet weak var smothnessSlider: NSSlider!
+    @IBOutlet weak var fpsLabel: NSTextField!
+    @IBOutlet weak var powerButton: NSSegmentedControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Initialize display switch.
+        self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
+        if self.displaySwitch.numberOfItems > 0 {
+            AppConfig.sharedInstance.setDisplay(self.displaySwitch.itemTitle(at: 0))
+//            self.updateResolutionLabel()
+//            let resolution = Screen.getDisplayResolution(id: AppConfig.sharedInstance.display)
+//            self.resolutionLabel.stringValue = "\(Int(resolution.width)) × \(Int(resolution.height))"
+        } else {
+            AppConfig.sharedInstance.isSetupValid = false
+            self.displaySwitch.isEnabled = false
+        }
+
+    }
+    
+    @IBAction func displaySwitched(_ sender: Any) {
+        AppConfig.sharedInstance.setDisplay(self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem))
+        //self.updateResolutionLabel()
+    }
     
     @IBAction func brightnessSliderMoved(_ sender: Any) {
         NSLog("Setting \(self.brightnessSlider.maxValue - self.brightnessSlider.doubleValue + self.brightnessSlider.minValue) brightness")

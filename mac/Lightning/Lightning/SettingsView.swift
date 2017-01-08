@@ -11,13 +11,11 @@ import Cocoa
 
 class SettingsView: NSViewController {
     
-    @IBOutlet weak var displaySwitch: NSPopUpButton!
     @IBOutlet weak var portSwitch: NSPopUpButton!
     @IBOutlet weak var topLightsField: NSTextField!
     @IBOutlet weak var leftLightsField: NSTextField!
     @IBOutlet weak var rightLightsField: NSTextField!
     @IBOutlet weak var lightsLabel: NSTextField!
-    @IBOutlet weak var resolutionLabel: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +27,6 @@ class SettingsView: NSViewController {
         } else {
             AppConfig.sharedInstance.isSetupValid = false
             self.portSwitch.isEnabled = false
-        }
-        
-        // Initialize display switch.
-        self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
-        if self.displaySwitch.numberOfItems > 0 {
-            AppConfig.sharedInstance.setDisplay(self.displaySwitch.itemTitle(at: 0))
-            self.updateResolutionLabel()
-        } else {
-            AppConfig.sharedInstance.isSetupValid = false
-            self.displaySwitch.isEnabled = false
         }
         
         // Initialize lights fields.
@@ -56,16 +44,6 @@ class SettingsView: NSViewController {
         lightsCount += Int(self.rightLightsField.stringValue)!
         lightsCount += Int(self.topLightsField.stringValue)!
         self.lightsLabel.stringValue = "\(lightsCount) lights"
-    }
-    
-    func updateResolutionLabel() {
-        let resolution = Screen.getDisplayResolution(id: AppConfig.sharedInstance.display)
-        self.resolutionLabel.stringValue = "\(Int(resolution.width)) × \(Int(resolution.height))"
-    }
-    
-    @IBAction func displaySwitched(_ sender: Any) {
-        AppConfig.sharedInstance.setDisplay(self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem))
-        self.updateResolutionLabel()
     }
     
     @IBAction func portSwitched(_ sender: Any) {
