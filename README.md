@@ -13,3 +13,8 @@ Just clone or fork repository into your workspace. Then you should be able to im
     <img src="resource/backlight.png">
     <img src="resource/settings.png">
 </p>
+
+## Results
+<p align="center">
+    <img src="resource/results.png">
+</p>
