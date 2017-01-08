@@ -25,7 +25,6 @@ class BacklightView: NSViewController {
         // Initialize animiation switch.
         self.animiationSwitch.addItems(withTitles: Animations.getAnimationNames())
         if (self.animiationSwitch.numberOfItems < 1) {
-            self.switchControls(toState: false)
             self.powerButton.isEnabled = false
         }
     }
@@ -35,15 +34,23 @@ class BacklightView: NSViewController {
     }
     
     @IBAction func powerButtonPressed(_ sender: Any) {
-        self.switchControls(toState: false)
+        self.animiationSwitch.isEnabled = false
         DispatchQueue.global(qos: .userInteractive).async {
+            
+            var colors = [Color]()
+            colors.append(Color.init(color: self.firstColorPicker.color))
+            colors.append(Color.init(color: self.secondColorPicker.color))
+            colors.append(Color.init(color: self.thirdColorPicker.color))
+            colors.append(Color.init(color: self.fourthColorPicker.color))
+
+            
             let animation = Animations.animations[self.animiationSwitch.itemTitle(at: self.animiationSwitch.indexOfSelectedItem)]!
-            animation.setup()
+            animation.setup(colors: colors)
             while (self.powerButton.selectedSegment == 1) {
                 // Avoids memory leaks.
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    animation.run(sleepTime: UInt32(self.speedSlider.maxValue - self.speedSlider.doubleValue + self.speedSlider.minValue))
+                    animation.run(colors: colors, sleepTime: UInt32(self.speedSlider.maxValue - self.speedSlider.doubleValue + self.speedSlider.minValue))
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)
@@ -53,17 +60,9 @@ class BacklightView: NSViewController {
             }
             DispatchQueue.main.sync {
                 self.fpsLabel.stringValue = "0 frames per second"
-                self.switchControls(toState: true)
+                self.animiationSwitch.isEnabled = true
             }
         }
-    }
-    
-    func switchControls(toState: Bool) {
-        self.animiationSwitch.isEnabled = toState
-        self.firstColorPicker.isEnabled = toState
-        self.secondColorPicker.isEnabled = toState
-        self.thirdColorPicker.isEnabled = toState
-        self.fourthColorPicker.isEnabled = toState
     }
     
 }

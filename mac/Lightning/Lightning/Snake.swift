@@ -12,18 +12,17 @@ class Snake: LightController, Animation {
     
     private let snakeLength = 5
     
-    func setup() {
+    func setup(colors: [Color]) {
         for index in 0...self.lights.lights.count - 1 {
             if index < snakeLength {
-                self.lights.lights[index].color.red = 255
+                self.lights.lights[index].color = colors[0]
             } else {
-                self.lights.lights[index].color.green = 255
-                self.lights.lights[index].color.blue = 255
+                self.lights.lights[index].color = colors[1]
             }
         }
     }
     
-    func run(sleepTime: UInt32) {
+    func run(colors: [Color], sleepTime: UInt32) {
         var lastColor = lights.lights[lights.lights.count - 1].color
         for light in lights.lights {
             swap(&lastColor, &light.color)
