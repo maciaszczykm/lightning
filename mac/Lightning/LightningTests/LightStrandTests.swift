@@ -24,7 +24,7 @@ class LightStrandTests: XCTestCase {
         super.tearDown()
     }
     
-    func testTotalLightsCount () {
+    func testTotalLightsCount() {
         let screen = Screen(id: 0, resolution: CGSize(width: 1280, height: 1024))
         let lights = LightStrand(screen: screen)
         XCTAssert(lights.lights.count == 25)

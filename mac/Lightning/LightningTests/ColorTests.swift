@@ -20,14 +20,14 @@ class ColorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testColorInitialization () {
+    func testColorInitialization() {
         let color = Color(color: NSColor.red)
         XCTAssert(color.red == 255)
         XCTAssert(color.green == 0)
         XCTAssert(color.blue == 0)
     }
     
-    func testColorLoading () {
+    func testColorLoad() {
         var color = Color()
         color.load(color: NSColor.green)
         XCTAssert(color.red == 0)
