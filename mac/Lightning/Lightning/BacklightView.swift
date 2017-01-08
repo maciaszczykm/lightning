@@ -63,7 +63,6 @@ class BacklightView: NSViewController {
         colors.append(Color.init(color: self.secondColorPicker.color))
         colors.append(Color.init(color: self.thirdColorPicker.color))
         colors.append(Color.init(color: self.fourthColorPicker.color))
-        print(colors)
         return colors
     }
     
