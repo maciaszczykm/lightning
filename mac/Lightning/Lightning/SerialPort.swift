@@ -23,6 +23,16 @@ class SerialPort {
         self.useMagicWord = useMagicWord
     }
     
+    func send(lights: LightStrand) {
+        var data = Data()
+        for light in lights.lights {
+            data.append(light.color.red)
+            data.append(light.color.green)
+            data.append(light.color.blue)
+        }
+        self.send(data: data)
+    }
+    
     func send(data: Data) {
         if (self.useMagicWord) {
             var mutatedData = Data(SerialPort.magicWord)

@@ -10,9 +10,11 @@ import Foundation
 
 class Snake: LightController, Animation {
     
+    private let snakeLength = 5
+    
     func setup() {
         for index in 0...self.lights.lights.count - 1 {
-            if index < 5 {
+            if index < snakeLength {
                 self.lights.lights[index].color.red = 255
             } else {
                 self.lights.lights[index].color.green = 255
@@ -26,14 +28,7 @@ class Snake: LightController, Animation {
         for light in lights.lights {
             swap(&lastColor, &light.color)
         }
-        
-        var data = Data()
-        for light in lights.lights {
-            data.append(light.color.red)
-            data.append(light.color.green)
-            data.append(light.color.blue)
-        }
-        self.serialPort.send(data: data)
+        self.serialPort.send(lights: lights)
         usleep(sleepTime)
     }
     
