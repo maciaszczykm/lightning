@@ -1,3 +1,4 @@
 language: objective-c
 osx_image: xcode8.2
 xcode_project: mac/Lightning/Lightning.xcodeproj
+xcode_scheme: Lightning
