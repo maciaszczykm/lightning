@@ -7,6 +7,11 @@ Lightning-quick backlighting system.
 ## Development
 Just clone or fork repository into your workspace. Then you should be able to import macOS project into Xcode, Arduino module can be edited using [Arduino IDE](https://www.arduino.cc/en/main/software).
 
+## Wiring
+<p align="center">
+    <img src="arduino/wiring.png">
+</p>
+
 ## Interface
 <p align="center">
     <img src="resource/capture.png">
@@ -16,5 +21,5 @@ Just clone or fork repository into your workspace. Then you should be able to im
 
 ## Results
 <p align="center">
-    <img src="resource/results.png">
+    <img src="resource/results.jpg">
 </p>
