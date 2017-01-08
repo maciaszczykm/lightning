@@ -1,4 +1,7 @@
 # ![Lightning](resource/logo.png)
-Ambilight-like lighting system
+Lightning-quick backlighting system
 
-![Screenshot](resource/screenshot.png)
+![Capture view](resource/capture.png)
+![Backlight view](resource/backlight.png)
+![Settings view](resource/settings.png)
+
