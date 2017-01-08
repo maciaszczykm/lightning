@@ -1,5 +1,9 @@
 # <img height=180 src="resource/logo.png"/>
-Lightning-quick backlighting system.
+Lightning-quick backlighting system producing results like below:
+
+<p align="center">
+    <img src="resource/results.gif"/>
+</p>
 
 ## Usage
 Use following scheme to setup hardware:
@@ -19,9 +23,4 @@ To setup software:
     <img src="resource/capture.png"/>
     <img src="resource/backlight.png"/>
     <img src="resource/settings.png"/>
-</p>
-
-## Results
-<p align="center">
-    <img src="resource/results.gif"/>
 </p>
