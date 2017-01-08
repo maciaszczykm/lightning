@@ -1103,6 +1103,7 @@
                         <outlet property="displaySwitch" destination="fvw-YH-bdQ" id="ThZ-EX-n4t"/>
                         <outlet property="fpsLabel" destination="gP6-R1-GYC" id="cOS-jn-GeK"/>
                         <outlet property="powerButton" destination="m1x-55-egV" id="Ovv-Lm-j6W"/>
+                        <outlet property="resolutionLabel" destination="5PI-Gj-oBk" id="Fop-zh-bMk"/>
                         <outlet property="smothnessSlider" destination="8OB-Px-U8V" id="UiM-7Y-bZC"/>
                     </connections>
                 </viewController>

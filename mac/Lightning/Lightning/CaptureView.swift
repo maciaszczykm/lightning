@@ -14,6 +14,7 @@ class CaptureView: NSViewController {
     @IBOutlet weak var displaySwitch: NSPopUpButton!
     @IBOutlet weak var brightnessSlider: NSSlider!
     @IBOutlet weak var smothnessSlider: NSSlider!
+    @IBOutlet weak var resolutionLabel: NSTextField!
     @IBOutlet weak var fpsLabel: NSTextField!
     @IBOutlet weak var powerButton: NSSegmentedControl!
     
@@ -24,19 +25,21 @@ class CaptureView: NSViewController {
         self.displaySwitch.addItems(withTitles: Screen.getAvailableDisplays())
         if self.displaySwitch.numberOfItems > 0 {
             AppConfig.sharedInstance.setDisplay(self.displaySwitch.itemTitle(at: 0))
-//            self.updateResolutionLabel()
-//            let resolution = Screen.getDisplayResolution(id: AppConfig.sharedInstance.display)
-//            self.resolutionLabel.stringValue = "\(Int(resolution.width)) × \(Int(resolution.height))"
+            self.updateResolutionLabel()
         } else {
             AppConfig.sharedInstance.isSetupValid = false
             self.displaySwitch.isEnabled = false
         }
-
+    }
+    
+    func updateResolutionLabel() {
+        let resolution = Screen.getDisplayResolution(id: AppConfig.sharedInstance.display)
+        self.resolutionLabel.stringValue = "\(Int(resolution.width)) × \(Int(resolution.height))"
     }
     
     @IBAction func displaySwitched(_ sender: Any) {
         AppConfig.sharedInstance.setDisplay(self.displaySwitch.itemTitle(at: self.displaySwitch.indexOfSelectedItem))
-        //self.updateResolutionLabel()
+        self.updateResolutionLabel()
     }
     
     @IBAction func brightnessSliderMoved(_ sender: Any) {
