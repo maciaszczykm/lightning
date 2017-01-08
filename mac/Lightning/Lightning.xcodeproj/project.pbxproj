@@ -22,6 +22,7 @@
 		468A70151E22517000FE1A50 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A70141E22517000FE1A50 /* Snake.swift */; };
 		468A70171E225A9E00FE1A50 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A70161E225A9E00FE1A50 /* Animations.swift */; };
 		468A70191E2269F800FE1A50 /* Disco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A70181E2269F800FE1A50 /* Disco.swift */; };
+		468A702B1E22880F00FE1A50 /* LightStrandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A702A1E22880F00FE1A50 /* LightStrandTests.swift */; };
 		46ABE9D61E09DE59005BF613 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D51E09DE59005BF613 /* SettingsView.swift */; };
 		46ABE9D81E09E0D5005BF613 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ABE9D71E09E0D5005BF613 /* AppConfig.swift */; };
 		46FD2A5D1E212F8B0026190D /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD2A5C1E212F8B0026190D /* LightController.swift */; };
@@ -43,6 +44,13 @@
 			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
 			remoteInfo = "ORSSerialPort Tests";
 		};
+		468A70231E22862D00FE1A50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46399E881DFC454600078CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46399E8F1DFC454600078CE6;
+			remoteInfo = Lightning;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +71,9 @@
 		468A70141E22517000FE1A50 /* Snake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 		468A70161E225A9E00FE1A50 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		468A70181E2269F800FE1A50 /* Disco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disco.swift; sourceTree = "<group>"; };
+		468A701E1E22862C00FE1A50 /* LightningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		468A70221E22862D00FE1A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		468A702A1E22880F00FE1A50 /* LightStrandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightStrandTests.swift; sourceTree = "<group>"; };
 		46ABE9D51E09DE59005BF613 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		46ABE9D71E09E0D5005BF613 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		46FD2A5C1E212F8B0026190D /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
@@ -78,6 +89,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		468A701B1E22862C00FE1A50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				46399E921DFC454600078CE6 /* Lightning */,
+				468A701F1E22862D00FE1A50 /* LightningTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				46399E901DFC454600078CE6 /* Lightning.app */,
+				468A701E1E22862C00FE1A50 /* LightningTests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -158,6 +178,15 @@
 			name = Animations;
 			sourceTree = "<group>";
 		};
+		468A701F1E22862D00FE1A50 /* LightningTests */ = {
+			isa = PBXGroup;
+			children = (
+				468A702A1E22880F00FE1A50 /* LightStrandTests.swift */,
+				468A70221E22862D00FE1A50 /* Info.plist */,
+			);
+			path = LightningTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,13 +207,31 @@
 			productReference = 46399E901DFC454600078CE6 /* Lightning.app */;
 			productType = "com.apple.product-type.application";
 		};
+		468A701D1E22862C00FE1A50 /* LightningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468A70251E22862D00FE1A50 /* Build configuration list for PBXNativeTarget "LightningTests" */;
+			buildPhases = (
+				468A701A1E22862C00FE1A50 /* Sources */,
+				468A701B1E22862C00FE1A50 /* Frameworks */,
+				468A701C1E22862C00FE1A50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				468A70241E22862D00FE1A50 /* PBXTargetDependency */,
+			);
+			name = LightningTests;
+			productName = LightningTests;
+			productReference = 468A701E1E22862C00FE1A50 /* LightningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		46399E881DFC454600078CE6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Marcin Maciaszczyk";
 				TargetAttributes = {
@@ -193,6 +240,13 @@
 						DevelopmentTeam = S776A92NS2;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+					};
+					468A701D1E22862C00FE1A50 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = S776A92NS2;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 46399E8F1DFC454600078CE6;
 					};
 				};
 			};
@@ -216,6 +270,7 @@
 			projectRoot = "";
 			targets = (
 				46399E8F1DFC454600078CE6 /* Lightning */,
+				468A701D1E22862C00FE1A50 /* LightningTests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +302,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		468A701C1E22862C00FE1A50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,7 +335,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		468A701A1E22862C00FE1A50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468A702B1E22880F00FE1A50 /* LightStrandTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		468A70241E22862D00FE1A50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46399E8F1DFC454600078CE6 /* Lightning */;
+			targetProxy = 468A70231E22862D00FE1A50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		46399E991DFC454600078CE6 /* Main.storyboard */ = {
@@ -410,6 +488,39 @@
 			};
 			name = Release;
 		};
+		468A70261E22862D00FE1A50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S776A92NS2;
+				INFOPLIST_FILE = LightningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maciaszczykm.LightningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lightning.app/Contents/MacOS/Lightning";
+			};
+			name = Debug;
+		};
+		468A70271E22862D00FE1A50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S776A92NS2;
+				INFOPLIST_FILE = LightningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maciaszczykm.LightningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lightning.app/Contents/MacOS/Lightning";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,6 +541,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		468A70251E22862D00FE1A50 /* Build configuration list for PBXNativeTarget "LightningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				468A70261E22862D00FE1A50 /* Debug */,
+				468A70271E22862D00FE1A50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -21,6 +21,12 @@ class Screen {
         self.resolution = Screen.getDisplayResolution(id: id)
     }
     
+    init(id: UInt32, resolution: CGSize) {
+        NSLog("Initializing \(id) display with \(resolution.width) × \(resolution.height) resolution")
+        self.id = id
+        self.resolution = resolution
+    }
+    
     static func getAvailableDisplays() -> [String] {
         NSLog("Getting list of available displays")
         let maxCount: UInt32 = 16
