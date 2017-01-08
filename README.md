@@ -1,13 +1,18 @@
 # <img height=180 src="resource/logo.png"/>
 Lightning-quick backlighting system.
 
-## Development
-Just clone or fork repository into your workspace. Then you should be able to import macOS project into Xcode, Arduino module can be edited using [Arduino IDE](https://www.arduino.cc/en/main/software).
+## Usage
+Use following scheme to setup hardware:
 
-## Wiring
 <p align="center">
     <img src="arduino/wiring.png"/>
 </p>
+
+To setup software:
+
+1. Clone this repository.
+2. Use [Arduino IDE](https://www.arduino.cc/en/main/software) to deploy `arduino/lighning/lightning.ino` to Arduino.
+3. Build macOS application from Xcode or [download latest release](https://github.com/maciaszczykm/lightning/releases).
 
 ## Interface
 <p align="center">
