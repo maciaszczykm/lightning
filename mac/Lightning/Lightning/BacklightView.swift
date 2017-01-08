@@ -36,21 +36,13 @@ class BacklightView: NSViewController {
     @IBAction func powerButtonPressed(_ sender: Any) {
         self.animiationSwitch.isEnabled = false
         DispatchQueue.global(qos: .userInteractive).async {
-            
-            var colors = [Color]()
-            colors.append(Color.init(color: self.firstColorPicker.color))
-            colors.append(Color.init(color: self.secondColorPicker.color))
-            colors.append(Color.init(color: self.thirdColorPicker.color))
-            colors.append(Color.init(color: self.fourthColorPicker.color))
-
-            
             let animation = Animations.animations[self.animiationSwitch.itemTitle(at: self.animiationSwitch.indexOfSelectedItem)]!
-            animation.setup(colors: colors)
+            animation.setup(colors: self.getSelectedColors())
             while (self.powerButton.selectedSegment == 1) {
                 // Avoids memory leaks.
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    animation.run(colors: colors, sleepTime: UInt32(self.speedSlider.maxValue - self.speedSlider.doubleValue + self.speedSlider.minValue))
+                    animation.run(colors: self.getSelectedColors(), sleepTime: UInt32(self.speedSlider.maxValue - self.speedSlider.doubleValue + self.speedSlider.minValue))
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)
@@ -63,6 +55,16 @@ class BacklightView: NSViewController {
                 self.animiationSwitch.isEnabled = true
             }
         }
+    }
+    
+    func getSelectedColors() -> [Color] {
+        var colors = [Color]()
+        colors.append(Color.init(color: self.firstColorPicker.color))
+        colors.append(Color.init(color: self.secondColorPicker.color))
+        colors.append(Color.init(color: self.thirdColorPicker.color))
+        colors.append(Color.init(color: self.fourthColorPicker.color))
+        print(colors)
+        return colors
     }
     
 }
