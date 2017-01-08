@@ -18,5 +18,5 @@ Just clone or fork repository into your workspace. Then you should be able to im
 
 ## Results
 <p align="center">
-    <img src="resource/results.jpg"/>
+    <img src="resource/results.gif"/>
 </p>
