@@ -72,7 +72,8 @@ identifierstyle=\color{blue},
 stringstyle=\color{orange},
 }
 
-\includepdf[pages={1}]{resources/title_page.pdf}
+% TODO strona tytułowa i tytuł!
+% \includepdf[pages={1}]{resources/title_page.pdf}
 
 \tableofcontents
 
@@ -80,41 +81,23 @@ stringstyle=\color{orange},
 
 \section{Uzasadnienie wyboru tematu}
 
-Wraz z rozwojem informatyki proces tworzenia oprogramowania wymaga od informatyków co raz większej wiedzy w poszczególnych dziedzinach takich jak na przykład bazy 
-danych czy sieci komputerowe. Ciężko jest być specjalistą w każdej z nich, dlatego też podczas tworzenia oprogramowania programiści co raz częściej sięgają po różnego 
-rodzaju narzędzia programistyczne, które mają za zadanie uła\-twić im pracę, wykonując jej część za nich.
+Wraz z upływem czasu postęp technologiczny ma wpływ na życia co raz szerszej rzeszy ludzi na całym świecie. Niezliczone ilości urządzeń zagościły na stałe w domach i mało kto wyobraża sobie bez nich swoje życie. Zaczynając od artykułów gospodarstwa domowego, a kończąc na elektronice użytkowej do której zaliczają się komputery, telewizory czy też smartfony\footnote{~Przenośne urządzenia łączące w sobie zalety telefonów komórkowych oraz przenośnych komputerów (z ang. smartphone).}. Wszystkie te urządzenia mają na celu ułatwianie życia swoim użytkownikom.
 
-Przykładem wspomnianych narzędzi programistycznych są aplikacje szkieletowe wykorzystywane jako fundamenty dla tworzonych aplikacji czy też biblioteki programistyczne
-udostępniające zestawy funkcji związanych z wybranym zagadnieniem. Nie zawsze mamy możliwość skorzystania z nich, jednak jeśli taka istnieje warto to rozważyć,
-ponieważ podejmując decyzję o ich wykorzystaniu powstaje możliwość zaoszczędzenia sporej ilości czasu, który można poświęcić na rozwią\-zanie postawionego przed nami
-głównego problemu biznesowego, a także uniknąć wielu błędów związanych z nieznajomością danej dziedziny.
+W parze z licznymi zaletami urządzeń elektronicznych idą jednak pewne wady. Jedną z istotniejszych jest wpływ czasu spędzanego przed różnego rodzaju wyświetlaczami na zdrowie. Badania przeprowadzone na bazie danych Nielsen Audience Measurement pokazują, że przeciętny Polak spędza dziennie średnio 4,5 godziny przed ekranem telewizora\footnote{~Badania zostały przeprowadzone z uwzględnienem osób powyżej 4 roku życia w okresie od stycznia do czerwca 2015 roku \cite{czasprzedtv}.}. Nie oznacza to jednak, że przez cały ten czas ogląda on telewizję. Oglądanie filmów z dysku komputera, za pomocą serwisów VOD\footnote{~Wideo na życzenie (z ang. video on demand).} czy granie na konsoli także są wliczone w ten czas. Gdyby jednak dodać do tego czas spędzony przed ekranem smartfona czy też komputera wynik byłby zapewne dwukrotnie większy.
 
-Autor tej pracy wraz z kolegą z roku studiów -- Sebastianem Florkiem, w ramach pisania pracy dyplomowej zdecydował się na współpracę przy tworzeniu wspólnej aplikacji
-szkieletowej, której zadaniem będzie realizowanie mapowania obiektowo-relacyjnego w języku C++. Wybór języka programowania autorzy tłumaczą dobrą jego 
-znajomością nabytą w trakcie trwania studów. Główny przedmiot pracy, czyli mapowanie obiektowo-relacyjne to obecnie zagadnienie co raz bardziej powszechne, 
-szczególnie w językach programowania takich jak PHP czy Java. Programiści C++ nie mają już tak dużego wyboru wśród dostępnych narzędzi służących do mapowania 
-obiektowo-relacyjnego, co także miało znaczenie podczas wyboru zagadnienia które niniejsza praca ma podejmować.
+% TODO wsparcie co najmniej dwoma żródłami i cos o ogladaniu w ciemnosci
+Pogorszenie wzroku czy też wysychanie gałki ocznej są wymieniane jako naj\-częstsze skutki zbyt dużej ilości czasu spędzanego przed ekranem. Poza próbą jego ograniczenia, jedną z częstszych porad jest próba zmniejszenia kontrastu pomiędzy ekranem a jego otoczeniem.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{resources/trends.png}
-\caption[Wykres przedstawiający popularność mapowania obiektowo-relacyjnego na przestrzeni czasu w wybranych językach programowania] {Wykres przedstawiający 
-popularność mapowania obiektowo-relacyjnego na przestrzeni czasu w wybranych językach programowania \cite{trends}}
-\end{figure}
+Do celów niniejszej pracy należy złożenie i oprogramowanie systemu oświetlenia, który ma rozszerzać obraz widziany na ekranie na jego otoczenie. Poza zmniejszeniem kontrastu, a więc aspektem zdrowotnym, system ma także na celu zwiększyć wrażenia wizualne dostarczane przez oglądany obraz.
 
-Podział pracy współautorów tworzonej aplikacji szkieletowej, dalej pojawiającej się także pod nazwą Qubic, był kluczową kwestią do ustalenia. Ostatecznie przyjęty został
-on w sposób następujący -- tematem pracy Sebastiana Florka jest ,,Generowanie opisu mapowania obiektowo-relacyjnego w języku C++'' i to właśnie stworzenie generatora opisu
-mapowania jest głównym celem badawczym jego pracy. Zgodnie z tytułem tej pracy, jej autor będzie zajmował zrealizowaniem samego mapowania obiektowo-relacyjnego.
-Zadaniem generatora będzie wygenerowanie opisu mapowania w postaci plików nagłówkowych, klas oraz pliku projektu. Drugi moduł natomiast będzie implementował 
-mapowanie obiektowo-relacyjne w wygenerowanych plikach oraz udostępniał interfejs dostępny dla użytkownika.
+% TODO krótkie wyjaśnienie podstawowych pojęć i diagram/zdjęcia
+System oświetlenia składa się z taśmy diod elektroluminescencyjnych\footnote{~LED (z ang. light-emitting diode).} pod\-łączonych do mikrokontrolera Arduino Uno, który z kolei ma współpracować z komputerem z zainstalowanym systemem operacyjnym MacOS. Oprogramowanie mikrokontrolera, którego zadaniem jest sterowanie diodami zostało przygotowane w języku Arduino, natomiast aplikacja kontrolująca cały system przeznaczona na komputer z systemem MacOS zostałą napisana w języku Swift. Wybór języków jest ściśle związany z koniecznością uzyskania jak najlepszej wydajności oraz użyciem najnowszych technologii.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{resources/coop.png}
-\caption[Schemat współpracy modułów tworzonej aplikacji szkieletowej]{Schemat współpracy modułów tworzonej aplikacji szkieletowej, dalej występującej też pod nazwą Qubic}
-\end{figure}
+Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jednak to właśnie nowoczesne technologie, prostota wykonania i niskie koszta powinny uczynić z Ligtning, bo taką nazwę otrzymał projekt, pełnowartościowego konkurenta.
 
 \section{Problematyka i zakres pracy}
+
+% TODO cdn.
 
 Programowanie obiektowe jest obecnie jednym z najpopularniejszych pa\-ra\-dy\-gma\-tów programowania, a pojęcia takie jak klasa czy obiekt znane są wszystkim programistom.
 Podobnie jest z relacyjnym modelem organizacji baz danych i terminami takimi jak relacja czy krotka. Chcąc wykorzystać oba te podejścia w jednej aplikacji musimy zadbać o 
@@ -1008,7 +991,8 @@ komórkowe czy też aplikacja szkieletowa do tworzenia usług internetowych\foot
 
 \addcontentsline{toc}{chapter}{Bibliografia} 
 \begin{thebibliography}{99}
-\bibitem{symfonia} Grębosz, Jerzy. Symfonia C++. Standard. Wyd. 3. Kraków, 2013. ISBN 978-83-7366-134-4.
+\bibitem{czasprzedtv} {\tt http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy-telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja-seniorzy-raport}. Data dostępu -- 15.01.2017.
+
 \bibitem{hibernate} Bauer, Christian, King, David. Hibernate w akcji. Wyd. 1. Gliwice, 2007. ISBN 978-83-246-0527-9.
 \bibitem{persistence} Bauer Christian, King David. Java Persistence with Hibernate. Greenwich, 2007. ISBN 1-932394-88-5.
 \bibitem{sql} Viescas, John. SQL Queries for Mere Mortals. 2001. ISBN 83-7279-152-X.
