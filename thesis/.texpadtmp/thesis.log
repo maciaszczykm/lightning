@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  16 JAN 2017 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  16 JAN 2017 21:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -754,44 +754,44 @@ Rozdzia\l  3.
 
 ]
 Rozdzia\l  4.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 121.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 125.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 121.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 125.
 
-Overfull \hbox (17.6774pt too wide) in paragraph at lines 129--130
+Overfull \hbox (17.6774pt too wide) in paragraph at lines 133--134
 \T1/txr/m/n/12 Do wy-ma-ga« nie-funk-cjo-nal-nych po-sta-wio-nych przed pro-jek-to-wa-nym sys-te-mem nale»[]: 
  []
 
 [7
 
 ]
-Overfull \hbox (8.29214pt too wide) in paragraph at lines 135--136
+Overfull \hbox (8.29214pt too wide) in paragraph at lines 139--140
 []\T1/txr/m/n/12 Pami[]¢ na obu urz[]dzeniach steruj[]cych po-winna by¢ od-po-wied-nio zarz[]dzana,
  []
 
 <../resource/logo.png, id=29, 695.2374pt x 237.7683pt>
 File: ../resource/logo.png Graphic file (type png)
  <use ../resource/logo.png>
-Package pdftex.def Info: ../resource/logo.png used on input line 142.
+Package pdftex.def Info: ../resource/logo.png used on input line 146.
 (pdftex.def)             Requested size: 338.59021pt x 115.79637pt.
  [8 <../resource/logo.png>] [9]
 Rozdzia\l  5.
 [10
 
 ]
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 164.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 168.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 []\T1/txtt/m/n/12 http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 \T1/txtt/m/n/12 -telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja-
  []
 
