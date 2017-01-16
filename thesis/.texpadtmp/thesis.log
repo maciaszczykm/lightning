@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  16 JAN 2017 21:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  16 JAN 2017 22:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -617,7 +617,7 @@ Package babel Info: Making " an active character on input line 83.
 \c@definition=\count116
 \c@example=\count117
 \c@corollary=\count118
- (/Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.aux)
+ (./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 33.
@@ -649,10 +649,10 @@ File: utxexa.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Try loading font information for T1+txr on input line 33.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/t1txr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/t1txr.fd
 File: t1txr.fd 2000/12/15 v3.1
-) (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+)
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
 \scratchdimen=\dimen134
@@ -713,7 +713,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count125
- (/Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.toc
+ (./thesis.toc
 LaTeX Font Info:    Try loading font information for OT1+txr on input line 3.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
@@ -742,6 +742,9 @@ File: utxsyc.fd 2000/12/15 v3.1
 
  [2]
 Rozdzia\l  1.
+
+LaTeX Warning: Citation `czasprzedtv' on page 3 undefined on input line 72.
+
 [3
 
 ] [4]
@@ -772,7 +775,7 @@ Overfull \hbox (8.29214pt too wide) in paragraph at lines 139--140
 []\T1/txr/m/n/12 Pami[]¢ na obu urz[]dzeniach steruj[]cych po-winna by¢ od-po-wied-nio zarz[]dzana,
  []
 
-<../resource/logo.png, id=29, 695.2374pt x 237.7683pt>
+<../resource/logo.png, id=30, 695.2374pt x 237.7683pt>
 File: ../resource/logo.png Graphic file (type png)
  <use ../resource/logo.png>
 Package pdftex.def Info: ../resource/logo.png used on input line 146.
@@ -797,38 +800,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
 [11
 
-] (/Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.lof)
+] (./thesis.lof
+Overfull \hbox (23.78548pt too wide) in paragraph at lines 3--3
+ [][] []\T1/txr/m/n/12 Wykres przedstawiaj[]cy po-pu-lar-no±¢ ma-po-wa-nia obiektowo-relacyjnego 
+ []
+
+)
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
  [12
 
-] (/Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.lot)
+] (./thesis.lot)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
  [13
 
-] (/Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.lol)
+] (./thesis.lol)
 \tf@lol=\write6
 \openout6 = `thesis.lol'.
 
  [14
 
-] (/Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.aux) ) 
+] (/Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7759 strings out of 493014
- 108370 string characters out of 6133351
- 177743 words of memory out of 5000000
- 11117 multiletter control sequences out of 15000+600000
- 57015 words of font info for 107 fonts, out of 8000000 for 9000
+ 7789 strings out of 493014
+ 108050 string characters out of 6133351
+ 178920 words of memory out of 5000000
+ 11145 multiletter control sequences out of 15000+600000
+ 60064 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,39p,904b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on /Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.pdf (14 pages, 114542 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on /Users/maciaszczykm/Workspace/lightning/thesis/.texpadtmp/thesis.pdf (14 pages, 119351 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

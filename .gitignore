@@ -1,2 +1,5 @@
 # macOS files
 .DS_Store
+
+# Texpad files
+thesis/.texpadtmp/*
