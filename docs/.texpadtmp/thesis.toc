@@ -2,62 +2,27 @@
 \contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{3}
 \contentsline {section}{\numberline {1.1}Uzasadnienie wyboru tematu}{3}
 \contentsline {section}{\numberline {1.2}Problematyka i zakres pracy}{4}
-\contentsline {section}{\numberline {1.3}Cele pracy}{6}
-\contentsline {section}{\numberline {1.4}Metoda badawcza}{7}
-\contentsline {subsection}{\numberline {1.4.1}Studia literaturowe}{7}
-\contentsline {subsection}{\numberline {1.4.2}Analiza istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{8}
-\contentsline {subsection}{\numberline {1.4.3}Stworzenie w\IeC {\l }asnej aplikacji szkieletowej}{8}
-\contentsline {subsection}{\numberline {1.4.4}Analiza por\IeC {\'o}wnawcza oraz testy}{8}
-\contentsline {section}{\numberline {1.5}Przegl\IeC {\k a}d literatury w dziedzinie}{8}
-\contentsline {subsection}{\numberline {1.5.1}Literatura dotycz\IeC {\k a}ca j\IeC {\k e}zyka C++ oraz Qt}{8}
-\contentsline {subsection}{\numberline {1.5.2}Literatura dotycz\IeC {\k a}ca j\IeC {\k e}zyka SQL}{9}
-\contentsline {subsection}{\numberline {1.5.3}Literatura dotycz\IeC {\k a}ca mapowania obiektowo-relacyjnego}{9}
-\contentsline {section}{\numberline {1.6}Uk\IeC {\l }ad pracy}{9}
-\contentsline {chapter}{\numberline {2}Zagadnienia teoretyczne}{11}
-\contentsline {section}{\numberline {2.1}Architektura warstwowa}{11}
-\contentsline {section}{\numberline {2.2}Trwa\IeC {\l }o\IeC {\'s}\IeC {\'c} danych}{12}
-\contentsline {section}{\numberline {2.3}Relacyjne bazy danych}{12}
-\contentsline {section}{\numberline {2.4}Programowanie obiektowe}{13}
-\contentsline {section}{\numberline {2.5}Wykorzystanie SQL w C++}{14}
-\contentsline {section}{\numberline {2.6}Niedopasowanie paradygmat\IeC {\'o}w}{14}
-\contentsline {section}{\numberline {2.7}Koszt niedopasowania}{15}
-\contentsline {section}{\numberline {2.8}Mapowanie obiektowo-relacyjne}{16}
-\contentsline {section}{\numberline {2.9}Aplikacje szkieletowe}{18}
-\contentsline {chapter}{\numberline {3}Analiza istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{20}
-\contentsline {section}{\numberline {3.1}Kryteria analizy}{20}
-\contentsline {section}{\numberline {3.2}Por\IeC {\'o}wnanie istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{21}
-\contentsline {subsection}{\numberline {3.2.1}Biblioteka QxOrm}{21}
-\contentsline {subsection}{\numberline {3.2.2}Biblioteka Debea}{24}
-\contentsline {chapter}{\numberline {4}Aplikacja szkieletowa Qubic}{26}
-\contentsline {section}{\numberline {4.1}Modu\IeC {\l }y tworzonej aplikacji}{26}
-\contentsline {section}{\numberline {4.2}Analiza wymaga\IeC {\'n}}{27}
-\contentsline {subsection}{\numberline {4.2.1}Wymagania funkcjonalne}{27}
-\contentsline {subsection}{\numberline {4.2.2}Wymagania niefunkcjonalne}{27}
-\contentsline {section}{\numberline {4.3}Projekt}{28}
-\contentsline {subsection}{\numberline {4.3.1}Rodzaj aplikacji}{28}
-\contentsline {subsection}{\numberline {4.3.2}Diagram klas}{28}
-\contentsline {subsection}{\numberline {4.3.3}Wzorce projektowe}{30}
-\contentsline {subsection}{\numberline {4.3.4}\IeC {\'S}rodowisko programistyczne}{30}
-\contentsline {subsection}{\numberline {4.3.5}System kontroli wersji}{30}
-\contentsline {section}{\numberline {4.4}Implementacja}{31}
-\contentsline {subsection}{\numberline {4.4.1}Po\IeC {\l }\IeC {\k a}czenie z baz\IeC {\k a} danych}{32}
-\contentsline {subsection}{\numberline {4.4.2}Interfejs CRUD}{32}
-\contentsline {subsection}{\numberline {4.4.3}Interfejs do tworzenia zapyta\IeC {\'n}}{39}
-\contentsline {subsection}{\numberline {4.4.4}Metody dost\IeC {\k e}pu do powi\IeC {\k a}zanych danych}{39}
-\contentsline {section}{\numberline {4.5}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{42}
-\contentsline {subsubsection}{Jak wygl\IeC {\k a}da konfiguracja Qubica?}{42}
-\contentsline {subsubsection}{Jak wykorzysta\IeC {\'c} Qubica w tworzonym projekcie?}{42}
-\contentsline {subsubsection}{Jak po\IeC {\l }\IeC {\k a}czy\IeC {\'c} si\IeC {\k e} z baz\IeC {\k a} danych?}{42}
-\contentsline {subsubsection}{Jak korzysta\IeC {\'c} z operacji CRUD?}{42}
-\contentsline {subsubsection}{Jak tworzy\IeC {\'c} w\IeC {\l }asne zapytania za pomoc\IeC {\k a} Qubica?}{43}
-\contentsline {subsubsection}{Jak korzysta\IeC {\'c} z metod dost\IeC {\k e}pu do powi\IeC {\k a}zanych danych?}{43}
-\contentsline {section}{\numberline {4.6}Przyk\IeC {\l }adowa aplikacja wykorzystuj\IeC {\k a}ca Qubica}{43}
-\contentsline {section}{\numberline {4.7}Analiza Qubica}{49}
-\contentsline {section}{\numberline {4.8}Perspektywy rozwoju Qubica}{50}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{52}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{52}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{52}
-\contentsline {chapter}{Bibliografia}{53}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{55}
-\contentsline {chapter}{Spis tabel}{56}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{57}
+\contentsline {section}{\numberline {1.3}Cele pracy}{4}
+\contentsline {section}{\numberline {1.4}Metoda badawcza}{4}
+\contentsline {section}{\numberline {1.5}Przegl\IeC {\k a}d literatury w dziedzinie}{4}
+\contentsline {section}{\numberline {1.6}Uk\IeC {\l }ad pracy}{4}
+\contentsline {chapter}{\numberline {2}Zagadnienia teoretyczne}{5}
+\contentsline {chapter}{\numberline {3}Analiza istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{6}
+\contentsline {section}{\numberline {3.1}Kryteria analizy}{6}
+\contentsline {section}{\numberline {3.2}Por\IeC {\'o}wnanie istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{6}
+\contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{7}
+\contentsline {section}{\numberline {4.1}Modu\IeC {\l }y tworzonej aplikacji}{7}
+\contentsline {section}{\numberline {4.2}Analiza wymaga\IeC {\'n}}{7}
+\contentsline {section}{\numberline {4.3}Projekt}{7}
+\contentsline {section}{\numberline {4.4}Implementacja}{7}
+\contentsline {section}{\numberline {4.5}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{7}
+\contentsline {section}{\numberline {4.6}Przyk\IeC {\l }adowa aplikacja wykorzystuj\IeC {\k a}ca Qubica}{7}
+\contentsline {section}{\numberline {4.7}Analiza Qubica}{7}
+\contentsline {section}{\numberline {4.8}Perspektywy rozwoju Qubica}{7}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{8}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{8}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{8}
+\contentsline {chapter}{Bibliografia}{8}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{9}
+\contentsline {chapter}{Spis tabel}{10}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{11}

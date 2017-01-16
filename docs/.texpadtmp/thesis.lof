@@ -1,18 +1,6 @@
 \select@language {polish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Warstwowa architektura aplikacji}}{11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Mapowanie obiektowo-relacyjne\relax }}{16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Biblioteka QxOrm}}{21}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Biblioteka Debea}}{24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Logo tworzonej aplikacji szkieletowej\relax }}{28}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram klas\relax }}{29}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Przejrzysty widok systemu GitHub Issues\relax }}{31}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Przejrzysty widok systemu GitHub Miletsones\relax }}{31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Schemat blokowy metody zapisuj\IeC {\k a}cej obiekty w bazie danych\relax }}{35}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Schemat blokowy metody aktualizuj\IeC {\k a}cej obiekty w bazie danych\relax }}{36}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Schemat blokowy metody \IeC {\l }aduj\IeC {\k a}cej obiekty z bazy danych\relax }}{37}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Schemat blokowy metody usuwaj\IeC {\k a}cej obiekty z bazy danych\relax }}{38}
 \addvspace {10\p@ }
