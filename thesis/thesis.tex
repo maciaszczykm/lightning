@@ -44,26 +44,13 @@ showstringspaces=false,
 basicstyle=\footnotesize\ttfamily
 }
 
-\lstdefinestyle{customsql}{
+\lstdefinestyle{customswift}{
 captionpos=b, 
 belowcaptionskip=1\baselineskip,
 breaklines=true,
 frame=LRTB,
 xleftmargin=\parindent,
-language=SQL,
-showstringspaces=false,
-basicstyle=\footnotesize\ttfamily,
-keywordstyle=\bfseries\color{purple},
-identifierstyle=\color{violet}
-}
-
-\lstdefinestyle{customc}{
-captionpos=b, 
-belowcaptionskip=1\baselineskip,
-breaklines=true,
-frame=LRTB,
-xleftmargin=\parindent,
-language=C++,
+language=Swift,
 showstringspaces=false,
 basicstyle=\footnotesize\ttfamily,
 keywordstyle=\bfseries\color{green!40!black},
@@ -91,7 +78,7 @@ Pogorszenie wzroku czy też wysychanie gałki ocznej są wymieniane jako naj\-cz
 Do celów niniejszej pracy należy złożenie i oprogramowanie systemu oświetlenia, który ma rozszerzać obraz widziany na ekranie na jego otoczenie. Poza zmniejszeniem kontrastu, a więc aspektem zdrowotnym, system ma także na celu zwiększyć wrażenia wizualne dostarczane przez oglądany obraz.
 
 % TODO krótkie wyjaśnienie podstawowych pojęć i diagram/zdjęcia
-System oświetlenia składa się z taśmy diod elektroluminescencyjnych\footnote{~LED (z ang. light-emitting diode).} pod\-łączonych do mikrokontrolera Arduino Uno, który z kolei ma współpracować z komputerem z zainstalowanym systemem operacyjnym MacOS. Oprogramowanie mikrokontrolera, którego zadaniem jest sterowanie diodami zostało przygotowane w języku Arduino, natomiast aplikacja kontrolująca cały system przeznaczona na komputer z systemem MacOS zostałą napisana w języku Swift. Wybór języków jest ściśle związany z koniecznością uzyskania jak najlepszej wydajności oraz użyciem najnowszych technologii.
+System oświetlenia składa się z taśmy diod elektroluminescencyjnych\footnote{~LED (z ang. light-emitting diode).} pod\-łączonych do mikrokontrolera Arduino Uno, który z kolei ma współpracować z komputerem z zainstalowanym systemem operacyjnym MacOS. Oprogramowanie mikrokontrolera, którego zadaniem jest sterowanie diodami zostało przygotowane w języku Arduino, natomiast aplikacja kontrolująca cały system przeznaczona na komputer z systemem MacOS została napisana w języku Swift. Wybór języków jest ściśle związany z koniecznością uzyskania jak najlepszej wydajności oraz użyciem najnowszych technologii.
 
 Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jednak to właśnie nowoczesne technologie, prostota wykonania i niskie koszta powinny uczynić z Ligtning, bo taką nazwę otrzymał projekt, pełnowartościowego konkurenta.
 
@@ -105,15 +92,15 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 
 \section{Metoda badawcza}
 
-% metoda badawcza
+% TODO metoda badawcza
 
 \section{Przegląd literatury w dziedzinie}
 
-% przeglad literatury
+% TODO przegląd literatury
 
 \section{Układ pracy}
 
-% uklad pracy
+% TODO układ pracy
 
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
 \label{teoria}
@@ -129,7 +116,7 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 
 \section{Porównanie istniejących rozwiązań}
 
-% TODO porownanie
+% TODO porównanie
 
 \chapter{System oświetlenia Lightning}
 \label{lightning}
@@ -142,9 +129,35 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 
 \section{Analiza wymagań}
 
-% TODO wymagania
+\subsection{Wymagania funkcjonalne}
+
+W celu stworzenia jak najatrakcyjniejszego system oświetlenia podczas projektowania Lightning przyjęto poniższe wymagania funkcjonalne:
+
+\begin{itemize}
+\item System musi udostępniać tryb przechwytywania rozszerzający obraz wyświetlany na ekranie na jego otoczenie za pomocą diod elektroluminescencyjnych.
+\item System musi posiadać tryb animacji za pomocą diod elektroluminescencyjnych. Powinien być on łatwy do rozszerzenia o kolejne animacje.
+\item System musi być konfigurowalny z poziomu aplikacji sterującej. Konfiguracji podlegać musi co najmniej liczba i rozmieszczenie diod za ekranem, a także wykorzystywany port szeregowy.
+\item Projekt musi być odpowiednio udokumentowany. Dokumentacja powinna ułatwiać szybkie skonfigurowanie oraz uruchomienie systemu.
+\end{itemize}
+
+\subsection{Wymagania niefunkcjonalne}
+
+Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą:
+
+\begin{itemize}
+\item System musi działać płynnie, a więc liczba osiąganych klatek na sekundę powinna być jak największa nawet przy dużych rozdzielczościach przechwytywanego ekranu.
+\item Korzystanie z aplikacji sterującej powinno być jak najbardziej intuicyjne, a użytkownik powinien mieć do wskazówek dotyczących jej interfejsu.
+\item Oprogramowanie mikrokontrolera powinno oferować jak najprostszy interfejs i zawierać jak najmniej logiki sterującej.
+\item Pamięć na obu urządzeniach sterujących powinna być odpowiednio zarządzana, niedopuszczalne są wycieki pamięci czy też zapętlenia programu.
+\end{itemize}
 
 \section{Projekt}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.85\textwidth]{../resource/logo.png}
+\caption{Logo tworzonej aplikacji szkieletowej}
+\end{figure}
 
 % TODO projekt
 

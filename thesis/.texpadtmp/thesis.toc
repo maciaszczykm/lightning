@@ -13,16 +13,18 @@
 \contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{7}
 \contentsline {section}{\numberline {4.1}Modu\IeC {\l }y tworzonej aplikacji}{7}
 \contentsline {section}{\numberline {4.2}Analiza wymaga\IeC {\'n}}{7}
-\contentsline {section}{\numberline {4.3}Projekt}{7}
-\contentsline {section}{\numberline {4.4}Implementacja}{7}
-\contentsline {section}{\numberline {4.5}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{7}
-\contentsline {section}{\numberline {4.6}Przyk\IeC {\l }adowa aplikacja wykorzystuj\IeC {\k a}ca Qubica}{7}
-\contentsline {section}{\numberline {4.7}Analiza Qubica}{7}
-\contentsline {section}{\numberline {4.8}Perspektywy rozwoju Qubica}{7}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{8}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{8}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{8}
-\contentsline {chapter}{Bibliografia}{8}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{9}
-\contentsline {chapter}{Spis tabel}{10}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{11}
+\contentsline {subsection}{\numberline {4.2.1}Wymagania funkcjonalne}{7}
+\contentsline {subsection}{\numberline {4.2.2}Wymagania niefunkcjonalne}{7}
+\contentsline {section}{\numberline {4.3}Projekt}{8}
+\contentsline {section}{\numberline {4.4}Implementacja}{8}
+\contentsline {section}{\numberline {4.5}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{8}
+\contentsline {section}{\numberline {4.6}Przyk\IeC {\l }adowa aplikacja wykorzystuj\IeC {\k a}ca Qubica}{8}
+\contentsline {section}{\numberline {4.7}Analiza Qubica}{8}
+\contentsline {section}{\numberline {4.8}Perspektywy rozwoju Qubica}{8}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{9}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{9}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{9}
+\contentsline {chapter}{Bibliografia}{9}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{10}
+\contentsline {chapter}{Spis tabel}{11}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{12}
