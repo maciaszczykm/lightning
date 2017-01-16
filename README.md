@@ -15,7 +15,7 @@ Lightning-quick backlighting system.
 ## Wiring scheme
 
 <p align="center">
-    <img src="arduino/wiring.png"/>
+    <img src="resource/wiring.png"/>
 </p>
 
 ## Software setup
