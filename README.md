@@ -1,8 +1,8 @@
-# <img height=180 src="resource/logo.png"/>
-Lightning-quick backlighting system.
+# <img height=180 src="resources/logo.png"/>
+Ambilight-like backlighting system.
 
 <p align="center">
-    <img src="resource/results.gif"/>
+    <img src="resources/results.gif"/>
 </p>
 
 ## Requirements
@@ -15,7 +15,7 @@ Lightning-quick backlighting system.
 ## Wiring scheme
 
 <p align="center">
-    <img src="resource/wiring.png"/>
+    <img src="resources/wiring.png"/>
 </p>
 
 ## Software setup
@@ -26,7 +26,7 @@ Lightning-quick backlighting system.
 
 ## Interface
 <p align="center">
-    <img src="resource/capture.png"/>
-    <img src="resource/backlight.png"/>
-    <img src="resource/settings.png"/>
+    <img src="resources/capture.png"/>
+    <img src="resources/backlight.png"/>
+    <img src="resources/settings.png"/>
 </p>
