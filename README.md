@@ -1,4 +1,4 @@
-# <img height=180 src="resource/logo.png"/>
+# <img height=180 src="resources/logo.png"/>
 Lightning-quick backlighting system.
 
 <p align="center">
