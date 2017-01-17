@@ -112,23 +112,23 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 Do konstrukcji systemu wykorzystane zostały następujące komponenty:
 
 \begin{itemize}
-	\item Cyfrowo adresowany łańcuch składający się z 25 diod elektroluminescencyjnych o średnicy 12 mm ze sterownikiem WS2801. Dostępny w sklepie internetowym Botland w cenie 195 złotych \cite{diody}.
-	\item Stabilizowany zasilacz sieciowy o napięciu wyjściowym 5 V. Dostępny w sklepie internetowym Botland w cenie 19,90 złotych \cite{zasilacz}.
-	\item Wtyk ze złączem pozawalającym połączyć łańcuch z zasilaczem. Dostępny w sklepie Botland w cenie 1,90 złotego \cite{wtyk}.
-	\item Mikrokontroler Arduino Uno w wersji 3. Dostępny w sklepie Botland w cenie 95 złotych \cite{arduino}.
-	\item Przewód USB. Dostępny w sklepie Botland w cenie 4,90 złotych \cite{usb}.
+	\item Cyfrowo adresowany łańcuch składający się z 25 diod elektroluminescencyjnych o średnicy 12 mm ze sterownikiem WS2801. Dostępny w sklepie internetowym Botland w cenie 195 zł \cite{diody}.
+	\item Stabilizowany zasilacz sieciowy o napięciu wyjściowym 5 V. Dostępny w sklepie internetowym Botland w cenie 19,90 zł \cite{zasilacz}.
+	\item Wtyk ze złączem pozawalającym połączyć łańcuch z zasilaczem. Dostępny w sklepie Botland w cenie 1,90 zł \cite{wtyk}.
+	\item Mikrokontroler Arduino Uno w wersji 3. Dostępny w sklepie Botland w cenie 95 zł \cite{arduino}.
+	\item Przewód USB. Dostępny w sklepie Botland w cenie 4,90 zł \cite{usb}.
 \end{itemize}
 
-	Łańcuch z diodami został podłączony od jednej strony za pomocą wymienionego wcześniej wtyku z zasilaczem, z drugiej strony natomiast z mikrokontrolerem. Mikrokontroler natomiast komunikuje się z komputerem z systemem macOS za pomocą przewodu USB. Dokładny schemat połączenia komponentów przedstawia rysunek \ref{schemat}.
+	Łańcuch z diodami został podłączony od jednej strony za pomocą wymienionego wcześniej wtyku z zasilaczem, z drugiej strony natomiast z mikrokontrolerem. Ten z kolei komunikuje się z komputerem z systemem macOS za pomocą przewodu USB. Dokładny schemat połączenia komponentów przedstawia rysunek \ref{schemat}.
 	
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{../resource/wiring.png}
+\includegraphics[width=\textwidth]{../resources/wiring.png}
 \caption{Schemat podłączenia komponentów systemu \cite{schemat}}
 \label{schemat}
 \end{figure}
 		
-	Koszt związany z skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 złotych. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod oraz Arduino Uno w najnowszej wersji.
+	Koszt związany ze skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 złotych. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod oraz Arduino Uno w najnowszej wersji.
 
 \section{Moduły oprogramowania}
 
@@ -162,9 +162,30 @@ Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą
 
 \section{Projekt}
 
+\subsection{System kontroli wersji}
+
+Podczas pracy nad projektami programistycznymi często wymagana jest współpraca kilku programistów, cofanie pomyłkowo wprowadzonych zmian czy też dziennik zadań do wykonania. Wspomniane funkcjonalności udostępniają systemy kontroli wersji. Do najpopularniejszych należy Git, którego funkcjonalność darmowo udostępnia serwis   GitHub, gdzie z kolei znajduje się repozytorium projektu \cite{github}.
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=.85\textwidth]{../resource/logo.png}
+\includegraphics[width=\textwidth]{../resources/github.png}
+\caption{Repozytorium projektu w serwisie GitHub}
+\label{schemat}
+\end{figure}
+
+\subsection{Środowisko programistyczne}
+
+\subsection{Diagram klas}
+
+\subsection{Wzorce projektowe}
+
+\subsection{Interfejs użytkownika}
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.85\textwidth]{../resources/logo.png}
 \caption{Logo projektu}
 \end{figure}
 
@@ -184,7 +205,7 @@ Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą
 
 \section{Perspektywy rozwoju pracy}
 
-\addcontentsline{toc}{chapter}{Bibliografia} 
+\addcontentsline{toc}{chapter}{Bibliografia}
 \begin{thebibliography}{99}
 \bibitem{czasprzedtv} {\tt http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy\-telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja\--seniorzy-raport}.\\Data dostępu -- 15.01.2017.
 \bibitem{diody} {\tt https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch\-led-rgb-12-mm-ws2801-cyfrowy-adresowany-25-szt.html}.\\Data dostępu -- 17.01.2017.
@@ -193,6 +214,7 @@ Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą
 \bibitem{arduino} {\tt https://botland.com.pl/arduino-moduly-glowne/1060-arduino\-uno-r3.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{usb} {\tt hhttps://botland.com.pl/przewody-usb-a-b-20/5313-przewod\-usb-a-b-tracer-18m.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{schemat} {\tt hhttps://cdn-learn.adafruit.com/assets/assets/000/001/484/\-medium800/led\_pixels\_wiring-diagram.png?1396773276}.\\Data dostępu -- 17.01.2017.
+\bibitem{github} {\tt https://github.com/maciaszczykm/lightning}.\\Data dostępu -- 17.01.2017.
 \end{thebibliography}
 
 \addcontentsline{toc}{chapter}{Spis rysunków} 
