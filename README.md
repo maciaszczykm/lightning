@@ -1,5 +1,5 @@
 # <img height=180 src="resources/logo.png"/>
-Lightning-quick backlighting system.
+Ambilight-like backlighting system.
 
 <p align="center">
     <img src="resources/results.gif"/>
