@@ -109,6 +109,27 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 
 \section{Komponenty systemu}
 
+Do konstrukcji systemu wykorzystane zostały następujące komponenty:
+
+\begin{itemize}
+	\item Cyfrowo adresowany łańcuch składający się z 25 diod elektroluminescencyjnych o średnicy 12 mm ze sterownikiem WS2801. Dostępny w sklepie internetowym Botland w cenie 195 złotych \cite{diody}.
+	\item Stabilizowany zasilacz sieciowy o napięciu wyjściowym 5 V. Dostępny w sklepie internetowym Botland w cenie 19,90 złotych \cite{zasilacz}.
+	\item Wtyk ze złączem pozawalającym połączyć łańcuch z zasilaczem. Dostępny w sklepie Botland w cenie 1,90 złotego \cite{wtyk}.
+	\item Mikrokontroler Arduino Uno w wersji 3. Dostępny w sklepie Botland w cenie 95 złotych \cite{arduino}.
+	\item Przewód USB. Dostępny w sklepie Botland w cenie 4,90 złotych \cite{usb}.
+\end{itemize}
+
+	Łańcuch z diodami został podłączony od jednej strony za pomocą wymienionego wcześniej wtyku z zasilaczem, z drugiej strony natomiast z mikrokontrolerem. Mikrokontroler natomiast komunikuje się z komputerem z systemem macOS za pomocą przewodu USB. Dokładny schemat połączenia komponentów przedstawia rysunek \ref{schemat}.
+	
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resource/wiring.png}
+\caption{Schemat podłączenia komponentów systemu \cite{schemat}}
+\label{schemat}
+\end{figure}
+		
+	Koszt związany z skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 złotych. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod oraz Arduino Uno w najnowszej wersji.
+
 \section{Moduły oprogramowania}
 
 \subsection{Oprogramowanie przeznaczone na mikrokontroler}
@@ -165,7 +186,13 @@ Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą
 
 \addcontentsline{toc}{chapter}{Bibliografia} 
 \begin{thebibliography}{99}
-\bibitem{czasprzedtv} {\tt http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy\--telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja\--seniorzy-raport}. Data dostępu -- 15.01.2017.
+\bibitem{czasprzedtv} {\tt http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy\-telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja\--seniorzy-raport}.\\Data dostępu -- 15.01.2017.
+\bibitem{diody} {\tt https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch\-led-rgb-12-mm-ws2801-cyfrowy-adresowany-25-szt.html}.\\Data dostępu -- 17.01.2017.
+\bibitem{zasilacz} {\tt https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz\-impulsowy-5v-25a-wtyk-dc-55-21-mm.html}.\\Data dostępu -- 17.01.2017.
+\bibitem{wtyk} {\tt hhttps://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21\-mm-z-szybkozlaczem.html}.\\Data dostępu -- 17.01.2017.
+\bibitem{arduino} {\tt https://botland.com.pl/arduino-moduly-glowne/1060-arduino\-uno-r3.html}.\\Data dostępu -- 17.01.2017.
+\bibitem{usb} {\tt hhttps://botland.com.pl/przewody-usb-a-b-20/5313-przewod\-usb-a-b-tracer-18m.html}.\\Data dostępu -- 17.01.2017.
+\bibitem{schemat} {\tt hhttps://cdn-learn.adafruit.com/assets/assets/000/001/484/\-medium800/led\_pixels\_wiring-diagram.png?1396773276}.\\Data dostępu -- 17.01.2017.
 \end{thebibliography}
 
 \addcontentsline{toc}{chapter}{Spis rysunków} 
