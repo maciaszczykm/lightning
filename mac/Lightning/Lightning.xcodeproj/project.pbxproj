@@ -77,7 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4605A9EF1E22B8D20065B497 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = /Users/maciaszczykm/Workspace/lightning/mac/Lightning/build/Debug/Tests.xctest; sourceTree = "<absolute>"; };
 		46399E901DFC454600078CE6 /* Lightning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lightning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46399E931DFC454600078CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46399E951DFC454600078CE6 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		46399EAC1DFC4CD000078CE6 /* SerialPort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialPort.swift; sourceTree = "<group>"; };
 		46399EAF1DFC4DD200078CE6 /* ScreenCapturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCapturer.swift; sourceTree = "<group>"; };
 		46399EB11DFC4E2700078CE6 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		463A7A9A1E2EA75D0030B129 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		463E37311DFD8BF1005EA90A /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		468A70121E22514200FE1A50 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		468A70141E22517000FE1A50 /* Snake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				46399E901DFC454600078CE6 /* Lightning.app */,
+				463A7A9A1E2EA75D0030B129 /* Tests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -250,7 +251,7 @@
 			);
 			name = Tests;
 			productName = LightningTests;
-			productReference = 4605A9EF1E22B8D20065B497 /* Tests.xctest */;
+			productReference = 463A7A9A1E2EA75D0030B129 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

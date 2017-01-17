@@ -77,7 +77,7 @@ Pogorszenie wzroku czy też wysychanie gałki ocznej są wymieniane jako naj\-cz
 Do celów niniejszej pracy należy złożenie i oprogramowanie systemu oświetlenia, który ma rozszerzać obraz widziany na ekranie na jego otoczenie. Poza zmniejszeniem kontrastu, a więc aspektem zdrowotnym, system ma także na celu zwiększyć wrażenia wizualne dostarczane przez oglądany obraz.
 
 % TODO krótkie wyjaśnienie podstawowych pojęć i diagram/zdjęcia
-System oświetlenia składa się z taśmy diod elektroluminescencyjnych\footnote{~LED (z ang. light-emitting diode).} pod\-łączonych do mikrokontrolera Arduino Uno, który z kolei ma współpracować z komputerem z zainstalowanym systemem operacyjnym MacOS. Oprogramowanie mikrokontrolera, którego zadaniem jest sterowanie diodami zostało przygotowane w języku Arduino, natomiast aplikacja kontrolująca cały system przeznaczona na komputer z systemem MacOS została napisana w języku Swift. Wybór języków jest ściśle związany z koniecznością uzyskania jak najlepszej wydajności oraz użyciem najnowszych technologii.
+System oświetlenia składa się z taśmy diod elektroluminescencyjnych\footnote{~LED (z ang. light-emitting diode).} pod\-łączonych do mikrokontrolera Arduino Uno, który z kolei ma współpracować z komputerem z zainstalowanym systemem operacyjnym macOS. Oprogramowanie mikrokontrolera, którego zadaniem jest sterowanie diodami zostało przygotowane w języku Arduino, natomiast aplikacja kontrolująca cały system przeznaczona na komputer z systemem macOS została napisana w języku Swift. Wybór języków jest ściśle związany z koniecznością uzyskania jak najlepszej wydajności oraz użyciem najnowszych technologii.
 
 Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jednak to właśnie nowoczesne technologie, prostota wykonania i niskie koszta powinny uczynić z Ligtning, bo taką nazwę otrzymał projekt, pełnowartościowego konkurenta.
 
@@ -101,11 +101,35 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 
 \chapter{System oświetlenia Lightning}
 
-% TODO rozdziały typowe dla aplikacji z interfejsem, prezentacja interfejsu, wymagania i jego opis
-
 % TODO dodatkowo zdjęcie z efektami i podłączeniem oraz ramką
 
 % TODO ułożenie rozdziałów!
+
+% TODO dotąd
+
+\section{Analiza wymagań}
+
+\subsection{Wymagania funkcjonalne}
+
+W celu stworzenia jak najatrakcyjniejszego system oświetlenia podczas projektowania Lightning przyjęto poniższe wymagania funkcjonalne:
+
+\begin{itemize}
+\item System musi udostępniać tryb przechwytywania rozszerzający obraz wyświetlany na ekranie na jego otoczenie za pomocą diod elektroluminescencyjnych.
+\item System musi posiadać tryb animacji. Powinien być on łatwy do rozszerzenia o kolejne animacje.
+\item System musi być konfigurowalny z poziomu aplikacji sterującej. Konfiguracji podlegać musi co najmniej liczba i rozmieszczenie diod za ekranem, a także wykorzystywany port szeregowy.
+\item Projekt musi być odpowiednio udokumentowany. Dokumentacja powinna ułatwiać szybkie skonfigurowanie oraz uruchomienie systemu.
+\end{itemize}
+
+\subsection{Wymagania niefunkcjonalne}
+
+Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą:
+
+\begin{itemize}
+\item System musi działać płynnie, a więc liczba osiąganych klatek na sekundę powinna być jak największa nawet przy dużych rozdzielczościach przechwytywanego ekranu.
+\item Korzystanie z aplikacji sterującej powinno być jak najbardziej intuicyjne, a użytkownik powinien mieć dostęp do wskazówek dotyczących jej interfejsu.
+\item Oprogramowanie mikrokontrolera powinno oferować jak najprostszy interfejs i zawierać jak najmniej logiki sterującej.
+\item Pamięć na obu urządzeniach sterujących powinna być odpowiednio zarządzana, niedopuszczalne są wycieki pamięci czy też zapętlenia programu.
+\end{itemize}
 
 \section{Komponenty systemu}
 
@@ -119,46 +143,38 @@ Do konstrukcji systemu wykorzystane zostały następujące komponenty:
 	\item Przewód USB. Dostępny w sklepie Botland w cenie 4,90 zł \cite{usb}.
 \end{itemize}
 
-	Łańcuch z diodami został podłączony od jednej strony za pomocą wymienionego wcześniej wtyku z zasilaczem, z drugiej strony natomiast z mikrokontrolerem. Ten z kolei komunikuje się z komputerem z systemem macOS za pomocą przewodu USB. Dokładny schemat połączenia komponentów przedstawia rysunek \ref{schemat}.
+Łańcuch z diodami został podłączony od jednej strony za pomocą wymienionego wcześniej wtyku z zasilaczem, z drugiej strony natomiast z mikrokontrolerem. Ten z kolei komunikuje się z komputerem z systemem macOS za pomocą przewodu USB. Dokładny schemat połączenia komponentów przedstawia rysunek \ref{schemat}.
 	
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{../resources/wiring.png}
-\caption{Schemat podłączenia komponentów systemu \cite{schemat}}
+\caption[Schemat podłączenia komponentów systemu]{Schemat podłączenia komponentów systemu \cite{schemat}}
 \label{schemat}
 \end{figure}
 		
-	Koszt związany ze skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 złotych. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod oraz Arduino Uno w najnowszej wersji.
+Koszt związany ze skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 zł. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod czy też Arduino Uno w najnowszej wersji.
 
 \section{Moduły oprogramowania}
 
 \subsection{Oprogramowanie przeznaczone na mikrokontroler}
 
+Głównym celem oprogramowania przeznaczonego na mikrokontroler jest zarządza\-nie diodami. Dzieje się to w oparciu o polecenia otrzymywane portem szeregowym od komputera, który steruje całym systemem. W związku z charakterem swojego zadania oprogramowanie musi działać jak najszybciej oraz posiadać jak najmniej logiki sterującej. Kontrola diod ogranicza się do przesyłania pakietów danych otrzymywanych z komputera na odpowiednie wyjścia do których diody są podłączone do mikrokontrolera. 
+
+Moduł ten został napisany w natywnym języku Arduino, który udostępnia wszystkie podstawowe funkcje umożliwiające stworzenie oprogramowania spełniającego postawione przed nim wymagania.
+
 \subsection{Aplikacja przeznaczona na komputer}
 
-\section{Analiza wymagań}
+W przeciwieństwie do swojego poprzednika moduł przeznaczony na komputer ma za zadanie sterowanie całym systemem. Odpowiada on bezpośrednio na żądania użytkownika wydawane za pomocą stworzonego interfejsu graficznego i komunikuje się z oprogramowaniem mikrokontrolera w celu przekazania instrukcji zapalenia pewnej konfiguracji diod. Komunikacja odbywa się nieprzerwanie, jednokierunkowo, a każdy pakiet jest poprzedzony nagłówkiem składającym się z 11 bajtów.
 
-\subsection{Wymagania funkcjonalne}
-
-W celu stworzenia jak najatrakcyjniejszego system oświetlenia podczas projektowania Lightning przyjęto poniższe wymagania funkcjonalne:
+Aplikacja ta może działać w dwóch trybach:
 
 \begin{itemize}
-\item System musi udostępniać tryb przechwytywania rozszerzający obraz wyświetlany na ekranie na jego otoczenie za pomocą diod elektroluminescencyjnych.
-\item System musi posiadać tryb animacji za pomocą diod elektroluminescencyjnych. Powinien być on łatwy do rozszerzenia o kolejne animacje.
-\item System musi być konfigurowalny z poziomu aplikacji sterującej. Konfiguracji podlegać musi co najmniej liczba i rozmieszczenie diod za ekranem, a także wykorzystywany port szeregowy.
-\item Projekt musi być odpowiednio udokumentowany. Dokumentacja powinna ułatwiać szybkie skonfigurowanie oraz uruchomienie systemu.
+	\item Tryb przechwytywania w którym przechwytywany jest obraz wybranego wyświetlacza, a każda dioda świeci się w kolorze odpowiadającego jej koloru ekranu. W trybie tym użytkownik powinien mieć kontrolę nad jasnością diod a także możliwość wygładzania przejść aby uniknąć szybkich zmian kolorów.
+	\item Tryb animacji w którym za pomocą diod system wyświetla przygotowane wcześniej animacje. Animacje zapisane są jako klasy w języku Swift. Użytkownik poza wyborem animacji ma wpływ na użyte w niej kolory oraz prędkość animacji.
 \end{itemize}
 
-\subsection{Wymagania niefunkcjonalne}
-
-Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą:
-
-\begin{itemize}
-\item System musi działać płynnie, a więc liczba osiąganych klatek na sekundę powinna być jak największa nawet przy dużych rozdzielczościach przechwytywanego ekranu.
-\item Korzystanie z aplikacji sterującej powinno być jak najbardziej intuicyjne, a użytkownik powinien mieć do wskazówek dotyczących jej interfejsu.
-\item Oprogramowanie mikrokontrolera powinno oferować jak najprostszy interfejs i zawierać jak najmniej logiki sterującej.
-\item Pamięć na obu urządzeniach sterujących powinna być odpowiednio zarządzana, niedopuszczalne są wycieki pamięci czy też zapętlenia programu.
-\end{itemize}
+Ponadto aplikacja posiada możliwość konfiguracji liczby i rozmieszczenia diod, a także wykorzystywanego portu szeregowego.
+Aplikacja została napisana w języku Swift, który jest przeznaczony dla komputerów z systemem macOS. Umożliwia on szybkie projektowanie interfejsów graficznych zgodnych z wyglądem systemu oraz przede wszystkim udostępnia on wszystkie podstawowe funkcje obiektowego języka programowania co jest istotne podczas projektowania aplikacji, której logika nie jest już tak prosta jak w przypadku oprogramowania mikrokontrolera.
 
 \section{Projekt}
 
@@ -169,19 +185,19 @@ Podczas pracy nad projektami programistycznymi często wymagana jest współprac
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{../resources/github.png}
-\caption{Repozytorium projektu w serwisie GitHub}
+\caption{Zrzut ekranu z repozytorium projektu}
 \label{schemat}
 \end{figure}
 
 \subsection{Środowisko programistyczne}
+
+% TODO odtąd
 
 \subsection{Diagram klas}
 
 \subsection{Wzorce projektowe}
 
 \subsection{Interfejs użytkownika}
-
-
 
 \begin{figure}[h]
 \centering
