@@ -59,7 +59,7 @@ identifierstyle=\color{blue},
 stringstyle=\color{orange},
 }
 
-% TODO strona tytułowa
+\includepdf[noautoscale=true, pages=-]{title-page.pdf}
 
 \tableofcontents
 
@@ -83,29 +83,39 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 
 \section{Problematyka i zakres pracy}
 
+% TODO problematyka i zakres pracy
+
 \section{Cele pracy}
+
+% TODO cele pracy
 
 \section{Metoda badawcza}
 
+% TODO metoda badawcza
+
 \section{Przegląd literatury w dziedzinie}
+
+% TODO przegląd literatury w dziedzinie
 
 \section{Układ pracy}
 
+% TODO układ pracy
+
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
+
+% TODO zagadnienia teoretyczne
 
 \chapter[Analiza istniejących rozwiązań]{Analiza istniejących rozwiązań}
 
 \section{Kryteria analizy}
 
+% TODO kryteria analizy
+
 \section{Porównanie istniejących rozwiązań}
 
+% TODO porównanie istniejących rozwiązań
+
 \chapter{System oświetlenia Lightning}
-
-% TODO dodatkowo zdjęcie z efektami i podłączeniem oraz ramką
-
-% TODO ułożenie rozdziałów!
-
-% TODO dotąd
 
 \section{Analiza wymagań}
 
@@ -154,9 +164,11 @@ Do konstrukcji systemu wykorzystane zostały następujące komponenty:
 		
 Koszt związany ze skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 zł. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod czy też Arduino Uno w najnowszej wersji.
 
+% TODO opis oraz zdjęcie mocowania diod
+
 \section{Moduły oprogramowania}
 
-\subsection{Oprogramowanie przeznaczone na mikrokontroler}
+\subsection{Oprogramowanie mikrokontrolera}
 
 Głównym celem oprogramowania przeznaczonego na mikrokontroler jest zarządza\-nie diodami. Dzieje się to w oparciu o polecenia otrzymywane portem szeregowym od komputera, który steruje całym systemem. W związku z charakterem swojego zadania oprogramowanie musi działać jak najszybciej oraz posiadać jak najmniej logiki sterującej. Kontrola diod ogranicza się do przesyłania pakietów danych otrzymywanych z komputera na odpowiednie wyjścia do których diody są podłączone do mikrokontrolera. 
 
@@ -189,48 +201,98 @@ Podczas pracy nad projektami programistycznymi często wymagana jest współprac
 \label{schemat}
 \end{figure}
 
-\subsection{Środowisko programistyczne}
+\subsection{Wykorzystane technologie}
 
-% TODO odtąd
+Oprogramowanie mikrokontrolera zostało napisane w języku Arduino i to właśnie na tę platformę jest przeznaczone. Do jego napisania użyta została jedynie wbudowana biblioteka do obsługi portu szeregowego. Wykorzystano środowisko programistyczne Arduino \cite{arduinoide}.
+
+Aplikacja sterująca została napisana w języku Swift, do stworzenia interfejsu graficznego wykorzystano framework\footnote{~Szkielet budowy aplikacji. Definiuje strukturę aplikacji oraz jej ogólny mechanizm działania, dostarcza zestaw komponentów i bibliotek ogólnego przeznaczenia do wykonywania określonych zadań.} Cocoa. Ponadto wykorzystano bibliotekę\\ORSSerialPort ułatwiającą komunikację poprzez port szeregowy \cite{orsserialport}. Wykorzystano środowisko programistyczne Xcode \cite{xcode}.
 
 \subsection{Diagram klas}
 
+% TODO diagram klas
+
 \subsection{Wzorce projektowe}
+
+% TODO wzorce projektowe
 
 \subsection{Interfejs użytkownika}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.85\textwidth]{../resources/logo.png}
+\includegraphics[width=\textwidth]{../resources/logo.png}
 \caption{Logo projektu}
+\end{figure}
+
+Interfejs, w tym przypadku graficzny, należy do elementów na które użytkownicy zwracają uwagę na samym początku, dlatego też powinien być on zaprojektowany z pomysłem i umożliwiać jak najprostsze poruszanie się po aplikacji.
+Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logiczny jest podział na trzy widoki przedstawione poniżej:
+
+% TODO interfejs użytkownika
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/capture.png}
+\caption{Widok trybu przechwytywania}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/capture.png}
+\caption{Widok trybu animacji}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/capture.png}
+\caption{Widok konfiguracji}
 \end{figure}
 
 \section{Implementacja}
 
+% TODO implementacja
+
 \section{Podręcznik użytkownika}
+
+% TODO podręcznik użytkownika
 
 \section{Przykładowa implementacja animacji}
 
+% TODO przykładowa implementacja animacji
+
 \section{Analiza projektu}
 
+% TODO analiza projektu
+
 \section{Perspektywy rozwoju projektu}
+
+% TODO perspektywy rozwoju projektu
 
 \chapter{Podsumowanie}
 
 \section{Dyskusja wyników}
 
+% TODO dyskusja wyników
+
 \section{Perspektywy rozwoju pracy}
+
+% TODO perspektywy rozwoju pracy
 
 \addcontentsline{toc}{chapter}{Bibliografia}
 \begin{thebibliography}{99}
 \bibitem{czasprzedtv} {\tt http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy\-telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja\--seniorzy-raport}.\\Data dostępu -- 15.01.2017.
 \bibitem{diody} {\tt https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch\-led-rgb-12-mm-ws2801-cyfrowy-adresowany-25-szt.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{zasilacz} {\tt https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz\-impulsowy-5v-25a-wtyk-dc-55-21-mm.html}.\\Data dostępu -- 17.01.2017.
-\bibitem{wtyk} {\tt hhttps://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21\-mm-z-szybkozlaczem.html}.\\Data dostępu -- 17.01.2017.
+\bibitem{wtyk} {\tt https://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21\-mm-z-szybkozlaczem.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{arduino} {\tt https://botland.com.pl/arduino-moduly-glowne/1060-arduino\-uno-r3.html}.\\Data dostępu -- 17.01.2017.
-\bibitem{usb} {\tt hhttps://botland.com.pl/przewody-usb-a-b-20/5313-przewod\-usb-a-b-tracer-18m.html}.\\Data dostępu -- 17.01.2017.
-\bibitem{schemat} {\tt hhttps://cdn-learn.adafruit.com/assets/assets/000/001/484/\-medium800/led\_pixels\_wiring-diagram.png?1396773276}.\\Data dostępu -- 17.01.2017.
+\bibitem{usb} {\tt https://botland.com.pl/przewody-usb-a-b-20/5313-przewod\-usb-a-b-tracer-18m.html}.\\Data dostępu -- 17.01.2017.
+\bibitem{schemat} {\tt https://cdn-learn.adafruit.com/assets/assets/000/001/484/\-medium800/led\_pixels\_wiring-diagram.png?1396773276}.\\Data dostępu -- 17.01.2017.
 \bibitem{github} {\tt https://github.com/maciaszczykm/lightning}.\\Data dostępu -- 17.01.2017.
+\bibitem{arduinoide} {\tt https://www.arduino.cc/en/main/software}.\\Data dostępu -- 18.01.2017.
+\bibitem{orsserialport} {\tt https://github.com/armadsen/ORSSerialPort}.\\Data dostępu -- 18.01.2017.
+\bibitem{xcode} {\tt https://developer.apple.com/xcode/}.\\Data dostępu -- 18.01.2017.
 \end{thebibliography}
 
 \addcontentsline{toc}{chapter}{Spis rysunków} 
