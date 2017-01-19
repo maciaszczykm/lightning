@@ -61,6 +61,7 @@ stringstyle=\color{orange},
 
 \includepdf[noautoscale=true, pages=-]{title-page.pdf}
 
+% TODO złe numery stron
 \tableofcontents
 
 \chapter{Wstęp}
@@ -268,7 +269,15 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 
 \section{Perspektywy rozwoju projektu}
 
-% TODO perspektywy rozwoju projektu
+W celu dalszego rozwoju stworzonego systemu oświetlenia należy rozważyć wprowadzenie następujących usprawnień:
+
+\begin{itemize}
+	\item Zaawansowana konfiguracja ułożenia diod -- Obecnie diody rozmieszczane są równomiernie na górnej i bocznych krawędziach. Wprowadzenie trybu konfiguracji w którym istniałaby możliwość dopasowania każdego obszaru przechwytywania osobno byłoby znacznym usprawnieniem.
+	\item Korekcja kolorów -- Obecny stan systemu umożliwia kontrolę jasności diod oraz wygładzania przejść pomiędzy kolejnymi stanami. Wprowadzenie korekcji kolorów umożliwiłoby dopasowanie koloru diod do otoczenia, czyli na przykład czerwonej ściany za wyświetlaczem.
+	\item Częstotliwość przechwytywania -- Poza korekcją kolorów kolejnym wartościowym dodatkiem byłoby wprowadzenie ograniczenia częstotliwości przechwytywania.
+	\item Poprawki graficzne szaty graficznej -- Dodanie ikony dla aplikacji sterującej, użycie obrazka wyświetlacza trybie konfiguracji czy też wyświetlanie poglądu animacji.
+	\item Automatyczne testy -- Automatyczne budowanie i testowanie całej aplikacji przy każdej zmianie podniosłoby jakość projektu. 
+\end{itemize}
 
 \chapter{Podsumowanie}
 
