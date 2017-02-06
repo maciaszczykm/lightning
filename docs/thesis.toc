@@ -15,31 +15,31 @@
 \contentsline {section}{\numberline {3.1}Kryteria analizy}{8}
 \contentsline {section}{\numberline {3.2}Por\IeC {\'o}wnanie istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{9}
 \contentsline {subsection}{\numberline {3.2.1}Technologia Philips Ambilight}{9}
-\contentsline {subsection}{\numberline {3.2.2}System o\IeC {\'s}wietlenia Lightpack}{9}
-\contentsline {subsection}{\numberline {3.2.3}System o\IeC {\'s}wietlenia Lightpack 2}{9}
-\contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{10}
-\contentsline {section}{\numberline {4.1}Analiza wymaga\IeC {\'n}}{10}
-\contentsline {subsection}{\numberline {4.1.1}Wymagania funkcjonalne}{10}
-\contentsline {subsection}{\numberline {4.1.2}Wymagania niefunkcjonalne}{10}
-\contentsline {section}{\numberline {4.2}Komponenty systemu}{11}
-\contentsline {section}{\numberline {4.3}Modu\IeC {\l }y oprogramowania}{12}
-\contentsline {subsection}{\numberline {4.3.1}Oprogramowanie mikrokontrolera}{12}
-\contentsline {subsection}{\numberline {4.3.2}Aplikacja przeznaczona na komputer}{13}
-\contentsline {section}{\numberline {4.4}Projekt}{13}
-\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{13}
-\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{14}
-\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{15}
-\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{15}
-\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{15}
-\contentsline {section}{\numberline {4.5}Implementacja}{15}
-\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{15}
-\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{15}
-\contentsline {section}{\numberline {4.8}Analiza projektu}{15}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{15}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{18}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{18}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{18}
-\contentsline {chapter}{Bibliografia}{19}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{21}
-\contentsline {chapter}{Spis tabel}{22}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{23}
+\contentsline {subsection}{\numberline {3.2.2}System o\IeC {\'s}wietlenia Lightpack}{11}
+\contentsline {subsection}{\numberline {3.2.3}System o\IeC {\'s}wietlenia Lightpack 2}{11}
+\contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{12}
+\contentsline {section}{\numberline {4.1}Analiza wymaga\IeC {\'n}}{12}
+\contentsline {subsection}{\numberline {4.1.1}Wymagania funkcjonalne}{12}
+\contentsline {subsection}{\numberline {4.1.2}Wymagania niefunkcjonalne}{12}
+\contentsline {section}{\numberline {4.2}Komponenty systemu}{13}
+\contentsline {section}{\numberline {4.3}Modu\IeC {\l }y oprogramowania}{14}
+\contentsline {subsection}{\numberline {4.3.1}Oprogramowanie mikrokontrolera}{14}
+\contentsline {subsection}{\numberline {4.3.2}Aplikacja przeznaczona na komputer}{15}
+\contentsline {section}{\numberline {4.4}Projekt}{15}
+\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{15}
+\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{16}
+\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{17}
+\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{17}
+\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{17}
+\contentsline {section}{\numberline {4.5}Implementacja}{17}
+\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{17}
+\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{17}
+\contentsline {section}{\numberline {4.8}Analiza projektu}{17}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{17}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{20}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{20}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{20}
+\contentsline {chapter}{Bibliografia}{21}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{23}
+\contentsline {chapter}{Spis tabel}{24}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{25}
