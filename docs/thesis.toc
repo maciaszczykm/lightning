@@ -31,15 +31,19 @@
 \contentsline {subsection}{\numberline {4.4.3}Diagram klas}{17}
 \contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{17}
 \contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{17}
-\contentsline {section}{\numberline {4.5}Implementacja}{17}
-\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{17}
-\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{17}
-\contentsline {section}{\numberline {4.8}Analiza projektu}{19}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{20}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{22}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{22}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{22}
-\contentsline {chapter}{Bibliografia}{23}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{25}
-\contentsline {chapter}{Spis tabel}{26}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{27}
+\contentsline {section}{\numberline {4.5}Implementacja}{19}
+\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{19}
+\contentsline {subsubsection}{Czym jest Lightning?}{19}
+\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{19}
+\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{19}
+\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{19}
+\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{19}
+\contentsline {section}{\numberline {4.8}Analiza projektu}{21}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{23}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{24}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{24}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{24}
+\contentsline {chapter}{Bibliografia}{25}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{27}
+\contentsline {chapter}{Spis tabel}{28}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{29}

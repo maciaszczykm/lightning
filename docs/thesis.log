@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  7 FEB 2017 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  7 FEB 2017 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,103 +950,131 @@ Package pdftex.def Info: ../resources/github.png used on input line 305.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15] [16 <../resources/github.png>]
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 367.
+<../resources/capture.png, id=74, 702.625pt x 401.5pt>
+File: ../resources/capture.png Graphic file (type png)
+
+<use ../resources/capture.png>
+Package pdftex.def Info: ../resources/capture.png used on input line 335.
+(pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
+File: ../resources/capture.png Graphic file (type png)
+ <use ../resources/capture.png>
+Package pdftex.def Info: ../resources/capture.png used on input line 341.
+(pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../resources/capture.png Graphic file (type png)
+<use ../resources/capture.png>
+Package pdftex.def Info: ../resources/capture.png used on input line 347.
+(pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17 <../resources/capture.png>] [18]
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 391.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-(../resources/animation.swift [17]) (../resources/animations.swift [18])
-<../resources/logo.png, id=81, 695.2374pt x 237.7683pt>
+(../resources/animation.swift [19
+
+]) [20] (../resources/animations.swift)
+<../resources/logo.png, id=90, 695.2374pt x 237.7683pt>
 File: ../resources/logo.png Graphic file (type png)
 
 <use ../resources/logo.png>
-Package pdftex.def Info: ../resources/logo.png used on input line 392.
+Package pdftex.def Info: ../resources/logo.png used on input line 414.
 (pdftex.def)             Requested size: 398.33858pt x 136.23317pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19 <../resources/logo.png>]
-Overfull \hbox (1.72815pt too wide) in paragraph at lines 425--426
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21] [22 <../resources/logo.png>]
+Overfull \hbox (1.72815pt too wide) in paragraph at lines 447--448
 \T1/txr/m/n/12 u»y-cie ob-razka wy-±wie-tla-cza try-bie kon-fi-gu-ra-cji czy te
 » wy-±wie-tla-nie pogl[]du
  []
 
-[20] [21]
+[23]
 Rozdzia\l  5.
-[22
+[24
 
 ]
-Overfull \hbox (8.60225pt too wide) in paragraph at lines 443--444
+Overfull \hbox (8.60225pt too wide) in paragraph at lines 465--466
 []\T1/txr/m/n/12 Rozwi[]zaniem po-±red-nim by-ªoby prze-nie-sie-nie opro-gra-mo
 -wa-nia przechytuj[]cego
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 []\T1/txtt/m/n/12 http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 \T1/txtt/m/n/12 telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 []\T1/txtt/m/n/12 https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch-
  []
 
 
-Overfull \hbox (5.52763pt too wide) in paragraph at lines 449--450
+Overfull \hbox (5.52763pt too wide) in paragraph at lines 471--472
 []\T1/txtt/m/n/12 https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 []\T1/txtt/m/n/12 https://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 []\T1/txtt/m/n/12 https://botland.com.pl/arduino-moduly-glowne/1060-arduino-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
 []\T1/txtt/m/n/12 https://botland.com.pl/przewody-usb-a-b-20/5313-przewod-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
 []\T1/txtt/m/n/12 https://cdn-learn.adafruit.com/assets/assets/000/001/484/-
  []
 
-[24
+[26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 []\T1/txtt/m/n/12 http://www.komputerswiat.pl/media/2016/224/4688581/003-
  []
 
-[25] (./thesis.lof)
+[27] (./thesis.lof)
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
- [26
+ [28
 
 ] (./thesis.lot)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
- [27
+ [29
 
 ] (./thesis.lol)
 \tf@lol=\write6
 \openout6 = `thesis.lol'.
 
- [28
+ [30
 
 ] (./thesis.aux)
 
@@ -1054,10 +1082,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8227 strings out of 493014
- 112404 string characters out of 6133351
- 270481 words of memory out of 5000000
- 11569 multiletter control sequences out of 15000+600000
+ 8232 strings out of 493014
+ 112530 string characters out of 6133351
+ 286481 words of memory out of 5000000
+ 11573 multiletter control sequences out of 15000+600000
  57015 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,18n,50p,903b,1805s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1068,10 +1096,10 @@ exmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/local/texlive/2016/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb>
-Output written on thesis.pdf (28 pages, 655139 bytes).
+Output written on thesis.pdf (30 pages, 687119 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

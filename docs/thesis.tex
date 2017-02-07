@@ -150,7 +150,7 @@ Do najważniejszych celów niniejszej pracy dyplomowej należą:
 
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
 
-% TODO zagadnienia teoretyczne
+% TODO zagadnienia teoretyczne - protokoly, swift, port szereg, przechtywywanie obrazu, mikrokontrolrty
 
 \chapter[Analiza istniejących rozwiązań]{Analiza istniejących rozwiązań}
 
@@ -189,7 +189,7 @@ Pierwsze miejsce w zestawieniu istniejących rozwiązań zajmuje technologia Amb
 \hline 
 Koszt & \\ \hline
 Rodzaj systemu & gotowy do użycia, zintegrowany \\ \hline
-Płynność działania & wysoka \\ \hline
+Płynność działania & bardzo wysoka \\ \hline
 Możliwość konfiguracji & duża  \\ \hline
 Interfejs użytkownika & intuicyjny  \\ \hline
 Dodatkowe możliwości &  obsługa dodatkowych lamp, \\ \hline
@@ -268,7 +268,7 @@ Do konstrukcji systemu wykorzystane zostały następujące komponenty:
 \label{schemat}
 \end{figure}
 		
-Koszt związany ze skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 zł. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod czy też Arduino Uno w najnowszej wersji.
+Koszt związany ze skompletowaniem wszystkich komponentów wyniósł łącznie 316,70 zł. Cena ta mogłaby ulec znacznemu zmniejszeniu w przypadku użycia kompatybilnych zamienników dla najdroższych elementów, czyli dla łańcucha diod czy też Arduino Uno w najnowszej wersji. Ponadto komponenty te mogą zostać wykorzystane w innych systemach.
 
 % TODO opis oraz zdjęcie mocowania diod
 
@@ -330,27 +330,26 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 
 % TODO interfejs użytkownika
 
-\begin{itemize}
-	\item a
-\end{itemize}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{../resources/capture.png}
+\caption{Widok trybu przechwytywania}
+\end{figure}
 
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=\textwidth]{../resources/capture.png}
-%\caption{Widok trybu przechwytywania}
-%\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{../resources/capture.png}
+\caption{Widok trybu animacji}
+\end{figure}
 
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=\textwidth]{../resources/capture.png}
-%\caption{Widok trybu animacji}
-%\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{../resources/capture.png}
+\caption{Widok konfiguracji}
+\end{figure}
 
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=\textwidth]{../resources/capture.png}
-%\caption{Widok konfiguracji}
-%\end{figure}
+\vfill
+\clearpage
 
 \section{Implementacja}
 
@@ -358,13 +357,38 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 
 \section{Podręcznik użytkownika}
 
-% TODO podręcznik użytkownika, opisac protokoly w teorii
+Odpowiedzi na poniższe pytania mają za zadanie przybliżyć potencjalnym użytkownikom czym jest Lightning, co oferuje, jak działa i jak mogą oni zacząć z niego korzystać. Jest to skrót informacji pojawiających się w niniejszej pracy.
+
+\subsubsection{Czym jest Lightning?}
+
+Lightning jest systemem oświetlenia posiadającym podobną funkcjonalność jak technologia Philips Ambilight, a więc rozszerzanie obrazu wyświetlanego na ekranie na jego otoczenie za pomocą diod elektroluminescencyjnych.
+
+\subsubsection{Jak działa Lightning?}
+
+Lightning składa się z kilku komponentów, poza komputerem podłączonym do wyświetlacza niezbędny jest mikrokontroler Arduino Uno oraz taśma diod elektroluminescencyjnych\footnote{~Wszystkie komponenty systemu zostały wyszczególnione w rozdziale \ref{komp}}. Działanie systemu opiera się na przechwytywaniu obrazu z komputera z systemem macOS, uśrednianiem kolorów występujących w sferach na które podzielony został ekran\footnote{~Każda ze sfer odpowiada jednej diodzie.} i przesyłaniu informacji do mikrokontrolera. Jego zadaniem jest odbieranie informacji na temat kolorów diod i sterowanie diodami. System jest w pełni niezależny od wykorzystywanego wyświetlacza.
+
+
+\subsubsection{Jak zacząć korzystać z Lightning?}
+
+% TODO opis komponentow, polaczenia i oprogramowania
+
+\subsubsection{Jak dodać własne animacje?}
+
+% TODO podręcznik użytkownika
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \section{Przykładowa implementacja animacji}
 
 Tryb animacji udostępnia kilka podstawowych animacji, które po uruchomieniu wyświetlane są za pomocą diod. W celu dodania nowej animacji wystarczy dodać do projektu nową klasę na wzór klasy Disco przedstawionej na listingu \ref{anim} oraz zarejestrować ją w klasie Animations przedstawionej na listingu \ref{anims}
 
-\lstinputlisting[style=customswift,caption=Klasa Disco -- przykładowa implementacja animacji]{../resources/animation.swift} \label{anim}
+\lstinputlisting[style=customswift,caption=Klasa implementująca animację]{../resources/animation.swift} \label{anim}
 
 Każda implementacja animacji musi implementować protokół Animation co wiąże się z koniecznością implementacji następujących metod:
 
@@ -373,15 +397,13 @@ Każda implementacja animacji musi implementować protokół Animation co wiąż
 	\item run(colors) -- Metoda ta uruchamiana jest przy każdym obiegu pętli w której odbywa się animacja. Jej głównym zadaniem jest przechodzenie pomiędzy kolejnymi stanami animacji. Kolory wybrane przez użytkownika przekazane są w parametrze.
 \end{itemize}
 
-\lstinputlisting[style=customswift,caption=Klasa Animations -- miejsce rejestracji animacji]{../resources/animations.swift} \label{anims}
+Ponadto klasa animacji powinna roszerzać klasę LightController, która zawiera wszystkie podstawowe funkcje umożliwiające sterowanie diodami.
 
+Animacja przedstawiona na listingu \ref{anim} inicjalizuje wszystkie diody na pierwszy kolor wybrany przez użytkownika, a potem w każdym następnym kroku zmienia kolor na kolejny i przesyła dane do mikrokontrolera.
 
+\lstinputlisting[style=customswift,caption=Klasa służąca do rejestrowania animacji]{../resources/animations.swift} \label{anims}
 
-
-
-
-
-% TODO przykładowa implementacja animacji
+Powyższy przykład obrazuje niski poziom skomplikowania implementacji nowych animacji.
 
 \section{Analiza projektu}
 
@@ -400,7 +422,7 @@ W rozdziale \ref{kryt} zostały zdefiniowane kryteria analizy której poddane zo
 Koszt & 316,70 zł\footnote{~Kwota ta mogłaby ulec znacznemu zmniejszeniu w przypadku wykorzystania dostępnych zamienników dla mikrokontrolera Arduino Uno a także taśmy diod elektroluminescencyjnych, tak jak zostało to opisane w rozdziale \ref{komp}.}\\ \hline
 Rodzaj systemu & do samodzielnego skompletowania, \\ \hline
 & zewnętrzny \\ \hline
-Płynność działania & wysoka \\ \hline
+Płynność działania & bardzo wysoka \\ \hline
 Możliwość konfiguracji & średnia  \\ \hline
 Interfejs użytkownika & intuicyjny  \\ \hline
 Dodatkowe możliwości &  tryb animacji, duża rozszerzalność \\ \hline

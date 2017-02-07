@@ -1,2 +1,2 @@
-\contentsline {lstlisting}{\numberline {4.1}Klasa Disco -- przyk\IeC {\l }adowa implementacja animacji}{17}
-\contentsline {lstlisting}{\numberline {4.2}Klasa Animations -- miejsce rejestracji animacji}{18}
+\contentsline {lstlisting}{\numberline {4.1}Klasa implementuj\IeC {\k a}ca animacj\IeC {\k e}}{19}
+\contentsline {lstlisting}{\numberline {4.2}Klasa s\IeC {\l }u\IeC {\.z}\IeC {\k a}ca do rejestrowania animacji}{21}
