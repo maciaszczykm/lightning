@@ -10,6 +10,10 @@
 \usepackage{float}
 \usepackage{listings}
 \usepackage[polish]{babel}
+\usepackage{footnote}
+
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
 
 \renewcommand{\chaptername}{Rozdział}
 \renewcommand{\contentsname}{Spis treści}
@@ -134,7 +138,7 @@ Do najważniejszych celów niniejszej pracy dyplomowej należą:
 
 \chapter[Analiza istniejących rozwiązań]{Analiza istniejących rozwiązań}
 
-\section{Kryteria analizy}
+\section{Kryteria analizy} \label{kryt}
 
 Tak jak to zostało wspomniane na wstępie projektowany system oświetlenia nie jest pierwszym w swoim rodzaju i ma on do czynienia ze sporą konkurencją w postaci istniejących już rozwiązań. W rozdziale tym zostanie przeprowadzona ich analiza, jednak przed przystąpieniem do niej konieczne jest zdefiniowanie kryteriów jakie zostaną wzięte pod uwagę. Kryteria te powinny mieć pokrycie z oczekiwaniami użytkowników, a Lightning powinno wyróżniać się co najmniej pod paroma względami. Po zapoznaniu się z opiniami użytkowników w Internecie pod uwagę zostały wzięte następujące kryteria:
 
@@ -149,7 +153,7 @@ Tak jak to zostało wspomniane na wstępie projektowany system oświetlenia nie 
 	\item Licencja -- Rodzaj licencji na jakiej udostępniane jest oprogramowanie ma znaczenie w licznych przypadkach. Większość użytkowników postawiona przed wyborem pomiędzy restrykcyjną licencją a oprogramowaniem otwarto-źródłowym wybierze to drugie.
 \end{itemize} 
 
-\section{Porównanie istniejących rozwiązań}
+\section{Porównanie istniejących rozwiązań} \label{por}
 
 \subsection{Technologia Philips Ambilight}
 
@@ -227,7 +231,7 @@ Do wymagań niefunkcjonalnych postawionych przed projektowanym systemem należą
 \item Pamięć na obu urządzeniach sterujących powinna być odpowiednio zarządzana, niedopuszczalne są wycieki pamięci czy też zapętlenia programu.
 \end{itemize}
 
-\section{Komponenty systemu}
+\section{Komponenty systemu} \label{komp}
 
 Do konstrukcji systemu wykorzystane zostały następujące komponenty:
 
@@ -303,11 +307,7 @@ Aplikacja sterująca została napisana w języku Swift, do stworzenia interfejsu
 
 \subsection{Interfejs użytkownika}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{../resources/logo.png}
-\caption{Logo projektu}
-\end{figure}
+
 
 Interfejs, w tym przypadku graficzny, należy do elementów na które użytkownicy zwracają uwagę na samym początku, dlatego też powinien być on zaprojektowany z pomysłem i umożliwiać jak najprostsze poruszanie się po aplikacji.
 Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logiczny jest podział na trzy widoki przedstawione poniżej:
@@ -315,26 +315,26 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 % TODO interfejs użytkownika
 
 \begin{itemize}
-	\item 
+	\item a
 \end{itemize}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{../resources/capture.png}
-\caption{Widok trybu przechwytywania}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\textwidth]{../resources/capture.png}
+%\caption{Widok trybu przechwytywania}
+%\end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{../resources/capture.png}
-\caption{Widok trybu animacji}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\textwidth]{../resources/capture.png}
+%\caption{Widok trybu animacji}
+%\end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{../resources/capture.png}
-\caption{Widok konfiguracji}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\textwidth]{../resources/capture.png}
+%\caption{Widok konfiguracji}
+%\end{figure}
 
 \section{Implementacja}
 
@@ -350,7 +350,34 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 
 \section{Analiza projektu}
 
-% TODO analiza projektu
+W rozdziale \ref{kryt} zostały zdefiniowane kryteria analizy której poddane zostały istnie\-jące już systemy oświetlenia. Teraz biorąc pod uwagę te same kryteria zostanie przeanalizowany Lightning.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/logo.png}
+\caption{Logo Lightning}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{| l | l |} 
+\hline 
+Koszt & 316,70 zł\footnote{~Kwota ta mogłaby ulec znacznemu zmniejszeniu w przypadku wykorzystania dostępnych zamienników dla mikrokontrolera Arduino Uno a także taśmy diod elektroluminescencyjnych, tak jak zostało to opisane w rozdziale \ref{komp}.}\\ \hline
+Rodzaj systemu & do samodzielnego skompletowania, \\ \hline
+& zewnętrzny \\ \hline
+Płynność działania & wysoka \\ \hline
+Możliwość konfiguracji & średnia  \\ \hline
+Interfejs użytkownika & intuicyjny  \\ \hline
+Dodatkowe możliwości &  tryb animacji, duża rozszerzalność \\ \hline
+Wspierany sprzęt i oprogramowanie &  komputery z systemem macOS  \\ \hline
+Licencja & kod otwartoźródłowy  \\ \hline
+\end{tabular} 
+\caption{Analiza systemu oświetlenia Lightning}
+\end{table}
+
+Do niewątpliwych zalet Ligthning należy z pewnością niski koszt, otwartożródłowy kod i łatwa rozszerzalność systemu. Użytkownicy znający podstawy programowania mogą z łątwością dopasować projekt do swoich potrzeb, nie jest to jednak konieczne ponieważ większość opcji konfiguracyjnych jest już dostępna. Ciekawym dodatkiem jest tryb animacji. Animacje można dodawać według własnych upodobań. Dodatkowo system można podłączyć do dowolnego wyświetlacza połączonego z komputerem.
+
+Podobnie jak w przypadku wszystkich innych analizowanych rozwiązań poza technologią Philips Ambilight Ligtning jest zewnętrznym systemem oświetlenia co wiąże się z koniecznością podłączenia dodatkowych urządzeń do wyświetlacza. Kolejną z wad jest przeznaczenie na komputery z systemem macOS, jest to związane z chęcią uzyskania jak najwyższej płynności działania. 
 
 \section{Perspektywy rozwoju projektu} \label{prp}
 
@@ -370,13 +397,15 @@ W celu dalszego rozwoju stworzonego systemu oświetlenia należy rozważyć wpro
 
 Przejście przez kolejne fazy tworzenia oprogramowania, od postawienia wymagań, przez zaprojektowanie, zaimplementowanie aż do stworzenia dokumentacji umożliwiło stworzenie systemu oświetlenia, który stanowi konkurencyjną alternatywę dla istniejących już rozwiązań.  Lightning udostępnia w pełni funkcjonalny tryb przechwytywania ekranu, tryb animacji, posiada możliwości konfiguracyjne, działa płynnie a koszt jego konstrukcji jest najmniejszy spośród wszystkich analizowanych systemów oświetlenia.
 
-Poza osiągnięciem rezultatów w postaci gotowego systemu oświetlenia, autorowi niniejszej pracy udało się zgromadzić użyteczne informacje dotyczące tematyki tworzenia oprogramowania przeznaczonego na mikrokontrolery, komunikacji portem szeregowym czy też zagadnieniom dotyczącym efektywnego przechwytywania obrazu.
+Poza osiągnięciem rezultatu w postaci gotowego systemu oświetlenia, w niniejszej pracy autorowi udało się zgromadzić użyteczne informacje dotyczące tematyki tworzenia oprogramowania przeznaczonego na mikrokontrolery, komunikacji portem szeregowym czy też zagadnieniom dotyczącym efektywnego przechwytywania obrazu.
 
 \section{Perspektywy rozwoju pracy}
 
-W celu dalszego rozwoju niniejszej pracy należy rozważyć przede wszystkim dalsze prace nad stworzonym systemem oświetlenia. W rozdziale \ref{prp} przedstawione zostały liczne możliwości rozwoju projektu, ich realizacja byłaby z pewnością sporym krokiem w przód. Podjęcie się tego zadania oznaczałoby jednak trzymanie się obecnej tematyki pracy, a przecież wykorzystanie mikrokontrolerów nie jest jedynym możliwym rozwiązaniem. 
+W celu dalszego rozwoju niniejszej pracy należy rozważyć przede wszystkim dalsze prace nad stworzonym systemem oświetlenia. W rozdziale \ref{prp} przedstawione zostały liczne możliwości rozwoju projektu, ich realizacja byłaby z pewnością sporym krokiem w przód. Podjęcie się tego zadania oznaczałoby jednak trzymanie się obecnej tematyki pracy, a przecież wykorzystanie mikrokontrolerów podłączonych do komputera nie jest jedynym możliwym rozwiązaniem. 
 
 Odejście od obecnej tematyki pracy zostałoby zapewnione poprzez stworzenie oprogramowania przeznaczonego bezpośrednio dla telewizorów. Aplikacja steru\-jąca mogłaby wtedy zostać przeniesiona na urządzenia mobilne. W tym przypadku wymagane byłoby dokładne zapoznanie się z dostępnym sprzętem i istniejącymi ograniczeniami. Z pewnością jednak takie rozwiązanie spotkałoby się z szerokim gronem odbiorców.
+
+Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego obraz do mikrokontrolera o większej mocy obliczeniowej, na przykład Raspberry Pi. W tym przypadku sterowanie diodami jak i przechytywanie obrazu mogłoby się odbywać bezpośrednio na nim. Mikrokontroler mógłby samodzielnie odtwarzać filmy bez konieczności podłączania kompuera.
 
 \addcontentsline{toc}{chapter}{Bibliografia}
 \begin{thebibliography}{99}

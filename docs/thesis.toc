@@ -35,7 +35,7 @@
 \contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{17}
 \contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{17}
 \contentsline {section}{\numberline {4.8}Analiza projektu}{17}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{17}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{18}
 \contentsline {chapter}{\numberline {5}Podsumowanie}{20}
 \contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{20}
 \contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{20}
