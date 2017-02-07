@@ -42,7 +42,8 @@ class BacklightView: NSViewController {
                 // Avoids memory leaks.
                 autoreleasepool() {
                     let startTime = CFAbsoluteTimeGetCurrent()
-                    animation.run(colors: self.getSelectedColors(), sleepTime: UInt32(self.speedSlider.maxValue - self.speedSlider.doubleValue + self.speedSlider.minValue))
+                    animation.run(colors: self.getSelectedColors())
+                    usleep(UInt32(self.speedSlider.maxValue - self.speedSlider.doubleValue + self.speedSlider.minValue))
                     let endTime = CFAbsoluteTimeGetCurrent()
                     DispatchQueue.main.sync {
                         let fps = Double(round(10 / (endTime - startTime))/10)

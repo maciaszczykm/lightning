@@ -34,12 +34,12 @@
 \contentsline {section}{\numberline {4.5}Implementacja}{17}
 \contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{17}
 \contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{17}
-\contentsline {section}{\numberline {4.8}Analiza projektu}{17}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{18}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{20}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{20}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{20}
-\contentsline {chapter}{Bibliografia}{21}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{23}
-\contentsline {chapter}{Spis tabel}{24}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{25}
+\contentsline {section}{\numberline {4.8}Analiza projektu}{19}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{20}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{22}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{22}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{22}
+\contentsline {chapter}{Bibliografia}{23}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{25}
+\contentsline {chapter}{Spis tabel}{26}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{27}

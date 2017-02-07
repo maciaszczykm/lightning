@@ -11,6 +11,6 @@ import Foundation
 protocol Animation {
     
     func setup(colors: [Color])
-    func run(colors: [Color], sleepTime: UInt32)
+    func run(colors: [Color])
     
 }

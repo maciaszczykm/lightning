@@ -36,31 +36,47 @@
 
 \begin{document}
 
-\lstset{aboveskip=20pt,belowskip=20pt}
-
-\lstdefinestyle{customcmd}{
-captionpos=b, 
-belowcaptionskip=1\baselineskip,
-breaklines=true,
-frame=LRTB,
-xleftmargin=\parindent,
-showstringspaces=false,
-basicstyle=\footnotesize\ttfamily
+\lstdefinelanguage{swift}
+{
+  morekeywords={
+    func,if,then,else,for,in,while,do,switch,case,default,where,break,continue,fallthrough,return,
+    typealias,struct,class,enum,protocol,var,func,let,get,set,willSet,didSet,inout,init,deinit,extension,
+    subscript,prefix,operator,infix,postfix,precedence,associativity,left,right,none,convenience,dynamic,
+    final,lazy,mutating,nonmutating,optional,override,required,static,unowned,safe,weak,internal,
+    private,public,is,as,self,unsafe,dynamicType,true,false,nil,Type,Protocol,
+  },
+  morecomment=[l]{//}, % l is for line comment
+  morecomment=[s]{/*}{*/}, % s is for start and end delimiter
+  morestring=[b]" % defines that strings are enclosed in double quotes
 }
 
+\definecolor{keyword}{HTML}{BA2CA3}
+\definecolor{string}{HTML}{D12F1B}
+\definecolor{comment}{HTML}{008400}
+
 \lstdefinestyle{customswift}{
-captionpos=b, 
-belowcaptionskip=1\baselineskip,
-breaklines=true,
-frame=LRTB,
-xleftmargin=\parindent,
-language=Swift,
-showstringspaces=false,
-basicstyle=\footnotesize\ttfamily,
-keywordstyle=\bfseries\color{green!40!black},
-commentstyle=\itshape\color{purple!40!black},
-identifierstyle=\color{blue},
-stringstyle=\color{orange},
+  captionpos=b, 
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=LRTB,
+  xleftmargin=\parindent,
+  language=swift,
+  showstringspaces=false,
+  keywordstyle=\color{keyword},
+  stringstyle=\color{string},
+  commentstyle=\color{comment},
+}
+
+\lstset{
+  basicstyle=\ttfamily,
+  showstringspaces=false, % lets spaces in strings appear as real spaces
+  columns=fixed,
+  keepspaces=true,
+  keywordstyle=\color{keyword},
+  stringstyle=\color{string},
+  commentstyle=\color{comment},
+  aboveskip=20pt,
+  belowskip=20pt,
 }
 
 \includepdf[noautoscale=true, pages=-]{title-page.pdf}
@@ -342,9 +358,28 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 
 \section{Podręcznik użytkownika}
 
-% TODO podręcznik użytkownika
+% TODO podręcznik użytkownika, opisac protokoly w teorii
 
 \section{Przykładowa implementacja animacji}
+
+Tryb animacji udostępnia kilka podstawowych animacji, które po uruchomieniu wyświetlane są za pomocą diod. W celu dodania nowej animacji wystarczy dodać do projektu nową klasę na wzór klasy Disco przedstawionej na listingu \ref{anim} oraz zarejestrować ją w klasie Animations przedstawionej na listingu \ref{anims}
+
+\lstinputlisting[style=customswift,caption=Klasa Disco -- przykładowa implementacja animacji]{../resources/animation.swift} \label{anim}
+
+Każda implementacja animacji musi implementować protokół Animation co wiąże się z koniecznością implementacji następujących metod:
+
+\begin{itemize}
+	\item setup(colors) -- Metoda ta uruchamiana jest jednokrotnie przy starcie animacji. Jej zadaniem jest odpowiednie zainicjalizowanie wszystkich diod. Kolory wybrane przez użytkownika przekazane są w parametrze.
+	\item run(colors) -- Metoda ta uruchamiana jest przy każdym obiegu pętli w której odbywa się animacja. Jej głównym zadaniem jest przechodzenie pomiędzy kolejnymi stanami animacji. Kolory wybrane przez użytkownika przekazane są w parametrze.
+\end{itemize}
+
+\lstinputlisting[style=customswift,caption=Klasa Animations -- miejsce rejestracji animacji]{../resources/animations.swift} \label{anims}
+
+
+
+
+
+
 
 % TODO przykładowa implementacja animacji
 

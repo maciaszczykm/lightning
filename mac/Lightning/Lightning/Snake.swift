@@ -22,13 +22,12 @@ class Snake: LightController, Animation {
         }
     }
     
-    func run(colors: [Color], sleepTime: UInt32) {
+    func run(colors: [Color]) {
         var lastColor = lights.lights[lights.lights.count - 1].color
         for light in lights.lights {
             swap(&lastColor, &light.color)
         }
         self.serialPort.send(lights: lights)
-        usleep(sleepTime)
     }
     
 }
