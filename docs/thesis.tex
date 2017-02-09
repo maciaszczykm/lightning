@@ -81,8 +81,9 @@
 
 \includepdf[noautoscale=true, pages=-]{title-page.pdf}
 
-% TODO złe numery stron
 \tableofcontents
+
+% TODO złe numery stron
 
 \chapter{Wstęp}
 
@@ -93,18 +94,20 @@ Wraz z upływem czasu postęp technologiczny ma wpływ na życia co raz szerszej
 W parze z licznymi zaletami urządzeń elektronicznych idą jednak pewne wady. Jedną z istotniejszych jest wpływ czasu spędzanego przed różnego rodzaju wyświetlaczami na zdrowie. Badania przeprowadzone na bazie danych Nielsen Audience Measurement pokazują, że przeciętny Polak spędza dziennie średnio 4,5 godziny przed ekranem telewizora\footnote{~Badania zostały przeprowadzone z uwzględnienem osób powyżej 4 roku życia w okresie od stycznia do czerwca 2015 roku \cite{czasprzedtv}.}. Nie oznacza to jednak, że przez cały ten czas ogląda on telewizję. Oglądanie filmów z dysku komputera, za pomocą serwisów VOD\footnote{~Wideo na życzenie (z ang. video on demand).} czy granie na konsoli także są wliczone w ten czas. Gdyby jednak dodać do tego czas spędzony przed ekranem smartfona czy też komputera wynik byłby zapewne dwukrotnie większy.
 
 % TODO wsparcie co najmniej dwoma źródłami i coś o oglądaniu w ciemności
+
 Pogorszenie wzroku czy też wysychanie gałki ocznej są wymieniane jako naj\-częstsze skutki zbyt dużej ilości czasu spędzanego przed ekranem. Poza próbą jego ograniczenia, jedną z częstszych porad jest próba zmniejszenia kontrastu pomiędzy ekranem a jego otoczeniem.
 
 Do celów niniejszej pracy należy złożenie i oprogramowanie systemu oświetlenia, który ma rozszerzać obraz widziany na ekranie na jego otoczenie. Poza zmniejszeniem kontrastu, a więc aspektem zdrowotnym, system ma także na celu zwiększyć wrażenia wizualne dostarczane przez oglądany obraz.
 
 % TODO krótkie wyjaśnienie podstawowych pojęć i diagram/zdjęcia
+
 System oświetlenia składa się z taśmy diod elektroluminescencyjnych\footnote{~LED (z ang. light-emitting diode).} pod\-łączonych do mikrokontrolera Arduino Uno, który z kolei ma współpracować z komputerem z zainstalowanym systemem operacyjnym macOS. Oprogramowanie mikrokontrolera, którego zadaniem jest sterowanie diodami zostało przygotowane w języku Arduino, natomiast aplikacja kontrolująca cały system przeznaczona na komputer z systemem macOS została napisana w języku Swift. Wybór języków jest ściśle związany z koniecznością uzyskania jak najlepszej wydajności oraz użyciem najnowszych technologii.
 
 Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jednak to właśnie nowoczesne technologie, prostota wykonania i niskie koszta powinny uczynić z Ligtning, bo taką nazwę otrzymał projekt, pełnowartościowego konkurenta.
 
 \section{Problematyka i zakres pracy}
 
-% TODO problematyka i zakres pracy
+% TODO
 
 \section{Cele pracy}
 
@@ -126,31 +129,33 @@ Do najważniejszych celów niniejszej pracy dyplomowej należą:
 
 \subsection{Studia literaturowe}
 
-% TODO studia literaturowe
+% TODO
 
 \subsection{Analiza istniejących systemów oświetlenia}
 
-% TODO analiza istniejących systemów oświetlenia
+% TODO
 
 \subsection{Stworzenie własnego systemu oświetlenia}
 
-% TODO stworzenie własnego systemu oświetlenia
+% TODO
 
 \subsection{Analiza porównawcza oraz testy}
 
-% TODO analiza porównawcza oraz testy
+% TODO
 
 \section{Przegląd literatury w dziedzinie}
 
-% TODO przegląd literatury w dziedzinie
+% TODO
 
 \section{Układ pracy}
 
-% TODO układ pracy
+% TODO
 
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
 
-% TODO zagadnienia teoretyczne - protokoly, swift, port szereg, przechtywywanie obrazu, mikrokontrolrty
+% TODO protokoly, swift, port szereg, przechtywywanie obrazu, mikrokontrolery
+
+% TODO info o oku ze strony lighpacka na kickstarterze
 
 \chapter[Analiza istniejących rozwiązań]{Analiza istniejących rozwiązań}
 
@@ -213,13 +218,90 @@ Do wad Ambilight zaliczyć można wysoki koszt, wsparcie jedynie dla telewizoró
 
 % TODO koszt i link do źródła informacji
 
-\subsection{System oświetlenia Lightpack}
+\subsection{System oświetlenia Lightpack} \label{lightpack}
 
-% TODO lightpack
+Kolejne miejsce w zestawieniu zajmuje system oświetlenia Lightpack. Jest to projekt ufundowany przez społeczność\footnote{~ Z ang. crowd-funding.} za pomocą serwisu Kickstarter \cite{lpk}, gdzie zebrał ponad pół miliona dolarów.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.7\textwidth]{../resources/lightpack.png}
+\caption[Logo Lightpack]{Logo Lightpack \cite{lps}}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{| l | l |} 
+\hline 
+Koszt & od 119 dolarów, czyli około 482 zł \\ \hline
+Rodzaj systemu & gotowy do użycia, zewnętrzny \\ \hline
+Płynność działania & wysoka \\ \hline
+Możliwość konfiguracji & duża  \\ \hline
+Interfejs użytkownika & intuicyjny  \\ \hline
+Dodatkowe możliwości &  animacja przejść pomiędzy kolorami, \\ \hline
+& pełna konfiguracja obszarów diod \\ \hline
+Wspierany sprzęt i oprogramowanie &  dowolny komputer i telewizor   \\ \hline
+Licencja & kod otwartoźródłowy  \\ \hline
+\end{tabular} 
+\caption{Analiza systemu oświetlenia Lightpack}
+\end{table}
+
+Nawiększą zaletą Lightpack jest multiplatformowość, działa on z każdym telewizorem oraz komputerami z systemami Windows, Linux jak i macOS. Posiada on także spore możliwości konfiguracyjne. Otwartoźródłowy kod również zalicza się do zalet, choć kod znajdujący się na repozytorium nie jest już uaktualniany od długiego czasu \cite{legacy}.
+
+Minusem jest dość wysoka cena jak i konieczność podłączenia dodatkowego urządzenia do wyświetlacza. Diody montowane są za pomocą samoprzypelnych taśm co również nie musi spodobać się wszystkim użytkownikom.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/lightpackm.jpg}
+\caption[Telewizor z systemem oświetlenia Lightpack]{Telewizor z systemem oświetlenia Lightpack \cite{lps}}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.8\textwidth]{../resources/prismatik.jpg}
+\caption[Aplikacja sterująca systemu oświetlenia Lightpack]{Aplikacja sterująca systemu oświetlenia Lightpack \cite{lps}}
+\end{figure}
+
+\vfill
+\clearpage
 
 \subsection{System oświetlenia Lightpack 2}
 
-% TODO lightpack 2
+Lightpack 2 jest kontynuacją opisanego w rozdziale \ref{lightpack} projektu Lightpack. Wprowadza on jednak sporo zmian i podobnie jak swój poprzednik został ufundowany z wykorzystaniem serwisu Kickstarter \cite{lp2k}, gdzie również zebrał ponad pół miliona dolarów.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.5\textwidth]{../resources/lightpack2.jpg}
+\caption[Logo Lightpack 2]{Logo Lightpack 2 \cite{lp2s}}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{| l | l |} 
+\hline 
+Koszt & od 239 dolarów, czyli około 968 zł \\ \hline
+Rodzaj systemu & gotowy do użycia, zewnętrzny \\ \hline
+Płynność działania & wysoka \\ \hline
+Możliwość konfiguracji & bardzo duża  \\ \hline
+Interfejs użytkownika & intuicyjny  \\ \hline
+Dodatkowe możliwości &  animacja przejść pomiędzy kolorami, \\ \hline
+& pełna konfiguracja obszarów diod, \\ \hline
+& aplikacja mobilna, dodatkowe lampy \\ \hline
+Wspierany sprzęt i oprogramowanie &  dowolny komputer i telewizor   \\ \hline
+Licencja & brak dostępu do źródeł,  \\ \hline
+& dostępne stare źródła aplikacji sterującej \\ \hline
+\end{tabular} 
+\caption{Analiza systemu oświetlenia Lightpack 2}
+\end{table}
+
+System Lighpack 2 posiada zalety swojego poprzednika, jednak dodaje on zupełnie nowe możliwości. Ciekawym dodatkiem jest obsługa zewnętrznych lamp rozmieszczonych w tym samym pomieszczeniu co wyświetlacz. Dodano aplikację mobilną. Najważniejszy jest jednak fakt, że nie wymaga on połączenia z komputerem. Tym razem podłączany on jest do dowolnego źródła sygnału HDMI, w tym konsoli czy dekodera telewizyjnego.
+
+Dużą wadą systemu jest spora cena, która rośnie wraz z chęcią dokupienia dodatkowych lamp czy też większej ilościo diod. Ponadto na Lighpack 2 trzeba jeszcze poczekać, ponieważ jest on w ostatniej fazie produkcji i na razie możliwe jest jedynie składanie zamówień.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/lightpack2m.jpg}
+\caption[Telewizor z systemem oświetlenia Lightpack 2]{Telewizor z systemem oświetlenia Lightpack 2 \cite{lp2s}}
+\end{figure}
 
 \chapter{System oświetlenia Lightning}
 
@@ -315,20 +397,16 @@ Aplikacja sterująca została napisana w języku Swift, do stworzenia interfejsu
 
 \subsection{Diagram klas}
 
-% TODO diagram klas
+% TODO
 
 \subsection{Wzorce projektowe}
 
-% TODO wzorce projektowe
+% TODO
 
 \subsection{Interfejs użytkownika}
 
-
-
 Interfejs, w tym przypadku graficzny, należy do elementów na które użytkownicy zwracają uwagę na samym początku, dlatego też powinien być on zaprojektowany z pomysłem i umożliwiać jak najprostsze poruszanie się po aplikacji.
 Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logiczny jest podział na trzy widoki przedstawione poniżej:
-
-% TODO interfejs użytkownika
 
 \begin{figure}[h!]
 \centering
@@ -351,9 +429,11 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 \vfill
 \clearpage
 
+% TODO
+
 \section{Implementacja}
 
-% TODO implementacja
+% TODO
 
 \section{Podręcznik użytkownika}
 
@@ -367,24 +447,19 @@ Lightning jest systemem oświetlenia posiadającym podobną funkcjonalność jak
 
 Lightning składa się z kilku komponentów, poza komputerem podłączonym do wyświetlacza niezbędny jest mikrokontroler Arduino Uno oraz taśma diod elektroluminescencyjnych\footnote{~Wszystkie komponenty systemu zostały wyszczególnione w rozdziale \ref{komp}}. Działanie systemu opiera się na przechwytywaniu obrazu z komputera z systemem macOS, uśrednianiem kolorów występujących w sferach na które podzielony został ekran\footnote{~Każda ze sfer odpowiada jednej diodzie.} i przesyłaniu informacji do mikrokontrolera. Jego zadaniem jest odbieranie informacji na temat kolorów diod i sterowanie diodami. System jest w pełni niezależny od wykorzystywanego wyświetlacza.
 
+\subsubsection{Ile diód można podłączyć do Lightning?}
+
+Dowolną ilość, system może jednak zacząć spowalniać w przypadku użycia ponad 200 diod jeśli podłączony jest do starszego komputera Mac.
 
 \subsubsection{Jak zacząć korzystać z Lightning?}
 
-% TODO opis komponentow, polaczenia i oprogramowania
+Pierwszym etapem powinno być skompletowanie wszystkich komponentów systemu wymienionych w rozdziale \ref{komp}. Następnie należy je ze sobą podłączyć tak jak przedstawia to rysunek \ref{schemat}. Ostatnim krokiem jest wgranie oprogramowania na Arduino -- najłatwiej zrobić to za pomocą środowiska programistycznego Arduino, a także uruchomienie aplikacji sterującej na komputerze Mac. 
 
 \subsubsection{Jak dodać własne animacje?}
 
-% TODO podręcznik użytkownika
+Proces dodawania własnych animacji został opisany w rozdziale  \ref{animacje}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Przykładowa implementacja animacji}
+\section{Przykładowa implementacja animacji} \label{animacje}
 
 Tryb animacji udostępnia kilka podstawowych animacji, które po uruchomieniu wyświetlane są za pomocą diod. W celu dodania nowej animacji wystarczy dodać do projektu nową klasę na wzór klasy Disco przedstawionej na listingu \ref{anim} oraz zarejestrować ją w klasie Animations przedstawionej na listingu \ref{anims}
 
@@ -420,7 +495,7 @@ W rozdziale \ref{kryt} zostały zdefiniowane kryteria analizy której poddane zo
 \begin{tabular}{| l | l |} 
 \hline 
 Koszt & 316,70 zł\footnote{~Kwota ta mogłaby ulec znacznemu zmniejszeniu w przypadku wykorzystania dostępnych zamienników dla mikrokontrolera Arduino Uno a także taśmy diod elektroluminescencyjnych, tak jak zostało to opisane w rozdziale \ref{komp}.}\\ \hline
-Rodzaj systemu & do samodzielnego skompletowania, \\ \hline
+Rodzaj systemu & do samodzielnego montażu, \\ \hline
 & zewnętrzny \\ \hline
 Płynność działania & bardzo wysoka \\ \hline
 Możliwość konfiguracji & średnia  \\ \hline
@@ -432,9 +507,11 @@ Licencja & kod otwartoźródłowy  \\ \hline
 \caption{Analiza systemu oświetlenia Lightning}
 \end{table}
 
+% TODO zdjęcia gotowego projektu
+
 Do niewątpliwych zalet Ligthning należy z pewnością niski koszt, otwartożródłowy kod i łatwa rozszerzalność systemu. Użytkownicy znający podstawy programowania mogą z łątwością dopasować projekt do swoich potrzeb, nie jest to jednak konieczne ponieważ większość opcji konfiguracyjnych jest już dostępna. Ciekawym dodatkiem jest tryb animacji. Animacje można dodawać według własnych upodobań. Dodatkowo system można podłączyć do dowolnego wyświetlacza połączonego z komputerem.
 
-Podobnie jak w przypadku wszystkich innych analizowanych rozwiązań poza technologią Philips Ambilight Ligtning jest zewnętrznym systemem oświetlenia co wiąże się z koniecznością podłączenia dodatkowych urządzeń do wyświetlacza. Kolejną z wad jest przeznaczenie na komputery z systemem macOS, jest to związane z chęcią uzyskania jak najwyższej płynności działania. 
+Podobnie jak w przypadku wszystkich innych analizowanych rozwiązań poza technologią Philips Ambilight Ligtning jest zewnętrznym systemem oświetlenia co wiąże się z koniecznością podłączenia dodatkowych urządzeń do wyświetlacza. Kolejną z wad jest przeznaczenie na komputery z systemem macOS, jest to związane z chęcią uzyskania jak najwyższej płynności działania.
 
 \section{Perspektywy rozwoju projektu} \label{prp}
 
@@ -479,6 +556,12 @@ Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego o
 \bibitem{xcode} {\tt https://developer.apple.com/xcode/}.\\Data dostępu -- 18.01.2017.
 \bibitem{ambilight} {\tt http://www.cobra.fr/media/wysiwyg/logo-ambilight.jpg}. \\Data dostępu -- 06.02.2017.
 \bibitem{ambilight2} {\tt http://www.komputerswiat.pl/media/2016/224/4688581/003\-philips-ambilight-2-sides.jpg}. \\Data dostępu -- 06.02.2017.
+\bibitem{lpk} {\tt https://www.kickstarter.com/projects/woodenshark/lightpack\-ambient-backlight-for-your-displays}. \\Data dostępu -- 09.02.2017.
+\bibitem{lps} {\tt http://lightpack.tv/}. \\Data dostępu -- 09.02.2017.
+\bibitem{legacy} {\tt https://github.com/Atarity/Lightpack}. \\Data dostępu -- 09.02.2017.
+\bibitem{lp2k} {\tt https://www.kickstarter.com/projects/woodenshark/lightpack\-2-ultimate-light-orchestra-for-your-livi}. \\Data dostępu -- 09.02.2017.
+\bibitem{lp2s} {\tt http://lightpack.tv/promo/index.php}. \\Data dostępu -- 09.02.2017.
+
 \end{thebibliography}
 
 \addcontentsline{toc}{chapter}{Spis rysunków} 
