@@ -32,19 +32,21 @@
 \contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{20}
 \contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{20}
 \contentsline {section}{\numberline {4.5}Implementacja}{22}
-\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{22}
-\contentsline {subsubsection}{Czym jest Lightning?}{22}
-\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{22}
-\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{22}
-\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{22}
-\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{23}
-\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{23}
-\contentsline {section}{\numberline {4.8}Analiza projektu}{25}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{26}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{27}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{27}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{27}
-\contentsline {chapter}{Bibliografia}{28}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{30}
-\contentsline {chapter}{Spis tabel}{31}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{32}
+\contentsline {subsection}{\numberline {4.5.1}Oprogramowanie mikrokontrolera}{22}
+\contentsline {subsection}{\numberline {4.5.2}Aplikacja przeznaczona na komputer}{26}
+\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{26}
+\contentsline {subsubsection}{Czym jest Lightning?}{26}
+\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{26}
+\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{27}
+\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{27}
+\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{27}
+\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{27}
+\contentsline {section}{\numberline {4.8}Analiza projektu}{29}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{30}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{32}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{32}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{32}
+\contentsline {chapter}{Bibliografia}{33}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{35}
+\contentsline {chapter}{Spis tabel}{36}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{37}

@@ -67,6 +67,19 @@
   commentstyle=\color{comment},
 }
 
+\lstdefinestyle{customarduino}{
+  captionpos=b, 
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=LRTB,
+  xleftmargin=\parindent,
+  language=Octave,
+  showstringspaces=false,
+  keywordstyle=\color{keyword},
+  stringstyle=\color{string},
+  commentstyle=\color{comment},
+}
+
 \lstset{
   basicstyle=\ttfamily,
   showstringspaces=false, % lets spaces in strings appear as real spaces
@@ -77,6 +90,10 @@
   commentstyle=\color{comment},
   aboveskip=20pt,
   belowskip=20pt,
+  numbers=left,
+  firstnumber=1,
+  numberfirstline=true,
+  numberstyle=\ttfamily\color{gray},
 }
 
 \includepdf[noautoscale=true, pages=-]{title-page.pdf}
@@ -149,7 +166,19 @@ Do najważniejszych celów niniejszej pracy dyplomowej należą:
 
 \section{Układ pracy}
 
+Temat niniejszej pracy to system oświetlenia skonstruowany za pomocą diod elektroluminescencyjnych oraz mikrokontrolera Arduino Uno. Jej głównym celem jest przeanalizowanie istniejących systemów oświetlenia oraz stworzenie własnego ro\-związania.
+
+Praca rozpoczyna się od uzasadnienia wyboru tematu pracy, a także opisu celów pracy, jej problematyki, zakresu, wykorzystanych metod badawczych, przeglądu literatury oraz jej układu.
+
+W kolejnym rozdziale zawarte zostały objaśnienia zagadnień teoretycznych po\-wiązanych z tematyką pracy, czyli...
+
 % TODO
+
+Następnie przeanalizowano istniejące już systemy oświetlenia biorąc pod uwagę wcześniej zdefiniowane kryteria.
+
+Kolejny rozdział opisuje projekt systemu oświetlenia Lightning tworzonego w ramach części badawczej niniejszej pracy. W rozdziale tym opisane zostają wymagania postawione przed projektem, komponenty z jakich będzie się on składał, tworzone moduły oprogramowania, diagram klas projektu, wykorzystane wzorce projektowe czy też sama implementacja. Rozdział kończy analiza wykonanego projektu i jego dokumentacja w postaci podręcznika użytkownika, opisu dodawania własnych animacji i perspektyw rozwoju projektu.
+
+Pracę kończy podsumowanie, które zawiera dyskusję wyników oraz dalsze prespektywy jej rozwoju.
 
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
 
@@ -433,6 +462,34 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 
 \section{Implementacja}
 
+\subsection{Oprogramowanie mikrokontrolera}
+
+Oprogramowanie mikrokontrolera napisane w natywnym języku Arduino mieści się w jednym pliku przedstawionym na listingu \ref{ino}.
+
+\lstinputlisting[style=customarduino,caption=Kod oprogramowania mikrokontrolera]{../arduino/lightning/lightning.ino} \label{ino}
+
+Tak jak to zostało wcześniej wspomniane celem mikrokontrolera jest odbieranie sygnału portem szeregowym i zapalanie diod w odpowiedniej konfiguracji. Wszystko musi odbywać się możliwie szybko, tak aby diody swój kolor zmieniały płynnie i nie pojawiały się żadne opóźnienia.
+
+Pierwszym przyjętym założeniem jest odpowiednie formatowanie pakietów danych, które będą wysyłane przez port szeregowy. Aby żadne dane nie zostały utracone każdy pakiet musi składać się z nagłówka i danych właściwych. Nagłówki składają się z 11 bajtów, długość całego pakietu jest natomiast uzależniona od ilości diod zdefiniowanej w nagłówku:
+
+\begin{itemize}
+	\item Pierwsze 9 bajtów -- Zakodowana nazwa projektu, a więc "Lightning" jako tablica znaków.
+	\item 10 bajt -- Liczba diod wykorzystywana przez użytkownika.
+	\item 11 bajt -- Suma kontrolna nagłówka, czyli wartość 10 bajta XOR\footnote{~Alternatywa wykluczająca (z ang. exclusive or).} 0x13. W przypadku niezgodności wartości, pakiet zostaje pominięty przez mikrokontroler.
+	\item Od 12 bajta -- Zakodowane kolory diod, na które mikrokontroler musi je zaświecić. Na każdą diodę przypadają 3 bajty danych:
+	\begin{itemize}
+		\item 1 bajt -- Wartość koloru czerwonego w skali od 0 do 255.
+		\item 2 bajt -- Wartość koloru zielonego w skali od 0 do 255.
+		\item 3 bajt -- Wartość koloru niebieskiego w skali od 0 do 255.
+	\end{itemize}
+\end{itemize}
+
+Jeśli użytkownik korzysta z 25 diod, pakiety danych będą miały długość 86 bajtów, co jest małą liczbą biorąc pod uwagę zakładaną prędkość 115200 bitów na sekundę jeśli chodzi o transmisję portem szeregowym. Kluczem dla płynności działania aplikacji okazuje się więc odczyt i sprawne przekazanie instrukcji diodom.
+
+% TODO opis oczekiwania na zmiany stanow etc.
+
+\subsection{Aplikacja przeznaczona na komputer}
+
 % TODO
 
 \section{Podręcznik użytkownika}
@@ -449,7 +506,7 @@ Lightning składa się z kilku komponentów, poza komputerem podłączonym do wy
 
 \subsubsection{Ile diód można podłączyć do Lightning?}
 
-Dowolną ilość, system może jednak zacząć spowalniać w przypadku użycia ponad 200 diod jeśli podłączony jest do starszego komputera Mac.
+Do 255 diod, wystarczy to do oświetlenia powierzchni nawet za największym ekranem i zapewni uzyskanie wysokiej płynności działania nawet ze starszymi komputerami Mac.
 
 \subsubsection{Jak zacząć korzystać z Lightning?}
 
