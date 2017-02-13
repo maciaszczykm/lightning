@@ -25,16 +25,16 @@ uint8_t magicWord[] = {'L','i','g', 'h', 't', 'n', 'i', 'n', 'g'}, leds, checksu
 // Lightning main loop states.
 #define HEADER_VALIDATION_STATE 0
 #define DATA_BUFFERING_STATE   1
+uint8_t state = HEADER_VALIDATION_STATE;
 
-uint8_t state = HEADER_VALIDATION_STATE;  // Initial Lightning state.
-uint8_t indexIn = 0, indexOut = 0;        // Indexes for input and output buffers.
-uint8_t buffer[256];                      // Circular buffer for serial port data is 256 bytes long.
-uint8_t spiFlag;                          // Allows to skip check if first byte has been already buffered when skipping from HEADER_VALIDATION_STATE to DATA_BUFFERING_STATE.
-int16_t index;                            // Index for reading header from buffer and turning LEDs off.
-int16_t bytesBuffered = 0;                // Number of bytes buffered to the buffer.
-int16_t value;                            // Current value read from serial port.
-int32_t bytesRemaining;                   // Number of bytes remaining to buffer in DATA_BUFFERING_STATE.
-unsigned long lastByteTime;               // Last time when byte was buffered.
+// Circular buffer for serial port data is 256 bytes long.
+uint8_t buffer[256];  
+
+// Other global variables.
+uint8_t indexIn = 0, indexOut = 0, spiFlag;
+int16_t bytesBuffered = 0, index, value;
+int32_t bytesRemaining;
+unsigned long lastByteTime;
 
 void setup() {
   LED_DDR  |=  LED_PIN; // Make LED pin an output.
@@ -51,16 +51,14 @@ void setup() {
 }
 
 void loop() {
-  // Buffer byte if there are any on serial port.
-  if((bytesBuffered < 256) && ((value = Serial.read()) >= 0)) {
+  if((bytesBuffered < 256) && ((value = Serial.read()) >= 0)) { // Buffer byte if there are any on serial port.
     buffer[indexIn++] = value;
     bytesBuffered++;
     lastByteTime = millis();
   } else {
-    // Turn off LEDs and reset timeout counter, when no data recieved for more than LED_TIMEOUT.
     if((millis() - lastByteTime) > LED_TIMEOUT) {
       for(index=0; index<32767; index++) {
-        for(SPDR=0; !(SPSR & _BV(SPIF)); );
+        for(SPDR=0; !(SPSR & _BV(SPIF)); ); // Turn off LEDs when no data recieved for more than LED_TIMEOUT.
       }
       delay(1);
       lastByteTime = millis();
@@ -68,7 +66,6 @@ void loop() {
   }
 
   switch(state) {
-
     case HEADER_VALIDATION_STATE:
       if(bytesBuffered >= HEADER_SIZE) {
         for(index=0; (index<MAGIC_WORD_SIZE) && (buffer[indexOut++] == magicWord[index++]);); // Move indexOut through buffer if it matches magic word.
@@ -78,7 +75,7 @@ void loop() {
           if(checksum == (leds ^ 0x13)) {
             bytesRemaining = 3L * ((long)leds + 1L);
             bytesBuffered -= 2;
-            spiFlag = 0;
+            spiFlag = 0; // Allows to skip check if first byte has been already buffered when skipping from HEADER_VALIDATION_STATE to DATA_BUFFERING_STATE.
             state = DATA_BUFFERING_STATE;
           } else {
             indexOut  -= 2;
