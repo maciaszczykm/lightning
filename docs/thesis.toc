@@ -1,52 +1,52 @@
 \select@language {polish}
-\contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{4}
-\contentsline {section}{\numberline {1.1}Uzasadnienie wyboru tematu}{4}
-\contentsline {section}{\numberline {1.2}Problematyka i zakres pracy}{5}
-\contentsline {section}{\numberline {1.3}Cele pracy}{5}
-\contentsline {section}{\numberline {1.4}Metoda badawcza}{6}
-\contentsline {subsection}{\numberline {1.4.1}Studia literaturowe}{6}
-\contentsline {subsection}{\numberline {1.4.2}Analiza istniej\IeC {\k a}cych system\IeC {\'o}w o\IeC {\'s}wietlenia}{6}
-\contentsline {subsection}{\numberline {1.4.3}Stworzenie w\IeC {\l }asnego systemu o\IeC {\'s}wietlenia}{6}
-\contentsline {subsection}{\numberline {1.4.4}Analiza por\IeC {\'o}wnawcza oraz testy}{6}
-\contentsline {section}{\numberline {1.5}Przegl\IeC {\k a}d literatury w dziedzinie}{6}
-\contentsline {section}{\numberline {1.6}Uk\IeC {\l }ad pracy}{6}
-\contentsline {chapter}{\numberline {2}Zagadnienia teoretyczne}{7}
-\contentsline {chapter}{\numberline {3}Analiza istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{8}
-\contentsline {section}{\numberline {3.1}Kryteria analizy}{8}
-\contentsline {section}{\numberline {3.2}Por\IeC {\'o}wnanie istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{9}
-\contentsline {subsection}{\numberline {3.2.1}Technologia Philips Ambilight}{9}
-\contentsline {subsection}{\numberline {3.2.2}System o\IeC {\'s}wietlenia Lightpack}{11}
-\contentsline {subsection}{\numberline {3.2.3}System o\IeC {\'s}wietlenia Lightpack 2}{13}
-\contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{15}
-\contentsline {section}{\numberline {4.1}Analiza wymaga\IeC {\'n}}{15}
-\contentsline {subsection}{\numberline {4.1.1}Wymagania funkcjonalne}{15}
-\contentsline {subsection}{\numberline {4.1.2}Wymagania niefunkcjonalne}{15}
-\contentsline {section}{\numberline {4.2}Komponenty systemu}{16}
-\contentsline {section}{\numberline {4.3}Modu\IeC {\l }y oprogramowania}{17}
-\contentsline {subsection}{\numberline {4.3.1}Oprogramowanie mikrokontrolera}{17}
-\contentsline {subsection}{\numberline {4.3.2}Aplikacja przeznaczona na komputer}{18}
-\contentsline {section}{\numberline {4.4}Projekt}{18}
-\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{18}
-\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{19}
-\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{20}
-\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{20}
-\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{20}
-\contentsline {section}{\numberline {4.5}Implementacja}{22}
-\contentsline {subsection}{\numberline {4.5.1}Oprogramowanie mikrokontrolera}{22}
-\contentsline {subsection}{\numberline {4.5.2}Aplikacja przeznaczona na komputer}{26}
-\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{26}
-\contentsline {subsubsection}{Czym jest Lightning?}{26}
-\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{26}
-\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{27}
-\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{27}
-\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{27}
-\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{27}
-\contentsline {section}{\numberline {4.8}Analiza projektu}{29}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{30}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{32}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{32}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{32}
-\contentsline {chapter}{Bibliografia}{33}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{35}
-\contentsline {chapter}{Spis tabel}{36}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{37}
+\contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{3}
+\contentsline {section}{\numberline {1.1}Uzasadnienie wyboru tematu}{3}
+\contentsline {section}{\numberline {1.2}Problematyka i zakres pracy}{6}
+\contentsline {section}{\numberline {1.3}Cele pracy}{6}
+\contentsline {section}{\numberline {1.4}Metoda badawcza}{7}
+\contentsline {subsection}{\numberline {1.4.1}Studia literaturowe}{7}
+\contentsline {subsection}{\numberline {1.4.2}Analiza istniej\IeC {\k a}cych system\IeC {\'o}w o\IeC {\'s}wietlenia}{7}
+\contentsline {subsection}{\numberline {1.4.3}Stworzenie w\IeC {\l }asnego systemu o\IeC {\'s}wietlenia}{7}
+\contentsline {subsection}{\numberline {1.4.4}Analiza por\IeC {\'o}wnawcza oraz testy}{7}
+\contentsline {section}{\numberline {1.5}Przegl\IeC {\k a}d literatury w dziedzinie}{7}
+\contentsline {section}{\numberline {1.6}Uk\IeC {\l }ad pracy}{7}
+\contentsline {chapter}{\numberline {2}Zagadnienia teoretyczne}{8}
+\contentsline {chapter}{\numberline {3}Analiza istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{9}
+\contentsline {section}{\numberline {3.1}Kryteria analizy}{9}
+\contentsline {section}{\numberline {3.2}Por\IeC {\'o}wnanie istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{10}
+\contentsline {subsection}{\numberline {3.2.1}Technologia Philips Ambilight}{10}
+\contentsline {subsection}{\numberline {3.2.2}System o\IeC {\'s}wietlenia Lightpack}{12}
+\contentsline {subsection}{\numberline {3.2.3}System o\IeC {\'s}wietlenia Lightpack 2}{14}
+\contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{16}
+\contentsline {section}{\numberline {4.1}Analiza wymaga\IeC {\'n}}{16}
+\contentsline {subsection}{\numberline {4.1.1}Wymagania funkcjonalne}{16}
+\contentsline {subsection}{\numberline {4.1.2}Wymagania niefunkcjonalne}{16}
+\contentsline {section}{\numberline {4.2}Komponenty systemu}{17}
+\contentsline {section}{\numberline {4.3}Modu\IeC {\l }y oprogramowania}{18}
+\contentsline {subsection}{\numberline {4.3.1}Oprogramowanie mikrokontrolera}{18}
+\contentsline {subsection}{\numberline {4.3.2}Aplikacja przeznaczona na komputer}{19}
+\contentsline {section}{\numberline {4.4}Projekt}{19}
+\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{19}
+\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{20}
+\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{21}
+\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{21}
+\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{21}
+\contentsline {section}{\numberline {4.5}Implementacja}{23}
+\contentsline {subsection}{\numberline {4.5.1}Oprogramowanie mikrokontrolera}{23}
+\contentsline {subsection}{\numberline {4.5.2}Aplikacja przeznaczona na komputer}{27}
+\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{27}
+\contentsline {subsubsection}{Czym jest Lightning?}{27}
+\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{27}
+\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{28}
+\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{28}
+\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{28}
+\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{28}
+\contentsline {section}{\numberline {4.8}Analiza projektu}{30}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{31}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{33}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{33}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{33}
+\contentsline {chapter}{Bibliografia}{34}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{36}
+\contentsline {chapter}{Spis tabel}{37}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{38}

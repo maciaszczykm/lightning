@@ -45,9 +45,9 @@
     final,lazy,mutating,nonmutating,optional,override,required,static,unowned,safe,weak,internal,
     private,public,is,as,self,unsafe,dynamicType,true,false,nil,Type,Protocol,
   },
-  morecomment=[l]{//}, % l is for line comment
-  morecomment=[s]{/*}{*/}, % s is for start and end delimiter
-  morestring=[b]" % defines that strings are enclosed in double quotes
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]"
 }
 
 \definecolor{keyword}{HTML}{BA2CA3}
@@ -82,7 +82,7 @@
 
 \lstset{
   basicstyle=\ttfamily,
-  showstringspaces=false, % lets spaces in strings appear as real spaces
+  showstringspaces=false,
   columns=fixed,
   keepspaces=true,
   keywordstyle=\color{keyword},
@@ -96,27 +96,46 @@
   numberstyle=\ttfamily\color{gray},
 }
 
-\includepdf[noautoscale=true, pages=-]{title-page.pdf}
-
+\includepdf{title-page.png}
+\mbox{}
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
 \tableofcontents
-
-% TODO złe numery stron
 
 \chapter{Wstęp}
 
 \section{Uzasadnienie wyboru tematu}
 
-Wraz z upływem czasu postęp technologiczny ma wpływ na życia co raz szerszej rzeszy ludzi na całym świecie. Niezliczone ilości urządzeń zagościły na stałe w domach i mało kto wyobraża sobie bez nich swoje życie. Zaczynając od artykułów gospodarstwa domowego, a kończąc na elektronice użytkowej do której zaliczają się komputery, telewizory czy też smartfony\footnote{~Przenośne urządzenia łączące w sobie zalety telefonów komórkowych oraz przenośnych komputerów (z ang. smartphone).}. Wszystkie te urządzenia mają na celu ułatwianie życia swoim użytkownikom.
+Wraz z upływem czasu postęp technologiczny ma wpływ na życia co raz szerszej rzeszy ludzi na całym świecie. Niezliczone ilości urządzeń zagościły na stałe w~domach i mało kto wyobraża sobie bez nich swoje życie. Zaczynając od artykułów gospodarstwa domowego, a kończąc na elektronice użytkowej do której zaliczają się komputery, telewizory czy też smartfony\footnote{~Przenośne urządzenia łączące w sobie zalety telefonów komórkowych oraz przenośnych komputerów (z ang. smartphone).}. Wszystkie te urządzenia mają na~celu ułatwianie życia swoim użytkownikom.
 
 W parze z licznymi zaletami urządzeń elektronicznych idą jednak pewne wady. Jedną z istotniejszych jest wpływ czasu spędzanego przed różnego rodzaju wyświetlaczami na zdrowie. Badania przeprowadzone na bazie danych Nielsen Audience Measurement pokazują, że przeciętny Polak spędza dziennie średnio 4,5 godziny przed ekranem telewizora\footnote{~Badania zostały przeprowadzone z uwzględnienem osób powyżej 4 roku życia w okresie od stycznia do czerwca 2015 roku \cite{czasprzedtv}.}. Nie oznacza to jednak, że przez cały ten czas ogląda on telewizję. Oglądanie filmów z dysku komputera, za pomocą serwisów VOD\footnote{~Wideo na życzenie (z ang. video on demand).} czy granie na konsoli także są wliczone w ten czas. Gdyby jednak dodać do tego czas spędzony przed ekranem smartfona czy też komputera wynik byłby zapewne dwukrotnie większy.
 
-% TODO wsparcie co najmniej dwoma źródłami i coś o oglądaniu w ciemności
-
 Pogorszenie wzroku czy też wysychanie gałki ocznej są wymieniane jako naj\-częstsze skutki zbyt dużej ilości czasu spędzanego przed ekranem. Poza próbą jego ograniczenia, jedną z częstszych porad jest próba zmniejszenia kontrastu pomiędzy ekranem a jego otoczeniem.
 
-Do celów niniejszej pracy należy złożenie i oprogramowanie systemu oświetlenia, który ma rozszerzać obraz widziany na ekranie na jego otoczenie. Poza zmniejszeniem kontrastu, a więc aspektem zdrowotnym, system ma także na celu zwiększyć wrażenia wizualne dostarczane przez oglądany obraz.
+\begin{figure}[h]
+\centering
+\includegraphics[width=.7\textwidth]{../resources/focuswo.png}
+\caption[Średni czas dopasowania źrenicy do wyświetlanego obrazu]{Średni czas dopasowania źrenicy do wyświetlanego obrazu \cite{diagramoko}}
+\end{figure}
 
-% TODO krótkie wyjaśnienie podstawowych pojęć i diagram/zdjęcia
+W roku 2002 firma Philips opatentowała technologię Ambilight\footnote{~Otaczające oświetlenie (z ang. ambient lighting).}, która ma za zadanie rozszerzać obraz wyświetlany na ekranie na jego otoczenie za pomocą diod umieszczonych na tylnym panelu tworzonych telewizorów. Ambilight spotkało się z bardzo dobrym odbiorem społeczności, ponieważ poza imponującymi efektami wizualnymi zgodnie z badaniami przeprowadzonymi przez profesora Begemanna redukuje ono negatywny wpływ wyświetlaczy na oko użytkowników telewizorów~\cite{ambilightaoko}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/ambilight3.jpg}
+\caption[Telewizor z technologią Philips Ambilight]{Telewizor z technologią Philips Ambilight \cite{ambilight2}}
+\end{figure}
+
+Ambilight posiada jednak znaczącą wadę, jest ono przeznaczone tylko dla telewizorów marki Philips, a więc nie mogą z niej korzystać użytkownicy telewizorów innych marek jak i ekranów podłączonych do komputera.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.7\textwidth]{../resources/focusw.png}
+\caption[Średni czas dopasowania źrenicy do wyświetlanego obrazu z otaczającym oświetleniem]{Średni czas dopasowania źrenicy do wyświetlanego obrazu z otaczającym oświetleniem \cite{diagramoko}}
+\end{figure}
+
+Autor niniejszej pracy jako cel postawił sobie złożenie i oprogramowanie systemu oświetlenia, który ma rozszerzać obraz widziany na ekranie na jego otoczenie w sposób podobny do Philips Ambilight. Poza zmniejszeniem kontrastu, a więc aspektem zdrowotnym, system ma także na celu zwiększyć wrażenia wizualne dostarczane przez oglądany obraz.
 
 System oświetlenia składa się z taśmy diod elektroluminescencyjnych\footnote{~LED (z ang. light-emitting diode).} pod\-łączonych do mikrokontrolera Arduino Uno, który z kolei ma współpracować z komputerem z zainstalowanym systemem operacyjnym macOS. Oprogramowanie mikrokontrolera, którego zadaniem jest sterowanie diodami zostało przygotowane w języku Arduino, natomiast aplikacja kontrolująca cały system przeznaczona na komputer z systemem macOS została napisana w języku Swift. Wybór języków jest ściśle związany z koniecznością uzyskania jak najlepszej wydajności oraz użyciem najnowszych technologii.
 
@@ -207,7 +226,7 @@ Tak jak to zostało wspomniane na wstępie projektowany system oświetlenia nie 
 
 \subsection{Technologia Philips Ambilight}
 
-Pierwsze miejsce w zestawieniu istniejących rozwiązań zajmuje technologia Ambilight\footnote{~Otaczające oświetlenie (z ang. ambient lighting).} opatentowana w 2002 roku przez firmę Philips. Pierwszy telewizor z Ambilight trafił do sklepów w 2004 roku. W chwili obecnej dostępnych jest dużo więcej modeli wyposażonych w Ambilight, który cieszy się sporą popularnością.
+Pierwsze miejsce w zestawieniu istniejących rozwiązań zajmuje technologia Ambilight opatentowana w 2002 roku przez firmę Philips. Pierwszy telewizor z Ambilight trafił do sklepów w 2004 roku. W chwili obecnej dostępnych jest dużo więcej modeli wyposażonych w Ambilight, który cieszy się sporą popularnością.
 
 \begin{figure}[h]
 \centering
@@ -600,7 +619,11 @@ Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego o
 
 \addcontentsline{toc}{chapter}{Bibliografia}
 \begin{thebibliography}{99}
-\bibitem{czasprzedtv} {\tt http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy\-telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja\--seniorzy-raport}.\\Data dostępu -- 15.01.2017.
+\bibitem{czasprzedtv} {\tt http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy\-telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja\--seniorzy-raport}.\\Data dostępu -- 20.01.2017.
+\bibitem{diagramoko} {\tt https://www.indiegogo.com/projects/lightpack-2-light\-orchestra-for-your-living-room-tv-videogames}. \\Data dostępu -- 20.02.2017.
+\bibitem{ambilightaoko} {\tt http://www.embedded.com/print/4012996}. \\Data dostępu -- 20.02.2017.
+\bibitem{ambilight2} {\tt http://www.komputerswiat.pl/media/2016/224/4688581/003\-philips-ambilight-2-sides.jpg}. \\Data dostępu -- 06.02.2017.
+
 \bibitem{diody} {\tt https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch\-led-rgb-12-mm-ws2801-cyfrowy-adresowany-25-szt.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{zasilacz} {\tt https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz\-impulsowy-5v-25a-wtyk-dc-55-21-mm.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{wtyk} {\tt https://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21\-mm-z-szybkozlaczem.html}.\\Data dostępu -- 17.01.2017.
@@ -612,7 +635,6 @@ Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego o
 \bibitem{orsserialport} {\tt https://github.com/armadsen/ORSSerialPort}.\\Data dostępu -- 18.01.2017.
 \bibitem{xcode} {\tt https://developer.apple.com/xcode/}.\\Data dostępu -- 18.01.2017.
 \bibitem{ambilight} {\tt http://www.cobra.fr/media/wysiwyg/logo-ambilight.jpg}. \\Data dostępu -- 06.02.2017.
-\bibitem{ambilight2} {\tt http://www.komputerswiat.pl/media/2016/224/4688581/003\-philips-ambilight-2-sides.jpg}. \\Data dostępu -- 06.02.2017.
 \bibitem{lpk} {\tt https://www.kickstarter.com/projects/woodenshark/lightpack\-ambient-backlight-for-your-displays}. \\Data dostępu -- 09.02.2017.
 \bibitem{lps} {\tt http://lightpack.tv/}. \\Data dostępu -- 09.02.2017.
 \bibitem{legacy} {\tt https://github.com/Atarity/Lightpack}. \\Data dostępu -- 09.02.2017.
