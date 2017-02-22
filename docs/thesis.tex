@@ -143,7 +143,21 @@ Podobne systemy oświetlenia dostępne są już od pewnego czasu na rynku, jedna
 
 \section{Problematyka i zakres pracy}
 
-% TODO
+Różnego rodzaju wyświetlacze towarzyszą w dniu codziennym większości ludzi. Co raz większa jest także popularność różnego rodzaju gadżetów elektronicznych. Niektórzy decydują się nawet na budowanie własnych narzędzi wykorzystując gotowe komponenty takie jak mikrokontrolery i inne urządzenia peryferyjne. Niniejsza praca porusza właśnie problematykę tworzenia oprogramowania przeznaczonego komputer jak i mikrokontroler, którego zadaniem będzie sterowanie taśmą diod elektroluminescencyjnych.
+
+Zadanie to wymaga przejścia kilku kolejnych etapów, które składają się na zakres pracy:
+
+\begin{enumerate}
+	\item Analiza istniejących rozwiązań realizujących podobne zadania.
+	\item Zebranie wymagań umożliwiających stworzenie konkurencyjnego systemu oświeletnia.
+	\item Zaprojektowanie systemu oświetlenia.
+	\item Skompletowanie odpowiednich komponentów i ich podłączenie.
+	\item Zaprojektowanie oprogramowania systemu oświetlenia przeznaczonego na mikrokontroler i komputer.
+	\item Implementacja oprogramowania.
+	\item Dokumentacja projektu.
+	\item Analiza stworzonego systemu oświetlenia.
+	\item Dyskusja osiągniętych wyników jak i perspektywy rozwoju projektu.
+\end{enumerate}
 
 \section{Cele pracy}
 
@@ -165,21 +179,51 @@ Do najważniejszych celów niniejszej pracy dyplomowej należą:
 
 \subsection{Studia literaturowe}
 
-% TODO
+Większość źródeł odnoszących się do tematyki niniejszej pracy znajduje się w Internecie. Źródła te można podzielić na następujące kategorie:
+
+\begin{itemize}
+	\item Tworzenie oprogramowania w języku Swift.
+	\item Tworzenie oprogramowania przeznaczonego na mikrokontroler Arduino.
+	\item Zagadnienia związane z mikrokontrolerami.
+\end{itemize}
+
+Rozdział  \ref{literatura} przedstawia najważniejsze pozycje spośród z każdej wymienionych kategorii źródeł.
 
 \subsection{Analiza istniejących systemów oświetlenia}
 
-% TODO
+Studia literaturowe to jedna z ważniejszych metod badawczych, jednakże analiza istniejących systemów oświetlenia jest równie istotna. Umożliwia ona wczesne zlokalizowanie istniejących problemów związanych z wybraną tematyką jak, braków istniejących rozwiązań i sprecyzowanie potrzeb użytkowników.
 
 \subsection{Stworzenie własnego systemu oświetlenia}
 
-% TODO
+Etapem następnym po zapoznaniu się z istniejącą literaturą i przeprowadzeniu analizy istniejących systemów oświetlenia jest stworzenie właśnego systemu oświetlenia. Jest to ważna metoda badawcza,
+ponieważ umożliwia dogłębne zapoznanie się z problematyką pracy jak i przejście przez wszystkie etapy tworzenia własnego systemu wykorzystującego mikrokontroler Arduino współpracujący z komputerem. Wszystkie napotkane problemy muszą zostać rozwiązane w jak najbardziej optymalny sposób, prowadzi to więc to do precyzyjnego zbadania wybranej tematyki.
 
 \subsection{Analiza porównawcza oraz testy}
 
-% TODO
+Analiza stworzonego systemu oświetlenia i porównanie go z isniejącymi już rozwią\-zaniami ma za zadanie poprowadzić do jak najtrafniejszych wniosków. Celem tego etapu jest dowiedzenie się czy przyjęte założenia i wybrane rozwiązania są lepsze od tych które przyjęli autorzy istniejących już rozwiązań.
 
-\section{Przegląd literatury w dziedzinie}
+\section{Przegląd literatury w dziedzinie} \label{literatura}
+
+\subsection{Tworzenie oprogramowania w języku Swift}
+
+Swift został opublikowany przez Apple w 2014 roku. Jest on następcą języka znanego jako Objective C, posiada on szereg usprawnień i nowych funkcjonalności mających za zadanie sprawić aby tworzenie oprogramowania na platforme Mac było jeszcze sprawniejsze. Oto lista wykorzystanych źródeł, które są związane z właśnie tym językiem:
+
+\begin{itemize}
+	\item {\it The Swift Programming Language (Swift 3.1)} \cite{swiftpub} -- Najlepsze i najdokładniejsze źródło informacji dotyczących Swifta. Publikacja utworzona przez twórców języka, firmę Apple.
+	\item {\it App Development with Swift} \cite{swiftdev} -- Kurs nauki programowania w języku Swift utworzony przez firmę Apple.
+	\item Oficjalna strona internetowa otwartoźródłowego projektu Swift \cite{swiftstr} -- Źródła, przydatne projekty oraz przede wszystkim odnośniki do dokumentacji.
+	\item Strona Apple Developer \cite{swiftapple} -- Obszerna baza gotowych przykładów, dokumentacja oraz pomoce dotyczące środowiska Xcode.
+\end{itemize}
+
+Fakt, że są to jedynie źródła internetowe związany jest głównie z niskim wiekiem języka a także jego ciągłym rozwojem.
+
+\subsection{Tworzenie oprogramowania przeznaczonego na mikrokontroler Arduino}
+
+% TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+% TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+% TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+
+\subsection{Zagadnienia związane z mikrokontrolerami}
 
 % TODO
 
@@ -189,9 +233,7 @@ Temat niniejszej pracy to system oświetlenia skonstruowany za pomocą diod elek
 
 Praca rozpoczyna się od uzasadnienia wyboru tematu pracy, a także opisu celów pracy, jej problematyki, zakresu, wykorzystanych metod badawczych, przeglądu literatury oraz jej układu.
 
-W kolejnym rozdziale zawarte zostały objaśnienia zagadnień teoretycznych po\-wiązanych z tematyką pracy, czyli...
-
-% TODO
+W kolejnym rozdziale zawarte zostały objaśnienia zagadnień teoretycznych po\-wiązanych z tematyką pracy.
 
 Następnie przeanalizowano istniejące już systemy oświetlenia biorąc pod uwagę wcześniej zdefiniowane kryteria.
 
@@ -202,8 +244,6 @@ Pracę kończy podsumowanie, które zawiera dyskusję wyników oraz dalsze presp
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
 
 % TODO protokoly, swift, port szereg, przechtywywanie obrazu, mikrokontrolery
-
-% TODO info o oku ze strony lighpacka na kickstarterze
 
 \chapter[Analiza istniejących rozwiązań]{Analiza istniejących rozwiązań}
 
@@ -623,6 +663,10 @@ Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego o
 \bibitem{diagramoko} {\tt https://www.indiegogo.com/projects/lightpack-2-light\-orchestra-for-your-living-room-tv-videogames}. \\Data dostępu -- 20.02.2017.
 \bibitem{ambilightaoko} {\tt http://www.embedded.com/print/4012996}. \\Data dostępu -- 20.02.2017.
 \bibitem{ambilight2} {\tt http://www.komputerswiat.pl/media/2016/224/4688581/003\-philips-ambilight-2-sides.jpg}. \\Data dostępu -- 06.02.2017.
+\bibitem{swiftpub} {\tt https://swift.org/documentation/TheSwiftProgrammingLanguage\-(Swift3.1).epub}. \\Data dostępu -- 20.02.2017.
+\bibitem{swiftdev} {\tt https://itunes.apple.com/us/book/app-development-with-swift/\-id1118575552?mt=11}. \\Data dostępu -- 20.02.2017.
+\bibitem{swiftstr} {\tt https://swift.org}. \\Data dostępu -- 20.02.2017.
+\bibitem{swiftapple} {\tt https://developer.apple.com/swift/}. \\Data dostępu -- 20.02.2017.
 
 \bibitem{diody} {\tt https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch\-led-rgb-12-mm-ws2801-cyfrowy-adresowany-25-szt.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{zasilacz} {\tt https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz\-impulsowy-5v-25a-wtyk-dc-55-21-mm.html}.\\Data dostępu -- 17.01.2017.
