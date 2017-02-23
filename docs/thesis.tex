@@ -183,8 +183,7 @@ Większość źródeł odnoszących się do tematyki niniejszej pracy znajduje s
 
 \begin{itemize}
 	\item Tworzenie oprogramowania w języku Swift.
-	\item Tworzenie oprogramowania przeznaczonego na mikrokontroler Arduino.
-	\item Zagadnienia związane z mikrokontrolerami.
+	\item Tworzenie oprogramowania przeznaczonego na mikrokontrolery Arduino.
 \end{itemize}
 
 Rozdział  \ref{literatura} przedstawia najważniejsze pozycje spośród z każdej wymienionych kategorii źródeł.
@@ -209,7 +208,7 @@ Analiza stworzonego systemu oświetlenia i porównanie go z isniejącymi już ro
 Swift został opublikowany przez Apple w 2014 roku. Jest on następcą języka znanego jako Objective C, posiada on szereg usprawnień i nowych funkcjonalności mających za zadanie sprawić aby tworzenie oprogramowania na platforme Mac było jeszcze sprawniejsze. Oto lista wykorzystanych źródeł, które są związane z właśnie tym językiem:
 
 \begin{itemize}
-	\item {\it The Swift Programming Language (Swift 3.1)} \cite{swiftpub} -- Najlepsze i najdokładniejsze źródło informacji dotyczących Swifta. Publikacja utworzona przez twórców języka, firmę Apple.
+	\item {\it The Swift Programming Language (Swift 3.1)} \cite{swiftpub} -- Najlepsze i najdokładniejsze źródło informacji dotyczących Swifta. Publikacja utworzona przez twórców języka, firmę Apple. 
 	\item {\it App Development with Swift} \cite{swiftdev} -- Kurs nauki programowania w języku Swift utworzony przez firmę Apple.
 	\item Oficjalna strona internetowa otwartoźródłowego projektu Swift \cite{swiftstr} -- Źródła, przydatne projekty oraz przede wszystkim odnośniki do dokumentacji.
 	\item Strona Apple Developer \cite{swiftapple} -- Obszerna baza gotowych przykładów, dokumentacja oraz pomoce dotyczące środowiska Xcode.
@@ -217,15 +216,15 @@ Swift został opublikowany przez Apple w 2014 roku. Jest on następcą języka z
 
 Fakt, że są to jedynie źródła internetowe związany jest głównie z niskim wiekiem języka a także jego ciągłym rozwojem.
 
-\subsection{Tworzenie oprogramowania przeznaczonego na mikrokontroler Arduino}
+\subsection{Tworzenie oprogramowania przeznaczonego na mikrokontrolery Arduino}
 
-% TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
-% TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
-% TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+Arduino należy do jednego z najpopularniejszych producentów mikrokontrolerów, są one proste w obsłudze, posiadają dużą społeczność i są łatwo dostępne. W celu zapoznania się z zagadnieniami dotyczącymi tworzenia oprogramowania przeznaczonego na mikrokontrolery Arduino autor skorzystał z następujących źródeł:
 
-\subsection{Zagadnienia związane z mikrokontrolerami}
-
-% TODO
+\begin{itemize}
+	\item {\it Arduino w akcji} \cite{arduinowakcji} -- Książka poświęcona platformie Arduino. Zawiera informacje ułatwiające realizację projektów od najprostszych do tych bardziej wymagających wykorzystujących liczne operacje wejścia-wyjścia jak i komunikujących się z innym oprogramowaniem.
+	\item {\it Arduino. Kurs video. Poziom pierwszy. Podstawowe techniki dla własnych projektów elektronicznych} \cite{arduinovid} -- Kurs wideo objaśniający podstawowe pojęcia elektroniki wymagane do tworzenia własnych systemów działających z Arduino. Zawiera dużo praktycznych informacji przedstawionych w łatwy do zrozumienia sposób.
+		\item Oficjalna strona internetowa Arduino \cite{arduinostr} -- Specyfikacja techniczna wszystkich płytek jak i dokumentacja dotycząca języka, forum użytkowników oraz obszerna baza danych gotowych przykładów i materiałów instruktażowych.
+\end{itemize}
 
 \section{Układ pracy}
 
@@ -243,7 +242,24 @@ Pracę kończy podsumowanie, które zawiera dyskusję wyników oraz dalsze presp
 
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
 
-% TODO protokoly, swift, port szereg, przechtywywanie obrazu, mikrokontrolery
+% TODO protokoly
+% TODO swift
+% TODO podstawy elektroniki
+% TODO z literatury rzeczy
+% TODO port szeregowy
+% TODO przechwytywanie obrazu
+% TODO mikrokontrolery
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter[Analiza istniejących rozwiązań]{Analiza istniejących rozwiązań}
 
@@ -280,7 +296,7 @@ Pierwsze miejsce w zestawieniu istniejących rozwiązań zajmuje technologia Amb
 \centering
 \begin{tabular}{| l | l |} 
 \hline 
-Koszt & \\ \hline
+Koszt & wysoki\footnote{~W przypadku technologii Ambilight ciężko jednoznacznie określić jej dokłądny koszt, ponieważ jest on wliczany do ceny telewizora. Warto jednak zauważyć, że cena telewizorów z technologią Ambilight przewyższa cene odpowiedników w nią nie wyposażonych. Ponadto dla użytkowników wyposażonych w telewizory innej marki koszt ten związany jest z kosztem zakupu nowego telewizora.} \\ \hline
 Rodzaj systemu & gotowy do użycia, zintegrowany \\ \hline
 Płynność działania & bardzo wysoka \\ \hline
 Możliwość konfiguracji & duża  \\ \hline
@@ -304,15 +320,13 @@ Do największych zalet technologii Ambilight należy jej integracja z telewizora
 
 Do wad Ambilight zaliczyć można wysoki koszt, wsparcie jedynie dla telewizorów marki Philips a także restrykcyjną licencję.
 
-% TODO koszt i link do źródła informacji
-
 \subsection{System oświetlenia Lightpack} \label{lightpack}
 
-Kolejne miejsce w zestawieniu zajmuje system oświetlenia Lightpack. Jest to projekt ufundowany przez społeczność\footnote{~ Z ang. crowd-funding.} za pomocą serwisu Kickstarter \cite{lpk}, gdzie zebrał ponad pół miliona dolarów.
+Kolejne miejsce w zestawieniu zajmuje system oświetlenia Lightpack. Jest to projekt ufundowany przez społeczność za pomocą serwisu Kickstarter \cite{lpk}, gdzie zebrał ponad pół miliona dolarów.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.7\textwidth]{../resources/lightpack.png}
+\includegraphics[width=.35\textwidth]{../resources/lightpack.jpg}
 \caption[Logo Lightpack]{Logo Lightpack \cite{lps}}
 \end{figure}
 
@@ -345,7 +359,7 @@ Minusem jest dość wysoka cena jak i konieczność podłączenia dodatkowego ur
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.8\textwidth]{../resources/prismatik.jpg}
+\includegraphics[width=.7\textwidth]{../resources/prismatik.jpg}
 \caption[Aplikacja sterująca systemu oświetlenia Lightpack]{Aplikacja sterująca systemu oświetlenia Lightpack \cite{lps}}
 \end{figure}
 
@@ -442,6 +456,17 @@ Koszt związany ze skompletowaniem wszystkich komponentów wyniósł łącznie 3
 
 % TODO opis oraz zdjęcie mocowania diod
 
+
+
+
+
+
+
+
+
+
+
+
 \section{Moduły oprogramowania}
 
 \subsection{Oprogramowanie mikrokontrolera}
@@ -487,9 +512,31 @@ Aplikacja sterująca została napisana w języku Swift, do stworzenia interfejsu
 
 % TODO
 
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Wzorce projektowe}
 
 % TODO
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Interfejs użytkownika}
 
@@ -519,6 +566,17 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 
 % TODO
 
+
+
+
+
+
+
+
+
+
+
+
 \section{Implementacja}
 
 \subsection{Oprogramowanie mikrokontrolera}
@@ -547,9 +605,32 @@ Jeśli użytkownik korzysta z 25 diod, pakiety danych będą miały długość 8
 
 % TODO opis oczekiwania na zmiany stanow etc.
 
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Aplikacja przeznaczona na komputer}
 
 % TODO
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Podręcznik użytkownika}
 
@@ -625,6 +706,19 @@ Licencja & kod otwartoźródłowy  \\ \hline
 
 % TODO zdjęcia gotowego projektu
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Do niewątpliwych zalet Ligthning należy z pewnością niski koszt, otwartożródłowy kod i łatwa rozszerzalność systemu. Użytkownicy znający podstawy programowania mogą z łątwością dopasować projekt do swoich potrzeb, nie jest to jednak konieczne ponieważ większość opcji konfiguracyjnych jest już dostępna. Ciekawym dodatkiem jest tryb animacji. Animacje można dodawać według własnych upodobań. Dodatkowo system można podłączyć do dowolnego wyświetlacza połączonego z komputerem.
 
 Podobnie jak w przypadku wszystkich innych analizowanych rozwiązań poza technologią Philips Ambilight Ligtning jest zewnętrznym systemem oświetlenia co wiąże się z koniecznością podłączenia dodatkowych urządzeń do wyświetlacza. Kolejną z wad jest przeznaczenie na komputery z systemem macOS, jest to związane z chęcią uzyskania jak najwyższej płynności działania.
@@ -667,7 +761,9 @@ Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego o
 \bibitem{swiftdev} {\tt https://itunes.apple.com/us/book/app-development-with-swift/\-id1118575552?mt=11}. \\Data dostępu -- 20.02.2017.
 \bibitem{swiftstr} {\tt https://swift.org}. \\Data dostępu -- 20.02.2017.
 \bibitem{swiftapple} {\tt https://developer.apple.com/swift/}. \\Data dostępu -- 20.02.2017.
-
+\bibitem{arduinowakcji} Evans, Mike, Noble, Joshua, Hochenbaum, Jordan. Arduino w akcji. Wyd. 1. Gliwice, 2014. ISBN 978-83-246-6356-9.
+\bibitem{arduinovid} {\tt http://videopoint.pl/kurs/arduino-kurs-video-poziom\-pierwszy-podstawowe-techniki-dla-wlasnych-projektow\-elektronicznych-pawel-matyszok,arduin.htm}. \\Data dostępu -- 20.02.2017.
+\bibitem{arduinostr} {\tt https://www.arduino.cc}. \\Data dostępu -- 20.02.2017.
 \bibitem{diody} {\tt https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch\-led-rgb-12-mm-ws2801-cyfrowy-adresowany-25-szt.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{zasilacz} {\tt https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz\-impulsowy-5v-25a-wtyk-dc-55-21-mm.html}.\\Data dostępu -- 17.01.2017.
 \bibitem{wtyk} {\tt https://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21\-mm-z-szybkozlaczem.html}.\\Data dostępu -- 17.01.2017.
