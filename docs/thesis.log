@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  27 FEB 2017 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  27 FEB 2017 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -666,6 +666,9 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 
 LaTeX Warning: Label `schemat' multiply defined.
 
+
+LaTeX Warning: Label `schemat' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
@@ -1005,194 +1008,200 @@ Package pdftex.def Info: ../resources/wiring.png used on input line 452.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<../resources/conn.JPG, id=92, 1843.688pt x 1384.372pt>
+File: ../resources/conn.JPG Graphic file (type jpg)
+
+<use ../resources/conn.JPG>
+Package pdftex.def Info: ../resources/conn.JPG used on input line 461.
+(pdftex.def)             Requested size: 398.33858pt x 299.09172pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [20]
-Overfull \hbox (7.49825pt too wide) in paragraph at lines 478--479
+Overfull \hbox (7.49825pt too wide) in paragraph at lines 472--473
 []\T1/txr/m/n/12 Moduª ten zo-staª na-pi-sany w na-tyw-nym j[]zyku Ar-du-ino, k
 tóry udost[]pnia wszyst-
  []
 
 [21 <../resources/wiring.png>]
-Overfull \hbox (9.66011pt too wide) in paragraph at lines 488--489
+Overfull \hbox (9.66011pt too wide) in paragraph at lines 482--483
 \T1/txr/m/n/12 kow-nik poza wy-bo-rem ani-ma-cji ma wpªyw na u»yte w niej ko-lo
 ry oraz pr[]dko±¢
  []
 
-
-Overfull \hbox (2.52142pt too wide) in paragraph at lines 498--499
+[22 <../resources/conn.JPG>]
+Overfull \hbox (2.52142pt too wide) in paragraph at lines 492--493
 \T1/txr/m/n/12 praca kilku pro-gra-mi-stów, co-fa-nie po-myª-kowo wpro-wa-dzo-n
 ych zmian czy te» dzien-
  []
 
-<../resources/github.png, id=98, 1339.0025pt x 1106.1325pt>
+<../resources/github.png, id=102, 1339.0025pt x 1106.1325pt>
 File: ../resources/github.png Graphic file (type png)
 
 <use ../resources/github.png>
-Package pdftex.def Info: ../resources/github.png used on input line 502.
-(pdftex.def)             Requested size: 318.67207pt x 263.2493pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[22] <class-diagram.png, id=102, 1904.11375pt x 1156.32pt>
+Package pdftex.def Info: ../resources/github.png used on input line 496.
+(pdftex.def)             Requested size: 278.83578pt x 230.3368pt.
+ [23 <../resources/github.png>]
+<class-diagram.png, id=108, 1904.11375pt x 1156.32pt>
 File: class-diagram.png Graphic file (type png)
-
-<use class-diagram.png>
-Package pdftex.def Info: class-diagram.png used on input line 519.
+ <use class-diagram.png>
+Package pdftex.def Info: class-diagram.png used on input line 513.
 (pdftex.def)             Requested size: 1904.10913pt x 1156.31718pt.
 
 
-LaTeX Warning: Float too large for page by 24.50433pt on input line 522.
+LaTeX Warning: Float too large for page by 24.50433pt on input line 516.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <../resources/github.png>] [24 <./class-diagram.png>] [25
+[24] [25 <./class-diagram.png>] [26
 
 ]
-<../resources/capture.png, id=115, 702.625pt x 401.5pt>
+<../resources/capture.png, id=119, 702.625pt x 401.5pt>
 File: ../resources/capture.png Graphic file (type png)
 
 <use ../resources/capture.png>
-Package pdftex.def Info: ../resources/capture.png used on input line 545.
+Package pdftex.def Info: ../resources/capture.png used on input line 539.
 (pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
- [26 <../resources/capture.png>]
-<../resources/backlight.png, id=120, 702.625pt x 401.5pt>
+ [27 <../resources/capture.png>]
+<../resources/backlight.png, id=124, 702.625pt x 401.5pt>
 File: ../resources/backlight.png Graphic file (type png)
 
 <use ../resources/backlight.png>
-Package pdftex.def Info: ../resources/backlight.png used on input line 564.
+Package pdftex.def Info: ../resources/backlight.png used on input line 558.
 (pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
- [27 <../resources/backlight.png>]
-<../resources/settings.png, id=125, 702.625pt x 401.5pt>
+ [28 <../resources/backlight.png>]
+<../resources/settings.png, id=129, 702.625pt x 401.5pt>
 File: ../resources/settings.png Graphic file (type png)
 
 <use ../resources/settings.png>
-Package pdftex.def Info: ../resources/settings.png used on input line 584.
+Package pdftex.def Info: ../resources/settings.png used on input line 578.
 (pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
- [28 <../resources/settings.png>]
+ [29 <../resources/settings.png>]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 604.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 598.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-(../arduino/lightning/lightning.ino [29
+(../arduino/lightning/lightning.ino [30
 
-] [30] [31]) [32] [33]
-(../resources/animation.swift [34]) (../resources/animations.swift [35])
-<../resources/logo.png, id=154, 695.2374pt x 237.7683pt>
+] [31] [32]) [33] [34]
+(../resources/animation.swift [35]) (../resources/animations.swift [36])
+<../resources/logo.png, id=158, 695.2374pt x 237.7683pt>
 File: ../resources/logo.png Graphic file (type png)
 
 <use ../resources/logo.png>
-Package pdftex.def Info: ../resources/logo.png used on input line 704.
+Package pdftex.def Info: ../resources/logo.png used on input line 698.
 (pdftex.def)             Requested size: 398.33858pt x 136.23317pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36 <../resources/logo.png>] [37]
-Overfull \hbox (1.72815pt too wide) in paragraph at lines 752--753
+[37 <../resources/logo.png>] [38]
+Overfull \hbox (1.72815pt too wide) in paragraph at lines 746--747
 \T1/txr/m/n/12 u»y-cie ob-razka wy-±wie-tla-cza try-bie kon-fi-gu-ra-cji czy te
 » wy-±wie-tla-nie pogl[]du
  []
 
-[38]
+[39]
 Rozdzia\l  5.
-[39
+[40
 
 ]
-Overfull \hbox (8.60225pt too wide) in paragraph at lines 770--771
+Overfull \hbox (8.60225pt too wide) in paragraph at lines 764--765
 []\T1/txr/m/n/12 Rozwi[]zaniem po-±red-nim by-ªoby prze-nie-sie-nie opro-gra-mo
 -wa-nia przechytuj[]cego
  []
 
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 []\T1/txtt/m/n/12 http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 \T1/txtt/m/n/12 telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 []\T1/txtt/m/n/12 https://www.indiegogo.com/projects/lightpack-2-light-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
 []\T1/txtt/m/n/12 http://www.komputerswiat.pl/media/2016/224/4688581/003-
  []
 
 
-Overfull \hbox (5.52763pt too wide) in paragraph at lines 778--779
+Overfull \hbox (5.52763pt too wide) in paragraph at lines 772--773
 []\T1/txtt/m/n/12 https://swift.org/documentation/TheSwiftProgrammingLanguage-
  []
 
 
-Overfull \hbox (11.82762pt too wide) in paragraph at lines 779--780
+Overfull \hbox (11.82762pt too wide) in paragraph at lines 773--774
 []\T1/txtt/m/n/12 https://itunes.apple.com/us/book/app-development-with-swift/-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--784
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
 []\T1/txtt/m/n/12 http://videopoint.pl/kurs/arduino-kurs-video-poziom-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--784
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
 \T1/txtt/m/n/12 pierwszy-podstawowe-techniki-dla-wlasnych-projektow-
  []
 
-[41
+[42
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 785--786
+Underfull \hbox (badness 10000) in paragraph at lines 779--780
 []\T1/txtt/m/n/12 https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch-
  []
 
 
-Overfull \hbox (5.52763pt too wide) in paragraph at lines 786--787
+Overfull \hbox (5.52763pt too wide) in paragraph at lines 780--781
 []\T1/txtt/m/n/12 https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
+Underfull \hbox (badness 10000) in paragraph at lines 781--782
 []\T1/txtt/m/n/12 https://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
+Underfull \hbox (badness 10000) in paragraph at lines 782--783
 []\T1/txtt/m/n/12 https://botland.com.pl/arduino-moduly-glowne/1060-arduino-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--790
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
 []\T1/txtt/m/n/12 https://botland.com.pl/przewody-usb-a-b-20/5313-przewod-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--791
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 []\T1/txtt/m/n/12 https://cdn-learn.adafruit.com/assets/assets/000/001/484/-
  []
 
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 796--797
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 790--791
 []\T1/txtt/m/n/12 https://www.kickstarter.com/projects/woodenshark/lightpack-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--800
+Underfull \hbox (badness 10000) in paragraph at lines 793--794
 []\T1/txtt/m/n/12 https://www.kickstarter.com/projects/woodenshark/lightpack-
  []
 
-[43] (./thesis.lof
+[44] (./thesis.lof
 Overfull \hbox (27.0375pt too wide) in paragraph at lines 5--5
  [][] []\T1/txr/m/n/12 ‘redni czas do-pa-so-wa-nia ¹re-nicy do wy-±wie-tla-nego
  ob-razu z otaczaj[]cym 
@@ -1202,19 +1211,19 @@ Overfull \hbox (27.0375pt too wide) in paragraph at lines 5--5
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
- [44
+ [45
 
 ] (./thesis.lot)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
- [45
+ [46
 
 ] (./thesis.lol)
 \tf@lol=\write6
 \openout6 = `thesis.lol'.
 
- [46
+ [47
 
 ] (./thesis.aux)
 
@@ -1222,10 +1231,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8963 strings out of 493014
- 121867 string characters out of 6133351
- 395521 words of memory out of 5000000
- 12281 multiletter control sequences out of 15000+600000
+ 8969 strings out of 493014
+ 121982 string characters out of 6133351
+ 395576 words of memory out of 5000000
+ 12285 multiletter control sequences out of 15000+600000
  60104 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,18n,50p,903b,2307s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1236,10 +1245,10 @@ exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on thesis.pdf (48 pages, 3010269 bytes).
+Output written on thesis.pdf (49 pages, 9103279 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 220 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -27,31 +27,31 @@
 \contentsline {section}{\numberline {4.3}Modu\IeC {\l }y oprogramowania}{21}
 \contentsline {subsection}{\numberline {4.3.1}Oprogramowanie mikrokontrolera}{21}
 \contentsline {subsection}{\numberline {4.3.2}Aplikacja przeznaczona na komputer}{22}
-\contentsline {section}{\numberline {4.4}Projekt}{22}
-\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{22}
-\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{23}
-\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{23}
-\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{25}
-\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{25}
-\contentsline {subsubsection}{Widok trybu przechwytywania}{26}
-\contentsline {subsubsection}{Widok trybu animacji}{27}
-\contentsline {subsubsection}{Widok konfiguracji}{28}
-\contentsline {section}{\numberline {4.5}Implementacja}{29}
-\contentsline {subsection}{\numberline {4.5.1}Oprogramowanie mikrokontrolera}{29}
-\contentsline {subsection}{\numberline {4.5.2}Aplikacja przeznaczona na komputer}{33}
-\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{33}
-\contentsline {subsubsection}{Czym jest Lightning?}{33}
-\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{33}
-\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{34}
-\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{34}
-\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{34}
-\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{34}
-\contentsline {section}{\numberline {4.8}Analiza projektu}{36}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{37}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{39}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{39}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{39}
-\contentsline {chapter}{Bibliografia}{40}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{43}
-\contentsline {chapter}{Spis tabel}{44}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{45}
+\contentsline {section}{\numberline {4.4}Projekt}{23}
+\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{23}
+\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{24}
+\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{24}
+\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{26}
+\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{26}
+\contentsline {subsubsection}{Widok trybu przechwytywania}{27}
+\contentsline {subsubsection}{Widok trybu animacji}{28}
+\contentsline {subsubsection}{Widok konfiguracji}{29}
+\contentsline {section}{\numberline {4.5}Implementacja}{30}
+\contentsline {subsection}{\numberline {4.5.1}Oprogramowanie mikrokontrolera}{30}
+\contentsline {subsection}{\numberline {4.5.2}Aplikacja przeznaczona na komputer}{34}
+\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{34}
+\contentsline {subsubsection}{Czym jest Lightning?}{34}
+\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{34}
+\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{35}
+\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{35}
+\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{35}
+\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{35}
+\contentsline {section}{\numberline {4.8}Analiza projektu}{37}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{38}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{40}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{40}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{40}
+\contentsline {chapter}{Bibliografia}{41}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{44}
+\contentsline {chapter}{Spis tabel}{45}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{46}
