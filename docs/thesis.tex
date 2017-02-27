@@ -78,6 +78,8 @@
   keywordstyle=\color{keyword},
   stringstyle=\color{string},
   commentstyle=\color{comment},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
 }
 
 \lstset{
@@ -497,7 +499,7 @@ Podczas pracy nad projektami programistycznymi często wymagana jest współprac
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{../resources/github.png}
+\includegraphics[width=.8\textwidth]{../resources/github.png}
 \caption{Zrzut ekranu z repozytorium projektu}
 \label{schemat}
 \end{figure}
@@ -510,38 +512,33 @@ Aplikacja sterująca została napisana w języku Swift, do stworzenia interfejsu
 
 \subsection{Diagram klas}
 
-% TODO
+Diagram klas projektu przedstawia rysunek \ref{diagram}.
 
+\begin{figure}[h]
+\centering
+\includegraphics[angle=90,height=\textheight]{class-diagram.png}
+\caption{Diagram klas}
+\label{diagram}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
+\vfill
+\clearpage
 
 \subsection{Wzorce projektowe}
 
-% TODO
+Aby Lightining był jak najłatwiej rozszerzalny o nowe funkcjonalności podczas jego implementacji wykorzystano wzorce projektowe.
 
+Pierwszym i zarazem najprostszym wykorzystanym wzorcem jest singleton, którego celem ograniczenie intancji wybranej klasy do jednej. Swoje zastosowanie odnalazł on podczas implementacji klasy przechowywującej konfigurację Lightning. Korzystając z takiego rozwiązania łatwo zapewnić, że wszystkie klasy będą korzystały z tej samej, aktualnej konfiguracji.
 
-
-
-
-
-
-
-
-
-
+Autor wykorzystał także wzorzec strategii, który umożliwia w trakcie działania programu zastosowanie wielu różnych algorytmów zapisanych w oddzielnych klasach na podstawie wcześniej zdefiniowanych warunków. W ten sposób zaimplementowany został mechanizm wyboru i rejestrowania animacji. Każda z nich znajduje się w oddzielnej klasie spełniającej protokół Animation, a zarejestrowana jest w klasie Animations. W trakcie działania programu wszystkie zarejestrowane klasy zostają wylistowane użytkownikowi za pomocą interfejsu. Po wybraniu jednej z klas i włączeniu trybu animacji, instancja klasy zostanie wykorzystana w celu uruchomienia metod setup() oraz run(). Metody te mają za zadanie sterowanie lampkami jak i całą animacją.
 
 \subsection{Interfejs użytkownika}
 
-Interfejs, w tym przypadku graficzny, należy do elementów na które użytkownicy zwracają uwagę na samym początku, dlatego też powinien być on zaprojektowany z pomysłem i umożliwiać jak najprostsze poruszanie się po aplikacji.
-Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logiczny jest podział na trzy widoki przedstawione poniżej:
+Interfejs, w tym przypadku graficzny, należy do elementów na które użytkownicy zwracają uwagę na samym początku, dlatego też powinien być on zaprojektowany z pomysłem i umożliwiać jak najprostsze poruszanie się po aplikacji. Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logiczny jest podział na trzy oddzielne widoki.
+
+\newpage
+
+\subsubsection{Widok trybu przechwytywania}
 
 \begin{figure}[h!]
 \centering
@@ -549,33 +546,54 @@ Aplikacja posiada dwa tryby działania oraz tryb konfiguracji, dlatego też logi
 \caption{Widok trybu przechwytywania}
 \end{figure}
 
+Widok aplikacji, który można nazwać głównym. Celem autora było uczynienie go jak najprostszym, a zarazem przekazanie wszystkich niezbędnych informacji. Składa się on z:
+
+\begin{itemize}
+	\item Pola wyboru ekranu -- Służy do wyboru monitora z którego będzie przechwytywany obraz. Dla ułatwienia obsługi główny monitor został dodatkowo oznaczony. Domyślnie ustawione na monitor główny.
+	\item Suwaka jasności -- Służy do sterowania jasnością diod. Domyślnie ustawiony na najwyższą jasność.
+	\item Suwaka płynności -- Służy do kontroli nad płynnością przejść pomiędzy kolejnymi stanami diod. Zwiększając płynność użytkownik jest w stanie zredukować efekt migotania lampek podczas szybko zmieniających się scen na monitorze.
+	\item Włącznika -- Przełącznik umożliwiający włączanie i wyłączanie trybu przechwytywania.
+	\item Rozdzielczości -- Wyświetla rozdzielczość wybranego ekranu.
+	\item Liczby klatek na sekundę -- Podczas gdy tryb przechwytywania jest aktywny wyświetlana jest liczba klatek na sekundę uzyskiwana w trakcie jego działania.
+\end{itemize}
+
+\subsubsection{Widok trybu animacji}
+
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{../resources/capture.png}
+\includegraphics[width=\textwidth]{../resources/backlight.png}
 \caption{Widok trybu animacji}
 \end{figure}
 
+Widok umożliwiający obsługę trzybu przechwytywania składa się z:
+
+\begin{itemize}
+	\item Pola wyboru animacji -- Użytkownik jest w stanie wybrać jedną z dostępnych animacji. Domyślnie ustawiony na pierwszą animację do wyboru.
+	\item Suwaka szybkości -- Służy do sterowania szybkością animacji.
+	\item Czterech pól wyboru kolorów -- Kolory te wykorzystywane są w animacjach.
+	\item Włącznika -- Przełącznik umożliwiający włączanie i wyłączanie trybu animacji.
+	\item Liczby klatek na sekundę -- Podczas gdy tryb animacji jest aktywny wyświetlana jest liczba klatek na sekundę uzyskiwana w trakcie jego działania.
+\end{itemize}
+
+\newpage
+
+\subsubsection{Widok konfiguracji}
+
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{../resources/capture.png}
+\includegraphics[width=\textwidth]{../resources/settings.png}
 \caption{Widok konfiguracji}
 \end{figure}
 
+Widok umożliwiający konfigurację aplikacji składa się z:
+
+\begin{itemize}
+	\item Pola wyboru portu szeregowego -- Służy do wyboru portu szeregowego do którego użytkownik podłączył Arduino.
+	\item Pól umożliwiających konfigurację liczby i rozmieszczenia diod -- Służy do przekazania aplikacji konfiguracji diod jaką wybrał użytkownik. 
+\end{itemize}
+
 \vfill
 \clearpage
-
-% TODO
-
-
-
-
-
-
-
-
-
-
-
 
 \section{Implementacja}
 
