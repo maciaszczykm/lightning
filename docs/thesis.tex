@@ -251,6 +251,7 @@ Pracę kończy podsumowanie, które zawiera dyskusję wyników oraz dalsze presp
 % TODO port szeregowy
 % TODO przechwytywanie obrazu
 % TODO mikrokontrolery
+% TODO SPI i opis portow jak w implementacji Arduino
 
 
 
@@ -615,34 +616,36 @@ Pierwszym przyjętym założeniem jest odpowiednie formatowanie pakietów danych
 
 Jeśli użytkownik korzysta z 25 diod, pakiety danych będą miały długość 86 bajtów, co jest małą liczbą biorąc pod uwagę zakładaną prędkość 115200 bitów na sekundę jeśli chodzi o transmisję portem szeregowym. Kluczem dla płynności działania aplikacji okazuje się więc odczyt i sprawne przekazanie instrukcji diodom.
 
-% TODO opis oczekiwania na zmiany stanow etc.
+Konfiguracja jak i rozpoczęcie nasłuchu portu szeregowego zaimplenemtowane zostało w metodzie setup(), która wykonywana jest jednokrotnie po uruchomieniu programu. Odczyt otrzymywanych danych jak i sterowanie diodami zaimplementowano w funkcji loop(), która wykonywana jest nieprzerwanie po wykonaniu funkcji setup().
 
+Aby odczyt informacji przeprowadzony został w możliwie szybki i przejrzysty sposób wykorzystano implementację imitującą maszynę stanową. Niemalże każdy obieg bieg pętli programu rozpoczyna się od odczytania danych z bufora portu szeregowego, nie ma to miejsca jedynie jeśli nie pojawiły się żadne dane lub bufor jest przepełniony. W przypadku braku danych przez czas dłuższy niż 5 sekund diody zostaną wyłączone aż do czasu otrzymania prawidłowego pakietu danych. Po fazie odczytu mogą mieć miejsce dwa algorytmy dalszego postępowania zależnie od stanu w jakim znajduje się program:
 
+\begin{itemize}
+	\item Stan walidacji nagłówka -- Pierwotny stan programu, jego zadaniem jest sprawdzenie odbieranych danych i wyszukanie prawidłowego nagłówka. Po wykonaniu swojego zadania program przechodzi w drugi stan.
+	\item Stan buforowania danych -- Po walidacji nagłówka przychodzi pora na odebranie danych, których ilość została w nim zdefiniowana a także zapalenie diod w odpowiedniej konfiguracji. Po wykonaniu swojego zadania program przechodzi w pierwotny stan.
+\end{itemize}
 
+Diody zapalane są za pomocą rejestrów portów umożliwiających niskopoziomowe operacje na pinach wejścia oraz wyjścia mikrokontrolera. Każdy port ma trzy rejestry:
 
+\begin{itemize}
+	\item DDR\footnote{~Rejestr kierunku danych (z ang. data direction registry).} -- Określa kierunek danych, tj. odbieranie lub wysyłanie danych.
+	\item PORT -- Kontroluje czy pin jest w stanie wysokim lub niskim co umożliwia przekazywanie danych.
+	\item PIN -- Rejestruje stan pinów wejścia ustawionych za pomocą funkcji pinMode().
+\end{itemize}
 
-
-
-
-
-
-
+Lightning korzysta z portu B, czyli pinów od 8 do 13 i to właśnie na nie przesyłane są informacje otrzymane z aplikacji sterującej przez port szeregowy.
 
 \subsection{Aplikacja przeznaczona na komputer}
 
-% TODO
+Kluczowym celem aplikacji przeznaczonej na komputer jest przechwytywanie obrazu. Musi się ono odbywać możliwie płynnie i przy tym być konfigurowalne. Aby zrealizować to założenie aplikacja działa wykorzystując kilka wątków jednocześnie. Wątek główny poświęcony został obsłudze interfejsu użytkownika i zapewnieniu jego responsywności w trakcie działania głównej logiki aplikacji. Wątki przechwytujące obraz czy też komunikujące się z portem szeregowym startowane są w momencie uruchomienia wybranego trybu i posiadają najwyższy możliwy priorytet.
 
+Zwalnianie zajętej pamięci nie należy do zadań programisty piszącego programy w języku Swift, jednakże w przypadku operacji wykonywanych bezpośrednio w pamięci graficznej pojawiły się wycieki pamięci co zostało rozwiązane za pomocą wykorzystania bloku autoreleasepool{}, który dodatkowo dba o odpowiednie zarządzanie pamięcią i jej zwalnianie w wybranych miejscach w aplikacji.
 
+\lstinputlisting[style=customswift,caption=Klasa odpowiedzialna za przechwytywanie ekranu]{../resources/capturer.swift} \label{capt}
 
+Przebieg funkcji przechwytującej ekran został pokazany na listingu \ref{capt}. Argumentami funkcji są jasność jak i płynność przejść wybrane przez użytkownika za pomocą interfejsu. Funkcja run() uruchamiana jest podczas każdego obiegu pętli w trakcie działania programu. Rozpoczyna się ona od zrobienia zrzutu całego ekranu za pomocą funkcji CGDisplayCreateImage(). Następnie iterując kolejno po każdej z reprezentacji diod wycinany jest fragment wykonanego wcześniej zrzutu odpowiadający obszarowi ekranu przypisanego danej diodzie, fragment ten jest poddawany filtrowi uśredniającemu kolor\footnote{~Filtr znalazł w tym przypadku swoje zastosowanie głównie ze względu na wysoką wydajność, co jest związane z faktem domyślnego wykonywania obliczeń za pomocą graficznej jednostki obliczeniowej w przypadku gdy okaże się to korzystniejsze od tradycyjnego wykorzystania w tym celu jednostki obliczeniowej procesora \cite{gpu}. Programista wciąż jest w stanie samemu zadeklarować gdzie obliczenia mają zostać wykonane, jest to jednak niekorzystne z punktu widzenia optymalizacji aplikacji.}. Kolor będący rezultatem filtra zapisywany jest w strukturach reprezentujących diody podczas przebiegu pętli, po jej zakończeniu dane zostają przesłane portem szeregowym do Arduino. 
 
-
-
-
-
-
-
-
-
+Komunikacja portem szeregowym została zaimplementowana za pomocą biblioteki ORSSerialPort udostępnionej w serwisie GitHub na jednym z repozytoriów. Jest ona prosta w obsłudze, a do projektu została zaimportowana jako submoduł repozytorium Git, co umożliwia jej łatwe aktualizowanie do najnowszej wersji.
 
 \section{Podręcznik użytkownika}
 
@@ -716,21 +719,6 @@ Licencja & kod otwartoźródłowy  \\ \hline
 \caption{Analiza systemu oświetlenia Lightning}
 \end{table}
 
-% TODO zdjęcia gotowego projektu
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Do niewątpliwych zalet Ligthning należy z pewnością niski koszt, otwartożródłowy kod i łatwa rozszerzalność systemu. Użytkownicy znający podstawy programowania mogą z łątwością dopasować projekt do swoich potrzeb, nie jest to jednak konieczne ponieważ większość opcji konfiguracyjnych jest już dostępna. Ciekawym dodatkiem jest tryb animacji. Animacje można dodawać według własnych upodobań. Dodatkowo system można podłączyć do dowolnego wyświetlacza połączonego z komputerem.
 
 Podobnie jak w przypadku wszystkich innych analizowanych rozwiązań poza technologią Philips Ambilight Ligtning jest zewnętrznym systemem oświetlenia co wiąże się z koniecznością podłączenia dodatkowych urządzeń do wyświetlacza. Kolejną z wad jest przeznaczenie na komputery z systemem macOS, jest to związane z chęcią uzyskania jak najwyższej płynności działania.
@@ -744,7 +732,7 @@ W celu dalszego rozwoju stworzonego systemu oświetlenia należy rozważyć wpro
 	\item Korekcja kolorów -- Obecny stan systemu umożliwia kontrolę jasności diod oraz wygładzania przejść pomiędzy kolejnymi stanami. Wprowadzenie korekcji kolorów umożliwiłoby dopasowanie koloru diod do otoczenia, czyli na przykład czerwonej ściany za wyświetlaczem.
 	\item Częstotliwość przechwytywania -- Poza korekcją kolorów kolejnym wartościowym dodatkiem byłoby wprowadzenie ograniczenia częstotliwości przechwytywania.
 	\item Poprawki graficzne szaty graficznej -- Dodanie ikony dla aplikacji sterującej, użycie obrazka wyświetlacza trybie konfiguracji czy też wyświetlanie poglądu animacji.
-	\item Automatyczne testy -- Automatyczne budowanie i testowanie całej aplikacji przy każdej zmianie podniosłoby jakość projektu. 
+	\item Automatyczne testy -- Automatyczne budowanie i testowanie całej aplikacji przy każdej zmianie podniosłoby jakość projektu.  Obecnie testy mogą zostać uruchomione ręcznie przez użytkownika, a pokrycie testami kodu aplikacji wciąż nie spełnia docelowego progu 95 procent.
 \end{itemize}
 
 \chapter{Podsumowanie}
@@ -792,7 +780,7 @@ Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego o
 \bibitem{legacy} {\tt https://github.com/Atarity/Lightpack}. \\Data dostępu -- 09.02.2017.
 \bibitem{lp2k} {\tt https://www.kickstarter.com/projects/woodenshark/lightpack\-2-ultimate-light-orchestra-for-your-livi}. \\Data dostępu -- 09.02.2017.
 \bibitem{lp2s} {\tt http://lightpack.tv/promo/index.php}. \\Data dostępu -- 09.02.2017.
-
+\bibitem{gpu} {\tt https://developer.apple.com/library/content/\-documentation/GraphicsImaging/Conceptual/CoreImaging/\-ci\_tasks/ci\_tasks.html}. \\Data dostępu -- 20.02.2017.
 \end{thebibliography}
 
 \addcontentsline{toc}{chapter}{Spis rysunków} 

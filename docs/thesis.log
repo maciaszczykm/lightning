@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  27 FEB 2017 20:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.14)  1 MAR 2017 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -923,28 +923,28 @@ Rozdzia\l  3.
 File: ../resources/ambilight.jpg Graphic file (type jpg)
 
 <use ../resources/ambilight.jpg>
-Package pdftex.def Info: ../resources/ambilight.jpg used on input line 291.
+Package pdftex.def Info: ../resources/ambilight.jpg used on input line 292.
 (pdftex.def)             Requested size: 278.83578pt x 164.85114pt.
  [13 <../resources/ambilight.jpg>]
 <../resources/ambilight2.jpg, id=66, 677.53125pt x 362.85562pt>
 File: ../resources/ambilight2.jpg Graphic file (type jpg)
 
 <use ../resources/ambilight2.jpg>
-Package pdftex.def Info: ../resources/ambilight2.jpg used on input line 317.
+Package pdftex.def Info: ../resources/ambilight2.jpg used on input line 318.
 (pdftex.def)             Requested size: 398.33858pt x 213.34103pt.
  [14 <../resources/ambilight2.jpg>]
 <../resources/lightpack.jpg, id=70, 401.5pt x 200.75pt>
 File: ../resources/lightpack.jpg Graphic file (type jpg)
 
 <use ../resources/lightpack.jpg>
-Package pdftex.def Info: ../resources/lightpack.jpg used on input line 331.
+Package pdftex.def Info: ../resources/lightpack.jpg used on input line 332.
 (pdftex.def)             Requested size: 139.42093pt x 69.71217pt.
 
 <../resources/lightpackm.jpg, id=71, 682.55pt x 420.57124pt>
 File: ../resources/lightpackm.jpg Graphic file (type jpg)
 
 <use ../resources/lightpackm.jpg>
-Package pdftex.def Info: ../resources/lightpackm.jpg used on input line 358.
+Package pdftex.def Info: ../resources/lightpackm.jpg used on input line 359.
 (pdftex.def)             Requested size: 398.33858pt x 245.45241pt.
 
 
@@ -954,7 +954,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../resources/prismatik.jpg Graphic file (type jpg)
 
 <use ../resources/prismatik.jpg>
-Package pdftex.def Info: ../resources/prismatik.jpg used on input line 364.
+Package pdftex.def Info: ../resources/prismatik.jpg used on input line 365.
 (pdftex.def)             Requested size: 278.83578pt x 211.82669pt.
 
 
@@ -962,7 +962,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15 <../resources/lightpack.jpg>] [16 <../resources/lightpackm.jpg> <../resourc
 es/prismatik.jpg>]
-Overfull \hbox (3.62544pt too wide) in paragraph at lines 373--374
+Overfull \hbox (3.62544pt too wide) in paragraph at lines 374--375
 \T1/txr/m/n/12 Lightpack 2 jest kontynuacj[] opi-sa-nego w roz-dziale 3.2.2[] p
 ro-jektu Li-ght-pack. Wpro-
  []
@@ -971,7 +971,7 @@ ro-jektu Li-ght-pack. Wpro-
 File: ../resources/lightpack2.jpg Graphic file (type jpg)
 
 <use ../resources/lightpack2.jpg>
-Package pdftex.def Info: ../resources/lightpack2.jpg used on input line 377.
+Package pdftex.def Info: ../resources/lightpack2.jpg used on input line 378.
 (pdftex.def)             Requested size: 199.16928pt x 199.15665pt.
  [17
 
@@ -980,12 +980,12 @@ Package pdftex.def Info: ../resources/lightpack2.jpg used on input line 377.
 File: ../resources/lightpack2m.jpg Graphic file (type jpg)
 
 <use ../resources/lightpack2m.jpg>
-Package pdftex.def Info: ../resources/lightpack2m.jpg used on input line 406.
+Package pdftex.def Info: ../resources/lightpack2m.jpg used on input line 407.
 (pdftex.def)             Requested size: 398.33858pt x 224.05522pt.
  [18 <../resources/lightpack2m.jpg>]
 Rozdzia\l  4.
 
-Overfull \hbox (17.6774pt too wide) in paragraph at lines 427--428
+Overfull \hbox (17.6774pt too wide) in paragraph at lines 428--429
 \T1/txr/m/n/12 Do wy-ma-ga« nie-funk-cjo-nal-nych po-sta-wio-nych przed pro-jek
 -to-wa-nym sys-te-mem nale»[]: 
  []
@@ -993,7 +993,7 @@ Overfull \hbox (17.6774pt too wide) in paragraph at lines 427--428
 [19
 
 ]
-Overfull \hbox (8.29214pt too wide) in paragraph at lines 433--434
+Overfull \hbox (8.29214pt too wide) in paragraph at lines 434--435
 []\T1/txr/m/n/12 Pami[]¢ na obu urz[]dzeniach steruj[]cych po-winna by¢ od-po-w
 ied-nio zarz[]dzana,
  []
@@ -1002,7 +1002,7 @@ ied-nio zarz[]dzana,
 File: ../resources/wiring.png Graphic file (type png)
 
 <use ../resources/wiring.png>
-Package pdftex.def Info: ../resources/wiring.png used on input line 452.
+Package pdftex.def Info: ../resources/wiring.png used on input line 453.
 (pdftex.def)             Requested size: 398.33858pt x 298.76253pt.
 
 
@@ -1012,26 +1012,26 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../resources/conn.JPG Graphic file (type jpg)
 
 <use ../resources/conn.JPG>
-Package pdftex.def Info: ../resources/conn.JPG used on input line 461.
+Package pdftex.def Info: ../resources/conn.JPG used on input line 462.
 (pdftex.def)             Requested size: 398.33858pt x 299.09172pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20]
-Overfull \hbox (7.49825pt too wide) in paragraph at lines 472--473
+Overfull \hbox (7.49825pt too wide) in paragraph at lines 473--474
 []\T1/txr/m/n/12 Moduª ten zo-staª na-pi-sany w na-tyw-nym j[]zyku Ar-du-ino, k
 tóry udost[]pnia wszyst-
  []
 
 [21 <../resources/wiring.png>]
-Overfull \hbox (9.66011pt too wide) in paragraph at lines 482--483
+Overfull \hbox (9.66011pt too wide) in paragraph at lines 483--484
 \T1/txr/m/n/12 kow-nik poza wy-bo-rem ani-ma-cji ma wpªyw na u»yte w niej ko-lo
 ry oraz pr[]dko±¢
  []
 
 [22 <../resources/conn.JPG>]
-Overfull \hbox (2.52142pt too wide) in paragraph at lines 492--493
+Overfull \hbox (2.52142pt too wide) in paragraph at lines 493--494
 \T1/txr/m/n/12 praca kilku pro-gra-mi-stów, co-fa-nie po-myª-kowo wpro-wa-dzo-n
 ych zmian czy te» dzien-
  []
@@ -1040,17 +1040,17 @@ ych zmian czy te» dzien-
 File: ../resources/github.png Graphic file (type png)
 
 <use ../resources/github.png>
-Package pdftex.def Info: ../resources/github.png used on input line 496.
+Package pdftex.def Info: ../resources/github.png used on input line 497.
 (pdftex.def)             Requested size: 278.83578pt x 230.3368pt.
  [23 <../resources/github.png>]
 <class-diagram.png, id=108, 1904.11375pt x 1156.32pt>
 File: class-diagram.png Graphic file (type png)
  <use class-diagram.png>
-Package pdftex.def Info: class-diagram.png used on input line 513.
+Package pdftex.def Info: class-diagram.png used on input line 514.
 (pdftex.def)             Requested size: 1904.10913pt x 1156.31718pt.
 
 
-LaTeX Warning: Float too large for page by 24.50433pt on input line 516.
+LaTeX Warning: Float too large for page by 24.50433pt on input line 517.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1062,27 +1062,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../resources/capture.png Graphic file (type png)
 
 <use ../resources/capture.png>
-Package pdftex.def Info: ../resources/capture.png used on input line 539.
+Package pdftex.def Info: ../resources/capture.png used on input line 540.
 (pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
  [27 <../resources/capture.png>]
 <../resources/backlight.png, id=124, 702.625pt x 401.5pt>
 File: ../resources/backlight.png Graphic file (type png)
 
 <use ../resources/backlight.png>
-Package pdftex.def Info: ../resources/backlight.png used on input line 558.
+Package pdftex.def Info: ../resources/backlight.png used on input line 559.
 (pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
  [28 <../resources/backlight.png>]
 <../resources/settings.png, id=129, 702.625pt x 401.5pt>
 File: ../resources/settings.png Graphic file (type png)
 
 <use ../resources/settings.png>
-Package pdftex.def Info: ../resources/settings.png used on input line 578.
+Package pdftex.def Info: ../resources/settings.png used on input line 579.
 (pdftex.def)             Requested size: 398.33858pt x 227.62596pt.
  [29 <../resources/settings.png>]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 598.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 599.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/t1txtt.fd
@@ -1090,118 +1090,130 @@ File: t1txtt.fd 2000/12/15 v3.1
 )
 (../arduino/lightning/lightning.ino [30
 
-] [31] [32]) [33] [34]
-(../resources/animation.swift [35]) (../resources/animations.swift [36])
-<../resources/logo.png, id=158, 695.2374pt x 237.7683pt>
+] [31] [32]) [33]
+Overfull \hbox (5.4721pt too wide) in paragraph at lines 624--625
+[]\T1/txr/m/n/12 Stan wa-li-da-cji na-gªówka -- Pier-wotny stan pro-gramu, jego
+ za-da-niem jest spraw-
+ []
+
+[34] (../resources/capturer.swift [35]) [36] [37] (../resources/animation.swift
+) [38] (../resources/animations.swift) [39]
+<../resources/logo.png, id=167, 695.2374pt x 237.7683pt>
 File: ../resources/logo.png Graphic file (type png)
 
 <use ../resources/logo.png>
-Package pdftex.def Info: ../resources/logo.png used on input line 698.
+Package pdftex.def Info: ../resources/logo.png used on input line 701.
 (pdftex.def)             Requested size: 398.33858pt x 136.23317pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[37 <../resources/logo.png>] [38]
-Overfull \hbox (1.72815pt too wide) in paragraph at lines 746--747
+ [40 <../resources/logo.png>]
+Overfull \hbox (1.72815pt too wide) in paragraph at lines 734--735
 \T1/txr/m/n/12 u»y-cie ob-razka wy-±wie-tla-cza try-bie kon-fi-gu-ra-cji czy te
 » wy-±wie-tla-nie pogl[]du
  []
 
-[39]
+[41]
 Rozdzia\l  5.
-[40
+[42
 
 ]
-Overfull \hbox (8.60225pt too wide) in paragraph at lines 764--765
+Overfull \hbox (8.60225pt too wide) in paragraph at lines 752--753
 []\T1/txr/m/n/12 Rozwi[]zaniem po-±red-nim by-ªoby prze-nie-sie-nie opro-gra-mo
 -wa-nia przechytuj[]cego
  []
 
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 768--769
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 756--757
 []\T1/txtt/m/n/12 http://www.wirtualnemedia.pl/artykul/coraz-dluzej-ogladamy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 768--769
+Underfull \hbox (badness 10000) in paragraph at lines 756--757
 \T1/txtt/m/n/12 telewizje-najwiecej-czasu-przed-szklanym-ekranem-spedzaja-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 769--770
+Underfull \hbox (badness 10000) in paragraph at lines 757--758
 []\T1/txtt/m/n/12 https://www.indiegogo.com/projects/lightpack-2-light-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 []\T1/txtt/m/n/12 http://www.komputerswiat.pl/media/2016/224/4688581/003-
  []
 
 
-Overfull \hbox (5.52763pt too wide) in paragraph at lines 772--773
+Overfull \hbox (5.52763pt too wide) in paragraph at lines 760--761
 []\T1/txtt/m/n/12 https://swift.org/documentation/TheSwiftProgrammingLanguage-
  []
 
 
-Overfull \hbox (11.82762pt too wide) in paragraph at lines 773--774
+Overfull \hbox (11.82762pt too wide) in paragraph at lines 761--762
 []\T1/txtt/m/n/12 https://itunes.apple.com/us/book/app-development-with-swift/-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
 []\T1/txtt/m/n/12 http://videopoint.pl/kurs/arduino-kurs-video-poziom-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
 \T1/txtt/m/n/12 pierwszy-podstawowe-techniki-dla-wlasnych-projektow-
  []
 
-[42
+[44
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 779--780
+Underfull \hbox (badness 10000) in paragraph at lines 767--768
 []\T1/txtt/m/n/12 https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch-
  []
 
 
-Overfull \hbox (5.52763pt too wide) in paragraph at lines 780--781
+Overfull \hbox (5.52763pt too wide) in paragraph at lines 768--769
 []\T1/txtt/m/n/12 https://botland.com.pl/zasilacze-sieciowe-5-v/1364-zasilacz-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 781--782
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 []\T1/txtt/m/n/12 https://botland.com.pl/szybkozlacza/1590-wtyk-dc-55-x-21-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
+Underfull \hbox (badness 10000) in paragraph at lines 770--771
 []\T1/txtt/m/n/12 https://botland.com.pl/arduino-moduly-glowne/1060-arduino-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--784
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
 []\T1/txtt/m/n/12 https://botland.com.pl/przewody-usb-a-b-20/5313-przewod-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 784--785
+Underfull \hbox (badness 10000) in paragraph at lines 772--773
 []\T1/txtt/m/n/12 https://cdn-learn.adafruit.com/assets/assets/000/001/484/-
  []
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 790--791
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 778--779
 []\T1/txtt/m/n/12 https://www.kickstarter.com/projects/woodenshark/lightpack-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--794
+Underfull \hbox (badness 10000) in paragraph at lines 781--782
 []\T1/txtt/m/n/12 https://www.kickstarter.com/projects/woodenshark/lightpack-
  []
 
-[44] (./thesis.lof
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
+[]\T1/txtt/m/n/12 https://developer.apple.com/library/content/-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
+\T1/txtt/m/n/12 documentation/GraphicsImaging/Conceptual/CoreImaging/-
+ []
+
+[46] (./thesis.lof
 Overfull \hbox (27.0375pt too wide) in paragraph at lines 5--5
  [][] []\T1/txr/m/n/12 ‘redni czas do-pa-so-wa-nia ¹re-nicy do wy-±wie-tla-nego
  ob-razu z otaczaj[]cym 
@@ -1211,19 +1223,19 @@ Overfull \hbox (27.0375pt too wide) in paragraph at lines 5--5
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
- [45
+ [47
 
 ] (./thesis.lot)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
- [46
+ [48
 
 ] (./thesis.lol)
 \tf@lol=\write6
 \openout6 = `thesis.lol'.
 
- [47
+ [49
 
 ] (./thesis.aux)
 
@@ -1231,13 +1243,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8969 strings out of 493014
- 121982 string characters out of 6133351
- 395576 words of memory out of 5000000
- 12285 multiletter control sequences out of 15000+600000
+ 8999 strings out of 493014
+ 122385 string characters out of 6133351
+ 395594 words of memory out of 5000000
+ 12312 multiletter control sequences out of 15000+600000
  60104 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,18n,50p,903b,2307s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,18n,50p,1349b,2307s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive
 /2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/t
@@ -1245,10 +1257,10 @@ exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on thesis.pdf (49 pages, 9103279 bytes).
+Output written on thesis.pdf (51 pages, 9110685 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
+ 226 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
