@@ -244,25 +244,84 @@ Pracę kończy podsumowanie, które zawiera dyskusję wyników oraz dalsze presp
 
 \chapter[Zagadnienia teoretyczne]{Zagadnienia teoretyczne}
 
-% TODO protokoly
-% TODO swift
-% TODO podstawy elektroniki
-% TODO z literatury rzeczy
-% TODO port szeregowy
-% TODO przechwytywanie obrazu
-% TODO mikrokontrolery
-% TODO SPI i opis portow jak w implementacji Arduino
+\section{Mikrokontroler Arduino Uno}
 
+Arduino Uno jest to popularny moduł z mikrokontrolerem AVR ATmega328. Posiada on 32 kB pamięci Flash, 2 kB RAM, 14 cyfrowych pinów wejścia/wyjścia\footnote{~6 z nich może zostać użyte jako wyjścia PWM (z ang. pulse-width modulation).}, 6 wejść analogowych oraz popularne interfejsy komunikacyjne. Wymieniona specyfikacja umożliwia wykonywanie wszystkich podstawowych zadań postawionych przed mikrokontrolerami.
 
+\section{Szeregowy interfejs urządzeń peryferyjnych}
 
+Do podstawowych zadań wspomianych w poprzednim rozdziale pracy należy przede wszystkim komunikacja z urządzeniami peryferyjnymi takimi jak diody, silniki czy różnego rodzaju czujniki. Komunikacja ta może zostać zrealizowana za pomocą szeregowego interfejsu urządzeń peryferyjnych, umożliwia on szybką komunikację na niewielkich odległościach pomiędzy mikrokontrolerami i urządzeniami peryferyjnymi. Transmisja danych za pomocą interfejsu SPI\footnote{~Szeregowy interfejs urządzeń peryferyjnych (z ang. serial peripherial interface).} odbywa się synchronicznie. Swoje zastosowanie w odnalazła to analogia do pana i niewolnika\footnote{~Z ang. master and slave.}, gdzie jedno urządzenie, którym jest zazwyczaj mikrokontroler, jest typu master i steruje podłączonymi do niego urządzeniami peryferyjnymi typu slave \cite{arduinostr}. 
 
+Komunikacja szeregowym interfejsem urządzeń peryferyjnych realizowana jest za pomocą trzech linii:
 
+\begin{itemize}
+	\item MISO\footnote{~Z ang. master in slave out.} -- Wejście urządzenia master, wyjście urządzenia slave. Służy do przesyłania danych z urządzenia slave do urządzenia master. Na Arduino jest to pin 12.
+	\item MOSI\footnote{~Z ang. master out slave in.} -- Wyjście urządzenia master, wejście urządzenia slave. Służy do przesyłania danych z urządzenia master do urządzenia slave. Na Arduino jest to pin 11.
+	\item SCK\footnote{~Oznaczana także jako SCLK lub Clock (z ang. zegar).} -- linia zegara. Jest sygnałem synchronizującym transmisję danych. Na Arduino jest to pin 13.
+\end{itemize}
 
+A także jednego pinu specyficznego dla każdego z urządzeń peryferjnych:
 
+\begin{itemize}
+	\item SS\footnote{Z ang. slave select.} -- Pin na każdym z urządzeń peryferyjnych, który master może wykorzystać do blokady wybranych urządzeń. Kiedy pin SS jest w stanie niskim może komunikować się z masterem, w przeciwnym przypadku master będzie ignorowany. Mechanizm ten umożliwia podłączenienie więcej niż jednego urządzenia za pomocą SPI, który dysponuje tylko jednym MISO, MOSI i SCK.
+\end{itemize}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=.55\textwidth]{../resources/spi.jpg}
+\caption{Piny SPI na płytce Arduino Uno}
+\end{figure}
 
+\section{Interfejs portu szeregowego}
 
+Zagadnienia przedstawione poprzednim rozdziale dotyczyły komunikacji pomiędzy mikrokontrolerami a urządzeniami peryferyjnymi, w tym rozdziale natomiast opisana zostanie koncepcja komunikacji pomiędzy mikrokontrolerem a komputerem z wykorzystaniem interfejsu portu szeregowego.
 
+Każde z urządzeń Arduino posiada co najmniej jeden port szeregowy, znany także jako UART bądź USART. Komunikuje się on wykorzystując w tym celu piny RX i TX\footnote{~Piny 0 i 1.} jak i port USB. Ponadto środowisko programistyczne Arduino zostało wypozażone w minotor portu szeregowego, który ma za zadanie ułatwić tworzenie aplikacji \cite{arduinostr}.
+
+Określenie szeregowy w nazwie portu szeregowego pochodzi od faktu, że dla transmisji danych w wybranym kierunku dostępny jest tylko jeden pin. Dane mogą być przesyłane z różną, wcześniej ustaloną prędkością. Aby transmisja danych przebiegała prawidłowo konieczne jest użycie takiej samej predkości po obu stronach interfejsu portu szeregowego.
+
+W Arduino transmisję portem szeregowym otwiera funkcja Serial.begin(), z paramterem baudRate, który jest prędkością przesyłania wyrażoną w bodach\footnote{~Bity na sekundę (z ang. baud).}. Naj\-częściej wykorzystywana jest prędkość 9600 bitów na sekundę, jednakże moża ona być mniejsza lub większa, tj.: 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, a nawet 115200 bitów na sekundę. Możliwe jest ustawienie prędkości z poza przedstawionego zakresu, na przykład komunikując się pinami 0 i 1 z komponentem wymagającym specyficznej prędkości przesyłu danych. Funkcja Serial.be\-gin() przyjmuje także drugi opcjonalny parametr, który konfiguruje takie ustawienia jak bit stopu czy bit kontroli parzystości.
+
+\begin{lstlisting}[style=customarduino,caption=Kod wysyłający co sekundę wiadomość powitalną do komputera za pomocą interfejsu portu szeregowego]
+void setup() {
+	Serial.begin(9600);
+}
+
+void loop() {
+	Serial.println("Hello Computer");
+	delay(1000);
+}
+\end{lstlisting}
+
+\section{Taśma diod elektroluminescencyjnych ze sterownikiem WS2801}
+
+Taśma cyfrowo adresowanych diod elektroluminescencyjnych ze sterownikiem WS2801 może zostać wykorzystana do budowy różnego rodzaju systemów oświetlenia. Wystaczy podłączyć ją do dwóch pinów mikrokontrolera a 25 jasnych 12mm diod będzie mogło zostać zaświecone na dowlony kolor z przestrzeni barw. Jak czytamy na stronie sklepu botland.com.pl \cite{ledb}
+
+\begin{quote}
+	Układ jest zasilany napięciem 5 V DC, pobiera maksymalnie 60 mA dla każdej diody. Dla jednego łańcucha producent zaleca użycie zasilacza o wydajności prądowej co najmniej 2 A. Wydajność 10 A wystarczy do podłączenia sześciu łańcuchów, czyli 150 diod LED.
+\end{quote}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.7\textwidth]{../resources/led.jpg}
+\caption{Taśma diod elektroluminescencyjnych ze sterownikiem WS2801 \cite{ledb}}
+\end{figure}
+
+\newpage
+
+\section{Przechwytywanie obrazu komputera}
+
+Przechwytywanie obrazu komputera należy do zadań o wysokiej słożoności obliczeniowej, co za tym idzie algorytm wykonujący operacje na obrazie powinien być jak najbardziej dopasowany do sprzętu na jaki jest przeznaczony. 
+
+W przypadku komputerów Mac najlepszym wyborem okazuje się być język programowania Swift oraz przeznaczone dla niego frameworki takie jak Core Graphics. Apple udostępnia technologię nazwaną Core Image, której główną funkcjonalnością jest przetwarzanie obrazów dostraczonych przez frameworki jak wcześniej wspomniane Core Graphics. Za pomocą Core Graphics i funkcji takich jak CGDisplayCreateImage() użytkownicy są w stanie szybko wykonywać zrzuty ekranu i inne podobne operacje. Core Image udostępnia za to zestaw narzędzi i filtrów za pomocą których możliwe jest renderowanie i modyfikowanie wcześniej przechwyconych obrazów.
+
+Operacje wykonywane przez Core Image należa do operacji niskopoziomowych i dzięki udostępnianemu interfejsowi operacje graficzne są w języku Swift dużo prostsze do wykonania. Programista nie musi znać OpenGL, OpenGL ES czy Metal aby wykorzystać moc graficznej jednostki obliczeniowej czy wykorzystać przetwarzanie wielowątkowe \cite{swiftapple}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../resources/cg.png}
+\caption{Relacja systemu operacyjnego z Core Image \cite{swiftapple}}
+\end{figure}
 
 \chapter[Analiza istniejących rozwiązań]{Analiza istniejących rozwiązań}
 
@@ -781,6 +840,7 @@ Rozwiązaniem pośrednim byłoby przeniesienie oprogramowania przechytującego o
 \bibitem{lp2k} {\tt https://www.kickstarter.com/projects/woodenshark/lightpack\-2-ultimate-light-orchestra-for-your-livi}. \\Data dostępu -- 09.02.2017.
 \bibitem{lp2s} {\tt http://lightpack.tv/promo/index.php}. \\Data dostępu -- 09.02.2017.
 \bibitem{gpu} {\tt https://developer.apple.com/library/content/\-documentation/GraphicsImaging/Conceptual/CoreImaging/\-ci\_tasks/ci\_tasks.html}. \\Data dostępu -- 20.02.2017.
+\bibitem{ledb} {\tt https://botland.com.pl/lancuchy-i-matryce-led/2443-lacuch\-led-rgb-12-mm-ws2801-cyfrowy-adresowany-25-szt.html}. \\Data dostępu -- 27.02.2017. 
 \end{thebibliography}
 
 \addcontentsline{toc}{chapter}{Spis rysunków} 

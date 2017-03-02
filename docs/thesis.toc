@@ -13,45 +13,50 @@
 \contentsline {subsection}{\numberline {1.5.2}Tworzenie oprogramowania przeznaczonego na mikrokontrolery Arduino}{9}
 \contentsline {section}{\numberline {1.6}Uk\IeC {\l }ad pracy}{9}
 \contentsline {chapter}{\numberline {2}Zagadnienia teoretyczne}{11}
-\contentsline {chapter}{\numberline {3}Analiza istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{12}
-\contentsline {section}{\numberline {3.1}Kryteria analizy}{12}
-\contentsline {section}{\numberline {3.2}Por\IeC {\'o}wnanie istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{13}
-\contentsline {subsection}{\numberline {3.2.1}Technologia Philips Ambilight}{13}
-\contentsline {subsection}{\numberline {3.2.2}System o\IeC {\'s}wietlenia Lightpack}{15}
-\contentsline {subsection}{\numberline {3.2.3}System o\IeC {\'s}wietlenia Lightpack 2}{17}
-\contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{19}
-\contentsline {section}{\numberline {4.1}Analiza wymaga\IeC {\'n}}{19}
-\contentsline {subsection}{\numberline {4.1.1}Wymagania funkcjonalne}{19}
-\contentsline {subsection}{\numberline {4.1.2}Wymagania niefunkcjonalne}{19}
-\contentsline {section}{\numberline {4.2}Komponenty systemu}{20}
-\contentsline {section}{\numberline {4.3}Modu\IeC {\l }y oprogramowania}{21}
-\contentsline {subsection}{\numberline {4.3.1}Oprogramowanie mikrokontrolera}{21}
-\contentsline {subsection}{\numberline {4.3.2}Aplikacja przeznaczona na komputer}{22}
-\contentsline {section}{\numberline {4.4}Projekt}{23}
-\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{23}
-\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{24}
-\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{24}
-\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{26}
-\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{26}
-\contentsline {subsubsection}{Widok trybu przechwytywania}{27}
-\contentsline {subsubsection}{Widok trybu animacji}{28}
-\contentsline {subsubsection}{Widok konfiguracji}{29}
-\contentsline {section}{\numberline {4.5}Implementacja}{30}
-\contentsline {subsection}{\numberline {4.5.1}Oprogramowanie mikrokontrolera}{30}
-\contentsline {subsection}{\numberline {4.5.2}Aplikacja przeznaczona na komputer}{35}
-\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{36}
-\contentsline {subsubsection}{Czym jest Lightning?}{37}
-\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{37}
-\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{37}
-\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{37}
-\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{37}
-\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{38}
-\contentsline {section}{\numberline {4.8}Analiza projektu}{40}
-\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{41}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{42}
-\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{42}
-\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{42}
-\contentsline {chapter}{Bibliografia}{43}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{46}
-\contentsline {chapter}{Spis tabel}{47}
-\contentsline {chapter}{Spis listing\IeC {\'o}w}{48}
+\contentsline {section}{\numberline {2.1}Mikrokontroler Arduino Uno}{11}
+\contentsline {section}{\numberline {2.2}Szeregowy interfejs urz\IeC {\k a}dze\IeC {\'n} peryferyjnych}{11}
+\contentsline {section}{\numberline {2.3}Interfejs portu szeregowego}{13}
+\contentsline {section}{\numberline {2.4}Ta\IeC {\'s}ma diod elektroluminescencyjnych ze sterownikiem WS2801}{14}
+\contentsline {section}{\numberline {2.5}Przechwytywanie obrazu komputera}{15}
+\contentsline {chapter}{\numberline {3}Analiza istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{16}
+\contentsline {section}{\numberline {3.1}Kryteria analizy}{16}
+\contentsline {section}{\numberline {3.2}Por\IeC {\'o}wnanie istniej\IeC {\k a}cych rozwi\IeC {\k a}za\IeC {\'n}}{17}
+\contentsline {subsection}{\numberline {3.2.1}Technologia Philips Ambilight}{17}
+\contentsline {subsection}{\numberline {3.2.2}System o\IeC {\'s}wietlenia Lightpack}{19}
+\contentsline {subsection}{\numberline {3.2.3}System o\IeC {\'s}wietlenia Lightpack 2}{21}
+\contentsline {chapter}{\numberline {4}System o\IeC {\'s}wietlenia Lightning}{23}
+\contentsline {section}{\numberline {4.1}Analiza wymaga\IeC {\'n}}{23}
+\contentsline {subsection}{\numberline {4.1.1}Wymagania funkcjonalne}{23}
+\contentsline {subsection}{\numberline {4.1.2}Wymagania niefunkcjonalne}{23}
+\contentsline {section}{\numberline {4.2}Komponenty systemu}{24}
+\contentsline {section}{\numberline {4.3}Modu\IeC {\l }y oprogramowania}{25}
+\contentsline {subsection}{\numberline {4.3.1}Oprogramowanie mikrokontrolera}{25}
+\contentsline {subsection}{\numberline {4.3.2}Aplikacja przeznaczona na komputer}{26}
+\contentsline {section}{\numberline {4.4}Projekt}{27}
+\contentsline {subsection}{\numberline {4.4.1}System kontroli wersji}{27}
+\contentsline {subsection}{\numberline {4.4.2}Wykorzystane technologie}{28}
+\contentsline {subsection}{\numberline {4.4.3}Diagram klas}{28}
+\contentsline {subsection}{\numberline {4.4.4}Wzorce projektowe}{30}
+\contentsline {subsection}{\numberline {4.4.5}Interfejs u\IeC {\.z}ytkownika}{30}
+\contentsline {subsubsection}{Widok trybu przechwytywania}{31}
+\contentsline {subsubsection}{Widok trybu animacji}{32}
+\contentsline {subsubsection}{Widok konfiguracji}{33}
+\contentsline {section}{\numberline {4.5}Implementacja}{34}
+\contentsline {subsection}{\numberline {4.5.1}Oprogramowanie mikrokontrolera}{34}
+\contentsline {subsection}{\numberline {4.5.2}Aplikacja przeznaczona na komputer}{39}
+\contentsline {section}{\numberline {4.6}Podr\IeC {\k e}cznik u\IeC {\.z}ytkownika}{40}
+\contentsline {subsubsection}{Czym jest Lightning?}{41}
+\contentsline {subsubsection}{Jak dzia\IeC {\l }a Lightning?}{41}
+\contentsline {subsubsection}{Ile di\IeC {\'o}d mo\IeC {\.z}na pod\IeC {\l }\IeC {\k a}czy\IeC {\'c} do Lightning?}{41}
+\contentsline {subsubsection}{Jak zacz\IeC {\k a}\IeC {\'c} korzysta\IeC {\'c} z Lightning?}{41}
+\contentsline {subsubsection}{Jak doda\IeC {\'c} w\IeC {\l }asne animacje?}{41}
+\contentsline {section}{\numberline {4.7}Przyk\IeC {\l }adowa implementacja animacji}{42}
+\contentsline {section}{\numberline {4.8}Analiza projektu}{44}
+\contentsline {section}{\numberline {4.9}Perspektywy rozwoju projektu}{45}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{46}
+\contentsline {section}{\numberline {5.1}Dyskusja wynik\IeC {\'o}w}{46}
+\contentsline {section}{\numberline {5.2}Perspektywy rozwoju pracy}{46}
+\contentsline {chapter}{Bibliografia}{47}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{50}
+\contentsline {chapter}{Spis tabel}{51}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{52}
